@@ -1,5 +1,5 @@
 site_name: PAROL6 DOCS 
-site_url: https://james-willett.github.io/mkdocs-material-youtube-tutorial/
+site_url: https://PCrnjak.github.io/PAROL6_DOCS/
 theme:
   name: material
   features:
@@ -10,8 +10,8 @@ theme:
     - search.highlight
     - content.tabs.link
     - content.code.annotation
-    - content.code.copyž
-  logo: Icon2.png
+    - content.code.copy
+  logo: assets/Icon2.png
   language: en
   palette:
     - scheme: default
@@ -44,7 +44,6 @@ extra:
       link: https://discord.gg/prjUvjmGpZ
     - icon: fontawesome/brands/patreon
       link: https://www.patreon.com/PCrnjak
-
 
 markdown_extensions:
   - admonition

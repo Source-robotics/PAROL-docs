@@ -1,5 +1,6 @@
 # About PAROL6
 
+
 ## Robot specifications
 
 * Payload: 1 Kg

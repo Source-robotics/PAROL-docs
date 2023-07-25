@@ -1,12 +1,12 @@
 # Home 
 <img src="assets/img3.png" alt="drawing" width="5000"/>
 
-PAROL6 is a high-performance 3D-printed desktop robotic arm. The design approach of PAROL6 was to be similar to industrial robots in terms of mechanical design, control software, and usability. Control software, GUI, and robots STL files are open-source. You can build your own PAROL6 robot by following the instructions located in [Github](https://www.mkdocs.org) respository.
+**PAROL6** is a high-performance 3D-printed desktop robotic arm. The design approach of PAROL6 was to be similar to industrial robots in terms of mechanical design, control software, and usability. Control software, GUI, and robots STL files are open-source. You can build your own PAROL6 robot by following the instructions located in [Github](https://www.mkdocs.org) respository.
 
 !!! note
 
-    Parol6 is stil work in progress and is being constantly updated.
-    Expect this document to change on weekly basis.
+    **Parol6 is stil work in progress and is being constantly updated.**<br />
+    **Expect this document to change on weekly basis.**
 
 ## Project links
 For building instructions visit: [Link](https://www.mkdocs.org)<br />
