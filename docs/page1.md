@@ -1,0 +1,3 @@
+# General concepts
+
+General stuff kao axes, limits, joint space cart space, jedinice ...
