@@ -1,8 +1,8 @@
-site_name: PAROL6 DOCS
+site_name: PAROL6 DOCS 
+site_url: https://PCrnjak.github.io/PAROL6_DOCS/
 theme:
   name: material
   features:
-    - navigation.tabs
     - navigation.sections
     - toc.integrate
     - navigation.top
@@ -11,20 +11,46 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+  logo: assets/Icon2.png
   language: en
   palette:
     - scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline 
+        icon: material/weather-sunny
         name: Switch to dark mode
-      primary: teal
-      accent: purple 
+      primary: blue
+      accent: blur 
     - scheme: slate 
       toggle:
-        icon: material/toggle-switch
+        icon: material/weather-night
         name: Switch to light mode    
-      primary: teal
-      accent: lime
+      primary: blue
+      accent: blur
 
+plugins:
+- search
+- social:
+    cards_layout: default
 
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/PCrnjak
+    - icon: fontawesome/brands/instagram
+      link: https://twitter.com/TheJamesWillett
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/petar-crnjak-009b43180/
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/prjUvjmGpZ
+    - icon: fontawesome/brands/patreon
+      link: https://www.patreon.com/PCrnjak
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/PCrnjak"  target="_blank" rel="noopener">Petar Crnjak</a>
