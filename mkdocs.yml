@@ -35,11 +35,16 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/james-willett
-    - icon: fontawesome/brands/twitter
+      link: https://github.com/PCrnjak
+    - icon: fontawesome/brands/instagram
       link: https://twitter.com/TheJamesWillett
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/willettjames/
+      link: https://www.linkedin.com/in/petar-crnjak-009b43180/
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/prjUvjmGpZ
+    - icon: fontawesome/brands/patreon
+      link: https://www.patreon.com/PCrnjak
+
 
 markdown_extensions:
   - admonition
@@ -49,4 +54,4 @@ markdown_extensions:
   - md_in_html
 
 copyright: |
-  &copy; 20223 <a href="https://github.com/james-willett"  target="_blank" rel="noopener">James Willett</a>
+  &copy; 2023 <a href="https://github.com/PCrnjak"  target="_blank" rel="noopener">Petar Crnjak</a>
