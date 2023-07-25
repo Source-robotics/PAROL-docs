@@ -11,7 +11,7 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copyž
-  logo: smaller_image.png
+  logo: Icon2.png
   language: en
   palette:
     - scheme: default
