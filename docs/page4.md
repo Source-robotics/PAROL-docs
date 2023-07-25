@@ -1,12 +1,28 @@
 # Software
 
-## Structure
+ To operate PAROL6 robot you need a:<br />
+
+ * High level software running on your PC
+ * Low level software running on PAROL6 control board
+
+ For high level software there are multiple options:
+
+ * Use PAROL6 commander software for control, programming, simulating
+ * Use our API to send command thur your languange of choice Matlab, python, c++
+ * Use ROS
+
+ For low level software only PAROL6 control board software is available.
 
 ## Communication protocol
 
+PAROL6 uses serial USB communication to talk between high and low level code. 
+
 ## PAROL6 commander software
 
-## PAROL6 driver board software
+### Structure
+
+
+## PAROL6 control board software
 
 ## API
 kako setup napraviti bla bla...

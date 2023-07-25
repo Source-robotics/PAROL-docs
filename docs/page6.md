@@ -1,5 +1,7 @@
 # Safety and handling
 
+
+
 PAROL6 needs special handling even tho it is lightweight desktop robot. Weighting only 5kg it still needs to be anhored to the surfaces.
 In case of power loss the robots joints will not hold themselfs and robot will start to fall down. That is the property of the relativly low reduction ratios in PAROL6. 
 
@@ -7,11 +9,16 @@ In case of power loss the robots joints will not hold themselfs and robot will s
 
     Solution for that problem, like in industrial aplications is to use brakes. Addition of brakes is on TODO list for PAROL6.
 
+
+
 ## Safe shutdown
 
 !!! Danger annotate "Addition of brakes"
 
     Solution for that problem, like in industrial aplications is to use brakes. Addition of brakes is on TODO list for PAROL6.
+
+
+<img src="/assets/img3.png" alt="drawing" width="5000"/>
 
 PAROL6 requires 3 connections for normal operation.
 
@@ -21,6 +28,8 @@ USB connection
 
 and ESTOP
 
+## Safe shutdown
+
 
 ## Anchoring the robot
 
@@ -29,6 +38,7 @@ and ESTOP
     Solution for that problem, like in industrial aplications is to use brakes. Addition of brakes is on TODO list for PAROL6.
 
 There are 2 ways of anchoring the robot:
+
 * Using the 6 holes in the base of the robot to attach it to the surface
 * Using clamps to attach it to the edge of the table or work surface
 
