@@ -17,10 +17,18 @@ See more of our robots on [Youtube](https://www.mkdocs.org) and [Instagram](http
 
 ## Documentation layout
 
-    mkdocs.yml    # The configuration file.
+    
     docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+        Home                # Homepage of the project.
+        About PAROL6        # Robot specifications, limits and.features
+        General concepts    # General robotics concepts and theory.
+        Getting started     # How to start using PAROL6 robot.
+        Software            # All about PAROL6 software and API.
+        Peripherals         # All about grippers, pneumatics, PLCs...
+        Safety and handling # How to not brake your robot.
+
+
+
 
 ## Support the project!
 All the code and STL files needed to build the robot are Open source and free to all and I would like to keep it that way. Any help in terms of donations, advice, or contribution is really appreciated. Thank you!

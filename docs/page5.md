@@ -46,7 +46,14 @@ There are 2 CAN buses.
 
 ## Pneumatics
 
+!!! Note annotate "Recommended pressure"
+
+    Recommended pressure for PAROL6 and generally in industry is 6-8 bar. All examples conducted with pneumatics you see in our videos are done with pressures in that range. Negative pressures are also possible but we are still experimenting with them.
+
 ### Example of gripper connection
+
+The 2 tubes going into a gripper are tubes that exit the PAROL6 robotic arm at a forearm region. Tubes going from the pneumatic valve need to be connected to the pneumatic connections in the base of the robot. Orientation is imporatant. Switching the 2 tubes will make your gripper normally closed or normally open depending on the orientation.
+
 <p align="center">
 <img src="../assets/pneumatic connection_edit.png" alt="drawing" width="800"/>
 </p>

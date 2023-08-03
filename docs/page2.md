@@ -2,7 +2,32 @@
 
 General stuff kao axes, limits, joint space cart space, jedinice ...
 
-## Commands
+## Basic theory
+### Units 
+### Joints and naming
+### Rules and convenctions
+### Frames
+
+## Concepts
+### Homing
+### Forward kinematics
+### Inverse kinematics
+### Joint space
+### Cartesian space
+### Jacobian
+### 3D representation
+### Singularity
+### Workspace
+### Velocity control
+### Position control
+### Torque control
+### Blends
+### Trajectory
+
+
+
+
+
 
 * `mkdocs new [dir-name]` - Create a new project.
 * `mkdocs serve` - Start the live-reloading docs server.
