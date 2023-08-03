@@ -21,6 +21,9 @@ PAROL6 uses serial USB communication to talk between high and low level code.
 
 ### Structure
 
+<p align="center">
+<img src="../assets/proces_full.png" alt="drawing" width="2000"/>
+</p>
 
 ## PAROL6 control board software
 

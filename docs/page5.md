@@ -8,8 +8,34 @@
 ## I/O connections
 
 PAROL6 is equipped with 2 isolated inputs and 2 isolated outputs.
-There are 
 
+### Isolated power supply
+
+It is standard to have isolated Inputs and Outputs to protect your device.<br />
+To use isolated power supply follow the connections on image below. Connect minus of power supply <br />
+to any of **GND_SEL** pins and plus of power supply to any of **HV_SEL** pins.
+
+!!! Note annotate "Note!"
+
+    **Even tho Inputs and Outputs are now isolated from the robot, the ESTOP is still connected to the same power supply of the robot**
+
+<p align="center">
+<img src="../assets/Ext_supply.png" alt="drawing" width="800"/>
+</p>
+
+By using isolated power supply you are not limited to 24V. You can 5V or 12V depending on your aplications.
+
+### Not isolated power supply
+
+By following the connections as shown on image below all inputs and outputs will be connected to power supply of the robot.
+
+<p align="center">
+<img src="../assets/Internal_24V.png" alt="drawing" width="800"/>
+</p>
+
+### Examples of input connections
+
+### Examples of output connections
 
 ## CAN bus
 
@@ -20,7 +46,10 @@ There are 2 CAN buses.
 
 ## Pneumatics
 
-
+### Example of gripper connection
+<p align="center">
+<img src="../assets/pneumatic connection_edit.png" alt="drawing" width="800"/>
+</p>
 
 ## Estop
 
