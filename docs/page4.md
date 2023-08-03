@@ -27,6 +27,9 @@ PAROL6 uses serial USB communication to talk between high and low level code.
 
 ## PAROL6 control board software
 
+### Code upload
+To upload code on your PAROL6 board you need a programming cable and stlink device
+
 ## API
 kako setup napraviti bla bla...
 Kako koristiti gui

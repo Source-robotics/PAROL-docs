@@ -1,5 +1,7 @@
 # Peripherals
 
+PAROL6 control board has multiple ways to interact with outside world. Communication with high level code running on a PC is done with USB, but on top of that you can use other features like I/O or CAN to communicata.
+
 <p align="center">
 <img src="../assets/IMG1.png" alt="drawing" width="900"/>
 </p>
