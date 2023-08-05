@@ -1,5 +1,4 @@
-# About PAROL6
-
+ 
 
 ## Robot specifications
 
