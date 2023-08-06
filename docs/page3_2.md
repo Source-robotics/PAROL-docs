@@ -55,4 +55,11 @@ That means your estop for that joint is not working and you need to check your w
 * Congrats you have a functional PAROL6 robot to work with!
 
 
+## Maintenance
+
+### Belts
+
+### Couplers and threadlocker
+
+
 ## Complete step by step guide!

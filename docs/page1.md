@@ -1,6 +1,5 @@
  
-
-## Robot specifications
+# Robot specifications
 
 * Payload: 1 Kg
 * Weight: 5.5 Kg
