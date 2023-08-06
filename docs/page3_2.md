@@ -59,7 +59,19 @@ That means your estop for that joint is not working and you need to check your w
 
 ### Belts
 
+We recommend to periodically check your belt tension and apply greese to the belts. If you see that the belt is not tight enough place another tension bearing as shown in the pictures. 
+
+Belts are located on Joints: 1,3,4,5
+
+<p align="center">
+<img src="../assets/belt1.jpg" alt="drawing" width="800"/> <br />
+</p>
+<p align="center">
+<img src="../assets/belt2.jpg" alt="drawing" width="800"/> <br />
+</p>
+<p align="center">
+<img src="../assets/belt3.jpg" alt="drawing" width="800"/> <br />
+</p>
+
 ### Couplers and threadlocker
 
-
-## Complete step by step guide!

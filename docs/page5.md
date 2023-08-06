@@ -37,7 +37,13 @@ By following the connections as shown on image below all inputs and outputs will
 
 ### Examples of input connections
 
+Inputs can be limit switches, push buttons, Sensors...
+For limit switch connect one end of the switch to HV_SEL and another one to IN1 or IN2.
+
 ### Examples of output connections
+
+Outputs can be releys, lamps, low power actuators...
+For releys connect one end to GND_SEL and another to OUT1 or OUT2.
 
 ## CAN bus
 

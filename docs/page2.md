@@ -1,6 +1,6 @@
 # General concepts
 
-General stuff kao axes, limits, joint space cart space, jedinice ...
+Here you can find knowledge that is usefull to have when operating and working with robotic arms. 
 
 ## Basic theory
 ### Units 
