@@ -25,6 +25,13 @@ PAROL6 requires 3 connections for normal operation.
 
 * ESTOP -> Marked with yellow and pink squares
 
+
+## Code upload
+
+When uploading code to the PAROL6 controller board TURN OFF the 24V power supply of the robot. When uploading code to PAROL6 controller board it receives 3v3 from stlink device. This keeps the robot constantly ON and blocks the shutdown of the robot with a powerbutton located on the base. <br />
+After the code is uploaded disconnect the stlink, turn on the robot with power button located on the base and then run the PAROL6 commander software.
+
+
 ## Safe shutdown
 
 !!! Danger annotate "Do not try to power off the robot when it is running!"

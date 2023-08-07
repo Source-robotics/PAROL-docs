@@ -9,18 +9,28 @@
     **Expect this document to change on weekly basis.**
 
 ## Project links
-For building instructions visit: [Link](https://www.mkdocs.org)<br />
-All project files are on Github: [Link](https://www.mkdocs.org)<br />
-For Discord community visit: [Link](https://www.mkdocs.org)<br />
-For official forum visit: [Link](https://www.mkdocs.org)<br />
-See more of our robots on [Youtube](https://www.mkdocs.org) and [Instagram](https://www.mkdocs.org)
+For building instructions visit: [Link](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm)<br />
+All project files are on Github: [Link](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm)<br />
+PAROL commander software on Github: [Link](https://github.com/PCrnjak/PAROL-commander-software)<br />
+For Discord community visit: [Link](https://discord.gg/prjUvjmGpZ)<br />
+For official forum visit: [Link](https://github.com/Source-robotics/Discussions/discussions)<br />
+See more of our robots on [Youtube](https://www.youtube.com/channel/UCp3sDRwVkbm7b2M-2qwf5aQ), [Instagram](https://www.instagram.com/5arcrnjak/), [Twitter(X)](https://twitter.com/SourceRobotics)
 
 ## Documentation layout
 
-    mkdocs.yml    # The configuration file.
+    
     docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+        Home                    # Homepage of the project.
+        About PAROL6            # Robot specifications, limits and.features
+        General concepts        # General robotics concepts and theory.
+        PAROL6 control board    # All about control board and how to use it.
+        Getting started         # How to start using PAROL6 robot.
+        Software                # All about PAROL6 software and API.
+        Peripherals             # All about grippers, pneumatics, PLCs...
+        Safety and handling     # How to not brake your robot.
+
+
+
 
 ## Support the project!
 All the code and STL files needed to build the robot are Open source and free to all and I would like to keep it that way. Any help in terms of donations, advice, or contribution is really appreciated. Thank you!
