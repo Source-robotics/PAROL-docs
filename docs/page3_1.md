@@ -1,5 +1,23 @@
 # PAROL6 control board
 
+## Introduction
+
+## Features
+### Hardware specs
+### Operating limits
+### Expansions
+
+## Physical properties
+### Dimensions
+### Mounting
+### Cooling
+### 3D models
+
+## Physical connections
+
+## Software
+
+## PCB revision history
 To use PAROL6 robotic arm you will need PAROL6 control board. PAROL6 control board is compact robotic controller. Its dimensions are 1x2x3 mm, that is little bigger then pack of playing cards. It allows PAROL6 to be really compact robot without the need of control cabinet that are usually the size of the whole robot. 
 
 Some of the features of control board:
