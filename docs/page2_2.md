@@ -38,12 +38,13 @@ Dimensions using default pneumatic gripper!
 
 |      |         |
 | ----------- | ------------------------------------ |
-| a1       | :material-check:     Fetch resource  | 
-| a2      | :material-check-all: Update resource | 
-| a3    | :material-close:     Delete resource |
-| a4       | :material-check:     Fetch resource  | 
-| a5       | :material-check-all: Update resource | 
-| a6    | :material-close:     Delete resource |
+| a1       |  110.50 mm | 
+| a2      | 23.42 mm | 
+| a3    | 180.00 mm |
+| a4       | 43.50 mm  | 
+| a5       | 176.35 mm| 
+| a6    | 62.8 mm|
+| a7    | 45.25 mm|
 
 !!! Note annotate "Dimensions can change!"
 
