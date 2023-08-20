@@ -57,6 +57,9 @@ There are 2 ways of anchoring the robot:
 * Using the 6 holes in the base of the robot to attach it to the surface
 * Using clamps to attach it to the edge of the table or work surface
 
+
+## Pinching points
+
 ## Transport
 
 When moving the robot grab it by the base. 
