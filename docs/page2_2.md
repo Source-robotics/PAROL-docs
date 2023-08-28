@@ -9,7 +9,7 @@
 * Degrees of freedom: 6 rotating joints
 * Material: 3D printed PETG plastic
 * Power consumption: 40W
-* Repeatability: 0.08 mm
+* Repeatability: 0.1 mm
 * Precision: 
 * Rotation range: 
 - 1 – 250 deg
@@ -54,14 +54,44 @@ Dimensions using default pneumatic gripper!
 
 ## Kinematic diagram 
 
-!!! Note annotate "TIP"
+!!! Note annotate "Dimensions can change!"
 
-    If you dont have an ESTOP you can use any NO switch!
+    For example when you change grippers or put robot on aditional base. <br />
+    If that happens you need to change your parameters in DH table, otherwise you kinematic diagram will be wrong  <br />
+    and as a result of that your Inverse kinematics and forward kinematic calculations resulting in corrupted trajectory <br />  planning and following!
+
+
+<p align="center">
+<img src="../assets/Kinematic_diagram.png" alt="drawing" width="800"/> <br />
+</p>
+
+* Digram for the robot using standard pneumatic gripper
 
 ## Denavit-Hartenberg parameters
 
 
-## Joint limits
+<p align="center">
+<img src="../assets/Joints.png" alt="drawing" width="800"/> <br />
+</p>
+
+!!! Warning annotate "Standby position"
+
+    **THIS IS THE POSITION OF THE ROBOT DEFINED BY THE DH TABLE BELOW!** <br />
+    ** This position is also called standby positon! ** <br />
+    ** In this position joint angles are as follows: ** <br />
+    ** Joint 1 -> 0 degress **  <br />
+    ** Joint 2 -> -90 degress **  <br />
+    ** Joint 3 -> 180 degrees ** <br />
+    ** Joint 4 -> 0 degrees ** <br />
+    ** Joint 5 -> 0 degrees ** <br />
+    ** Joint 6 -> 180 degrees ** <br />
+
+
+<p align="center">
+<img src="../assets/DH_table.png" alt="drawing" width="800"/> <br />
+</p>
+
+## Joint reduction ratios and microstepping 
 
 Reduction ratios for each joint are as follows:
 
@@ -74,25 +104,29 @@ Reduction ratios for each joint are as follows:
 
 Robot uses stepper motors. Microstepping is on all motors equal to 32. <br />
 With 32 microstepping regular 200 steps per revolution stepper motor needs 6400 steps for one revolution.
-For example limits of J2 are at -xx and xx. degree.
-Joint limits are defined in degrees and steps. 
 
+## Joint limits
 
 !!! Note annotate "TIP"
 
-    If you dont have an ESTOP you can use any NO switch!
+    Joint limits can change depending on type of gripper or base!  <br />
+    When using the robot make sure you use proper joint limits for your aplicaiton!  <br />
+
+Robot joint positive rotations are in the directions shown on the image!
 
 <p align="center">
 <img src="../assets/rotations1.png" alt="drawing" width="800"/> <br />
 </p>
 
-Standby position is also defined in DH table above. 
+!!! Note annotate "TIP"
+
+    Values are in degrees!
 
 | Joint      | Limit in negative direction        | Standby position| Limit in positive direction |
 | ----------- | ------------------------------------ | -- | ------------------------------------ |
-| J1       | :material-check:     Fetch resource  | -- | ---- |
-| J2       | :material-check-all: Update resource | -- | ---- |
-| J3    | :material-close:     Delete resource | -- | ---- |
-| J4       | :material-check:     Fetch resource  | -- | ---- |
-| J5       | :material-check-all: Update resource | -- | ---- |
-| J6    | :material-close:     Delete resource | -- | ---- |
+| J1       | -123.046875 | 0 | 123.046875 |
+| J2       | 145.0088 | -90 | -3.375 |
+| J3    | 107.866     | 180 | 287.8675 |
+| J4       | -105.46975 | 0 | 105.46975|
+| J5       | -90 | 0 |90 |
+| J6    | 0 | 180 | 360 |
