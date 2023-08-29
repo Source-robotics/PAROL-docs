@@ -60,9 +60,16 @@ There are 2 ways of anchoring the robot:
 
 ## Pinching points
 
+<p align="center">
+<img src="../assets/pinch_points.png" alt="drawing" width="900"/>
+</p>
+
+
 ## Transport
 
-When moving the robot grab it by the base. 
+When moving the robot it is best to move joints 2 and 3 to the limit switches. After that grab the robot by the base and you can carry it around.
+
+When packing the robot it is recommended to put some kind of sponge or styrofoam under J3 limit switch. After that you can tape around forearm and upper arm links.
 
 ## ESTOP
 

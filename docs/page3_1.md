@@ -35,29 +35,7 @@ To use PAROL6 robotic arm you will need a PAROL6 control board. The PAROL6 contr
 | Connection for smart power button   | 45.25 mm|
 
 
-
-TMC5160
-* Silent control of 6 stepper motors
-* Ability to adjust current, microstepping and more thru SPI!
-* Can connect up to 6 limit switches or sensors.
-* 1 x USB port and 2 x CAN bus
-* 2 isolated Inputs
-* 2 isolated Outputs
-* Flash memory for saving programs and running them without external PC
-* Connector for Power button
-* Connector for Cooling fan
-* Dedicated port for ESTOP
-
-
 ### Operating limits
-
-* Power supply
-* Stepper drivers
-* Temperature
-* Inputs 
-* Outputs
-* Fuse
-* Cooling fan
 
 |      |         |
 | ----------- | ------------------------------------ |
@@ -142,65 +120,73 @@ Link to PDF schematic!
 
 ### Pin definitions
 
-        #define PUL1 PC6 ---> 
-        #define PUL2 PA10 -->
-        #define PUL3 PC0 
-        #define PUL4 PC3 
-        #define PUL5 PC9 
-        #define PUL6 PC5 
+!!! Note annotate "TIP"
 
-        #define DIR1 PB15 
-        #define DIR2 PA1 
-        #define DIR3 PC1 
-        #define DIR4 PA0 
-        #define DIR5 PA8 
-        #define DIR6 PB1 
+    Even tho pins are named PUL1-PUL6 that does not mean they are <br />
+    connected to that joint of the robot! Follow the connection plan below for <br />
+    real connections! <br />
 
-        #define LIMIT1 PC12 
-        #define LIMIT2 PB3 
-        #define LIMIT3 PA15 
-        #define LIMIT4 PD2 
-        #define LIMIT5 PB4 
-        #define LIMIT6 PC11 
+Connections:
 
-        #define SELECT1 PC7 
-        #define SELECT2 PA9
-        #define SELECT3 PC15
-        #define SELECT4 PC2
-        #define SELECT5 PC8
-        #define SELECT6 PC4
+        #define PUL1 PC6 ---> Controls Joint 1, PULS pin of stepper driver
+        #define PUL2 PA10 --> Controls Joint 5, PULS pin of stepper driver
+        #define PUL3 PC0 ---> Controls Joint 6, PULS pin of stepper driver
+        #define PUL4 PC3 ---> Controls Joint 4, PULS pin of stepper driver
+        #define PUL5 PC9 ---> Controls Joint 3, PULS pin of stepper driver
+        #define PUL6 PC5 ---> Controls Joint 2, PULS pin of stepper driver
 
-        #define GLOBAL_ENABLE PA3
+        #define DIR1 PB15 --> Controls Joint 1, DIR pin of stepper driver
+        #define DIR2 PA1 ---> Controls Joint 5, DIR pin of stepper driver
+        #define DIR3 PC1 ---> Controls Joint 6, DIR pin of stepper driver
+        #define DIR4 PA0 ---> Controls Joint 4, DIR pin of stepper driver
+        #define DIR5 PA8 ---> Controls Joint 3, DIR pin of stepper driver
+        #define DIR6 PB1 ---> Controls Joint 2, DIR pin of stepper driver
 
-        #define MISO PA6
-        #define MOSI PA7
-        #define SCK PA5
-        #define FLASH_SELECT PA4
+        #define LIMIT1 PC12 ---> Connected to Limit 1 on PAROL6 control board
+        #define LIMIT2 PB3  ---> Connected to Limit 2 on PAROL6 control board
+        #define LIMIT3 PA15 ---> Connected to Limit 3 on PAROL6 control board
+        #define LIMIT4 PD2  ---> Connected to Limit 4 on PAROL6 control board
+        #define LIMIT5 PB4  ---> Connected to Limit 5 on PAROL6 control board
+        #define LIMIT6 PC11 ---> Connected to Limit 6 on PAROL6 control board
 
-        #define LED1 PB2
-        #define LED2 PB10
+        #define SELECT1 PC7  ---> Controls Joint 1, Select pin of stepper driver
+        #define SELECT2 PA9  ---> Controls Joint 5, Select pin of stepper driver
+        #define SELECT3 PC15 ---> Controls Joint 6, Select pin of stepper driver
+        #define SELECT4 PC2  ---> Controls Joint 4, Select pin of stepper driver
+        #define SELECT5 PC8  ---> Controls Joint 3, Select pin of stepper driver
+        #define SELECT6 PC4  ---> Controls Joint 2, Select pin of stepper driver
 
-        #define SUPPLY_ON_OFF PC10
-        #define SUPPLY_BUTTON_STATE PC14
+        #define GLOBAL_ENABLE PA3  --> Connected to ENABLE pins of all stepper drivers.
 
-        #define INPUT1 PB6
-        #define INPUT2 PB5
+        #define MISO PA6    --> SPI MISO; connected to all 6 stepper drivers and flash memory
+        #define MOSI PA7    --> SPI MOSI; connected to all 6 stepper drivers and flash memory
+        #define SCK PA5     --> SPI SCK; connected to all 6 stepper drivers and flash memory
+        #define FLASH_SELECT PA4 --> Chip select pin of the flash memory
 
-        #define OUTPUT1 PC13
-        #define OUTPUT2 PB7
+        #define LED1 PB2  --> LED1 on PCB
+        #define LED2 PB10 --> LED2 on PCB
 
-        #define ESTOP PB14
+        #define SUPPLY_ON_OFF PC10 --> Connected to power button connector, turns on/off power fet
+        #define SUPPLY_BUTTON_STATE PC14  --> Connected to power button connector, reads state of the button
 
-        #define VBUS PB0  // ADC1 CHANNEL 8
+        #define INPUT1 PB6      --> Connected to IN1 pins on the side of the board
+        #define INPUT2 PB5      --> Connected to IN2 pins on the side of the board
 
-        #define USB_D_PLUS  PA12 
-        #define USB_D_MINUS PA11 
+        #define OUTPUT1 PC13    --> Connected to OUT2 pins on the side of the board
+        #define OUTPUT2 PB7     --> Connected to OUT2 pins on the side of the board
 
-        #define CAN1TX PB9
-        #define CAN1RX PB8
+        #define ESTOP PB14 --> Connected to ESTOP pins on the side of the board
 
-        #define CAN1TX PB13
-        #define CAN1RX PB12
+        #define VBUS PB0   --> Reads voltage of the power supply voltage
+
+        #define USB_D_PLUS  PA12 --> USB pins
+        #define USB_D_MINUS PA11 --> USB pins
+
+        #define CAN1TX PB9      --> CAN channel 1
+        #define CAN1RX PB8      --> CAN channel 1
+
+        #define CAN2TX PB13     --> CAN channel 2
+        #define CAN2RX PB12     --> CAN channel 2
 
 
 

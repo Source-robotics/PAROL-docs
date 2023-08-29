@@ -50,7 +50,7 @@ Dimensions using default pneumatic gripper!
 
     For example when you change grippers or put robot on aditional base. <br />
     If that happens you need to change your parameters in DH table, otherwise you kinematic diagram will be wrong  <br />
-    and as a result of that your Inverse kinematics and forward kinematic calculations resulting in corrupted trajectory <br />  planning and following!
+
 
 ## Kinematic diagram 
 
@@ -58,7 +58,6 @@ Dimensions using default pneumatic gripper!
 
     For example when you change grippers or put robot on aditional base. <br />
     If that happens you need to change your parameters in DH table, otherwise you kinematic diagram will be wrong  <br />
-    and as a result of that your Inverse kinematics and forward kinematic calculations resulting in corrupted trajectory <br />  planning and following!
 
 
 <p align="center">
