@@ -8,11 +8,9 @@ If you decide to build it or buy a kit you will need to follow the assembly manu
 Assembly manual is also great tool for reparing and upgrading your robot. Make sure you use the latest version of the manual. <br />
 Version is marked on the first page in the bottom left corner.
 
-
 <p align="center">
 <img src="../assets/manual.png" alt="drawing" width="800"/> <br />
 </p>
-
 
 ## Powering on 
 
