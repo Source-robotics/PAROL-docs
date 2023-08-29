@@ -3,11 +3,59 @@
 ## Assembly manual
 
 Assembly manual is located in [Github](https://www.mkdocs.org) repository. <br />
-Of course to use the robot you will have to build/buy it. If you decide to build it or buy a kit you will need to follow the assembly manual to make it. Assembly manual is also great tool for reparing and upgrading your robot. Make sure you use the latest version of the manual. Version is marked on the first page in the bottom left corner.
+Of course to use the robot you will have to build/buy it.  <br />
+If you decide to build it or buy a kit you will need to follow the assembly manual to make it.  <br />
+Assembly manual is also great tool for reparing and upgrading your robot. Make sure you use the latest version of the manual. <br />
+Version is marked on the first page in the bottom left corner.
 
 <p align="center">
 <img src="../assets/manual.png" alt="drawing" width="800"/> <br />
 </p>
+
+## Powering on 
+
+<p align="center">
+<img src="../assets/Connectors.png" alt="drawing" width="900"/>
+</p>
+
+PAROL6 requires 3 connections for normal operation.
+
+* Power connection -> Marked green on image
+
+* USB connection -> Marked blue on image
+
+* ESTOP -> Marked with yellow and pink squares
+
+First connect power cable (marked green). After that you can turn robot on and off by pressing power button (marked red).
+
+## Powering off
+
+!!! Danger annotate "Do not try to power off the robot when it is running!"
+
+    ** If robot start to behave unexpectedly USE ESTOP.** <br />
+    ** If ESTOP is not functional power of the supply.**<br />
+    ** Reaching for the power button should be the last option.**
+
+Because lack of brakes sudden loss of power will result in robot falling down. That may cause damage to the robot or the operator.
+Robot is powered on and off by pressing a button marked red on the image. When powering the robot on even when USB connection is not available it will energise the
+the motors. It will produce 6 clicking sounds and that is normal behaviour.<br />
+
+Powering off the robot is also done by pressing button marked in RED. Before you power off the robot **GRAB IT BY THE FOREARM** and then press the button. This will ensure that robot does not fall down. **THESE STEPS ARE MANDATORY** Failing to do so will damage your robot!
+
+
+## Installing PAROL6 commander software
+
+Commander software can be located in [Github](https://github.com/PCrnjak/PAROL-commander-software) repository. <br />
+Some prerequisites you will need to have are: <br />
+
+* python <br />
+* pip3 <br />
+
+Commander software was tested on machines with these specifications: <br />
+
+* Windows 10, Ryzen 5, 32gb ram, Nvidia 3060  <br />
+* Windows 10,  <br />
+
 
 ## PAROL6 control board 
 

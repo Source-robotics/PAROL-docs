@@ -1,36 +1,231 @@
 # PAROL6 control board
 
-To use PAROL6 robotic arm you will need PAROL6 control board. PAROL6 control board is compact robotic controller. Its dimensions are 1x2x3 mm, that is little bigger then pack of playing cards. It allows PAROL6 to be really compact robot without the need of control cabinet that are usually the size of the whole robot. 
-
-Some of the features of control board:
-
-* Silent control of 6 stepper motors
-* Ability to adjust current, microstepping and more thru SPI!
-* Can connect up to 6 limit switches or sensors.
-* 1 x USB port and 2 x CAN bus
-* 2 isolated Inputs
-* 2 isolated Outputs
-* Flash memory for saving programs and running them without external PC
-* Connector for Power button
-* Connector for Cooling fan
-* Dedicated port for ESTOP
-
 <p align="center">
 <img src="../assets/PAROL6_board.png" alt="drawing" width="800"/> <br />
 </p>
 
-## How to upload code
+## Introduction
 
-Microcontroller on PAROL6 control board is STM32F446RE. To upload code you need to use STlink device and connect it dedicated CLK, SWDIO, 3V3 and GND pins. You can use jumper cables or dedicated stlink + cable assembly.
+The PAROL6 control board is the advanced 32-bit controller for 6 AXES robotic arms like PAROL6. It works out of the box with PAROL6 and PAROL6 commander software.
+
+To use PAROL6 robotic arm you will need a PAROL6 control board. The PAROL6 control board is a compact robotic controller. It is by size a little bigger than a pack of playing cards. It allows PAROL6 to be a really small and portable robot without the need for a control cabinet that is usually the size of the whole robot.
+
+## Features
+
+<p align="center">
+<img src="../assets/Features.png" alt="drawing" width="800"/> <br />
+</p>
+
+### Hardware specs
 
 
-## Wiring
+|      |         |
+| ----------- | ------------------------------------ |
+| Processor       |  110.50 mm | 
+| Processor features      | 23.42 mm | 
+| Communication interfaces    | 180.00 mm |
+| Stepper drivers       | 43.50 mm  | 
+| Stepper drivers features       | 176.35 mm| 
+| Inputs    | 62.8 mm|
+| Ouputs    | 45.25 mm|
+| Estop input    | 62.8 mm|
+| AdDitional memory    | 45.25 mm|
+| Programming  interface | JTAG |
+| Cooling fan connection  | 62.8 mm|
+| Connection for smart power button   | 45.25 mm|
+
+
+### Operating limits
+
+|      |         |
+| ----------- | ------------------------------------ |
+| Power supply       |  18V minimal, 24V maximal voltage | 
+| Stepper drivers      | Rated current 2.5A, maximal current 3.6A (Short burst or extreme cooling) | 
+| Temperature    | xx stepper driver temperature warrning, xx temperature error |
+| Isolated Inputs voltage       | 24V nominal voltage, min 12V max 50V  | 
+| Isolated Outputs voltage      | 176.35 mm| 
+| Isolated Inputs current       | 24V nominal voltage, min 12V max 50V  | 
+| Isolated Outputs current      | 176.35 mm| 
+| Fuse    | Fuse is used for outputs if used in NON ISOLATED MOD; 2A fuse|
+| Cooling fan   | Maximal allowed current draw for cooling fan is 0.3A |
+
+
+## Physical properties
+
+### Dimensions
+
+!!! note
+
+    ** Dimensions are in milimeters! **<br />
+
+<p align="center">
+<img src="../assets/PCB_dimensions.png" alt="drawing" width="800"/> <br />
+</p>
+
+
+### Mounting
+
+3 Holes located on PAROL6 control board are used to mount the PCB. Use M3 screws!
+
+### Cooling
+
+Stepper drivers need cooling. It can be done with nocuta fan or any other 5V tolerant fan that fits the robot. In case of PAROL6 the fan needs to be of these dimensions: 40x40x20
+
+Keep fan current draw around 0.1 A.
+Do not go over 0.3 A.
+
+### 3D models
+
+
+## Connections
+
+### Connectors
+
+* 24 power connector on PAROL6 control board is XT30 MALE connector. 
+
+* Connector for cooling fan on PAROL6 control is 
+
+* Connector for power on/off button on PAROL6 control is 
+
+* Connector for USB on PAROL6 control is USB female type B
+
+
+
+### Schematic
+
+!!! note
+
+    ** View schematic in PDF view. Images are hard to read! **<br />
+
+Link to PDF schematic!
+
+<p align="center">
+<img src="../assets/Scheamtic_main.png" alt="drawing" width="2000"/> <br />
+</p>
+
+<p align="center">
+<img src="../assets/Input_output_schematic.png" alt="drawing" width="2000"/> <br />
+</p>
+
+<p align="center">
+<img src="../assets/Stepper_drivers_schematic.png" alt="drawing" width="2000"/> <br />
+</p>
+
+### Pin connections
 
 <p align="center">
 <img src="../assets/CONTROLLER.png" alt="drawing" width="800"/> <br />
 </p>
 
-Follow the image on top for wiring your PAROL6 robot to the control board. To connect wires to phoenix contacts we recommend using small tweezers. 
+
+### Pin definitions
+
+!!! Note annotate "TIP"
+
+    Even tho pins are named PUL1-PUL6 that does not mean they are <br />
+    connected to that joint of the robot! Follow the connection plan below for <br />
+    real connections! <br />
+
+Connections:
+
+        #define PUL1 PC6 ---> Controls Joint 1, PULS pin of stepper driver
+        #define PUL2 PA10 --> Controls Joint 5, PULS pin of stepper driver
+        #define PUL3 PC0 ---> Controls Joint 6, PULS pin of stepper driver
+        #define PUL4 PC3 ---> Controls Joint 4, PULS pin of stepper driver
+        #define PUL5 PC9 ---> Controls Joint 3, PULS pin of stepper driver
+        #define PUL6 PC5 ---> Controls Joint 2, PULS pin of stepper driver
+
+        #define DIR1 PB15 --> Controls Joint 1, DIR pin of stepper driver
+        #define DIR2 PA1 ---> Controls Joint 5, DIR pin of stepper driver
+        #define DIR3 PC1 ---> Controls Joint 6, DIR pin of stepper driver
+        #define DIR4 PA0 ---> Controls Joint 4, DIR pin of stepper driver
+        #define DIR5 PA8 ---> Controls Joint 3, DIR pin of stepper driver
+        #define DIR6 PB1 ---> Controls Joint 2, DIR pin of stepper driver
+
+        #define LIMIT1 PC12 ---> Connected to Limit 1 on PAROL6 control board
+        #define LIMIT2 PB3  ---> Connected to Limit 2 on PAROL6 control board
+        #define LIMIT3 PA15 ---> Connected to Limit 3 on PAROL6 control board
+        #define LIMIT4 PD2  ---> Connected to Limit 4 on PAROL6 control board
+        #define LIMIT5 PB4  ---> Connected to Limit 5 on PAROL6 control board
+        #define LIMIT6 PC11 ---> Connected to Limit 6 on PAROL6 control board
+
+        #define SELECT1 PC7  ---> Controls Joint 1, Select pin of stepper driver
+        #define SELECT2 PA9  ---> Controls Joint 5, Select pin of stepper driver
+        #define SELECT3 PC15 ---> Controls Joint 6, Select pin of stepper driver
+        #define SELECT4 PC2  ---> Controls Joint 4, Select pin of stepper driver
+        #define SELECT5 PC8  ---> Controls Joint 3, Select pin of stepper driver
+        #define SELECT6 PC4  ---> Controls Joint 2, Select pin of stepper driver
+
+        #define GLOBAL_ENABLE PA3  --> Connected to ENABLE pins of all stepper drivers.
+
+        #define MISO PA6    --> SPI MISO; connected to all 6 stepper drivers and flash memory
+        #define MOSI PA7    --> SPI MOSI; connected to all 6 stepper drivers and flash memory
+        #define SCK PA5     --> SPI SCK; connected to all 6 stepper drivers and flash memory
+        #define FLASH_SELECT PA4 --> Chip select pin of the flash memory
+
+        #define LED1 PB2  --> LED1 on PCB
+        #define LED2 PB10 --> LED2 on PCB
+
+        #define SUPPLY_ON_OFF PC10 --> Connected to power button connector, turns on/off power fet
+        #define SUPPLY_BUTTON_STATE PC14  --> Connected to power button connector, reads state of the button
+
+        #define INPUT1 PB6      --> Connected to IN1 pins on the side of the board
+        #define INPUT2 PB5      --> Connected to IN2 pins on the side of the board
+
+        #define OUTPUT1 PC13    --> Connected to OUT2 pins on the side of the board
+        #define OUTPUT2 PB7     --> Connected to OUT2 pins on the side of the board
+
+        #define ESTOP PB14 --> Connected to ESTOP pins on the side of the board
+
+        #define VBUS PB0   --> Reads voltage of the power supply voltage
+
+        #define USB_D_PLUS  PA12 --> USB pins
+        #define USB_D_MINUS PA11 --> USB pins
+
+        #define CAN1TX PB9      --> CAN channel 1
+        #define CAN1RX PB8      --> CAN channel 1
+
+        #define CAN2TX PB13     --> CAN channel 2
+        #define CAN2RX PB12     --> CAN channel 2
+
+
+
+### Stepper driver orientation
+
+!!! Danger
+
+    ** Only use step sticks that are verified in this document! **<br />
+    ** Failing to do so will destroy your PAROL6 control board! **<br />
+
+Stepper drivers need to be placed with respect to this diagram to the PAROL6 control board!<br />
+Stepper drivers orientation can be recognised by 2 diagnostic pins!
+
+<p align="center">
+<img src="../assets/step_stick.png" alt="drawing" width="800"/> <br />
+</p>
+
+
+## How to upload code
+
+Microcontroller on PAROL6 control board is STM32F446RE. To upload code you need to use STlink device and connect it dedicated CLK, SWDIO, 3V3 and GND pins. You can use jumper cables or dedicated stlink + cable assembly.
+
+## Getting connected
+
+
+## Wiring PAROL6 control board
+
+
+## Software
+
+
+### PAROL6 control software structure
+
+### API
+
+### Firmware configuration
+
+
+## PCB revision history
 
 
 After sucesssful wiring of the robot it should look something like this. 
@@ -39,12 +234,5 @@ After sucesssful wiring of the robot it should look something like this.
 <img src="../assets/control_board.jpg" alt="drawing" width="800"/> <br />
 </p>
 
-## Stepper drivers orientation
-
-!!! Danger annotate "DANGER"
-
-    **Failing to follow this WILL result in destruction of your PAROL6 control board** <br />
-    
 
 
-## Schematic
