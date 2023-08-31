@@ -4,7 +4,13 @@ The PAROL6 robotic arm serves as an exceptional tool for educators aiming to enh
 
 The Theory Corner is designed to provide comprehensive explanations of essential robotic concepts. Whether you're a newcomer to robotics or a seasoned enthusiast, this section offers insights into topics such as kinematics, dynamics, control systems, sensors, programming languages, and more. 
 
+## Want to know more? 
+
+Here is a listo of great resources that you can use to learn more about robotics:
+
+
 ## Basic theory
+
 ### Units 
 
 There is a lot of conversion of units in robotics and PAROL6 is not an exception to that. To keep things simple and accurate we compiled where these conversions happen, why and how.
@@ -12,13 +18,31 @@ There is a lot of conversion of units in robotics and PAROL6 is not an exception
 
 ### Joints and naming
 
+Joint are numbered from bottom to the top of the arm. In case of PAROL6 it follows naming on the Figure 1.
+
 <p align="center">
 <img src="../assets/Joints.png" alt="drawing" width="800"/> <br />
 </p>
 
+                        Figure 1: Robot joint naming
+
 ### Rules and convenctions
 
-### Right hand rule for axes
+#### Right hand rule for axes
+
+The right-hand rule is a convention used to define the orientation of coordinate systems in three-dimensional space. It provides a consistent way to determine the positive directions of the axes (x, y, and z) in relation to each other.
+
+Here's how the right-hand rule works when assigning coordinate systems:
+
+* Thumb: Align your right thumb along the positive direction of the first axis (usually the x-axis). This is the axis that typically points to the right.
+
+* Index Finger: Extend your right index finger perpendicular to your thumb. This represents the positive direction of the second axis (usually the y-axis), which is often considered the "up" direction.
+
+* Middle Finger: Orient your right middle finger so that it is also perpendicular to your thumb and index finger. The middle finger represents the positive direction of the third axis (usually the z-axis), forming a right-handed coordinate system.
+
+With your hand in this configuration, the three fingers (thumb, index finger, and middle finger) define the positive directions of the x, y, and z axes, respectively. This right-hand rule establishes a consistent standard for defining coordinate systems in three-dimensional space.
+
+For rotation; orient your thumb in positive direction of axes you want to see positive rotation for. Your fingers now curl in the positive direction of rotation around that axis.
 
 
 
@@ -51,6 +75,7 @@ The first 3 axes are used to position the end effector in cartesian space while 
 <img src="../assets/spherical.png" alt="drawing" width="800"/> <br />
 </p>
 
+    	                Figure 2: left robot with spherical wrist, right robot without spherical wrist
 
 ### Orientation 
 
@@ -61,8 +86,7 @@ The advantage of robot arms of this type is that they can get to the same positi
 <img src="../assets/orientations.png" alt="drawing" width="800"/> <br />
 </p>
 
-
-### Robot dimensions
+                        Figure 3: Same position in space different orientation
 
 ### Frames
 
@@ -70,8 +94,21 @@ Coordinate frames or axes are often included at each joint to show the orientati
 
 #### WRF 
 
+World reference frame
+This is a static frame that is fixed in real world. It is usually located in the base of the robot. 
+For PAROL6 it is located in the base. See figure xx. Coordinate frame represents world frame.
+
 
 #### TRF
+
+TRF - Tool reference frame
+Reference frame that is associated to robots end-effector. This frame changes depending on what end effector you use. 
+
+<p align="center">
+<img src="../assets/real_frame.jpg" alt="drawing" width="800"/> <br />
+</p>
+
+                        Figure 4: Robot with TRF 
 
 ### Links
 
@@ -84,9 +121,7 @@ The joints represent the articulation points where motion occurs. These can incl
 
 #### Joint limits
 
-### Degrees of freedom
 
-#### Aditional axes
 
 ### Kinematic diagram
 
@@ -103,10 +138,11 @@ Denavit-Hartenberg parameters are a set of standardized parameters used to descr
 
 The Denavit-Hartenberg parameters consist of four values associated with each joint of a robotic arm:
 
-Link Length (a): The distance between the common normal (perpendicular) to the current and next joint axes, measured along the previous joint axis.
-Link Twist (α): The angle between the common normal of the current and next joint axes, measured along the previous joint axis.
-Link Offset (d): The distance between the joint axes along the common normal, measured along the current joint axis.
-Joint Angle (θ): The angle of rotation or translation about the current joint axis to align the coordinate frames.
+* Link Length (a): The distance between the common normal (perpendicular) to the current and next joint axes, measured along the previous joint axis.
+* Link Twist (α): The angle between the common normal of the current and next joint axes, measured along the previous joint axis.
+* Link Offset (d): The distance between the joint axes along the common normal, measured along the current joint axis.
+* Joint Angle (θ): The angle of rotation or translation about the current joint axis to align the coordinate frames.
+
 These parameters are defined for each pair of consecutive joints in the robot's kinematic chain. By applying a sequence of transformations using these parameters, you can calculate the overall transformation matrix that represents the position and orientation of each link relative to a reference frame.
 
 The Denavit-Hartenberg parameters provide a consistent and concise way to model and analyze the kinematics of complex robotic systems, making them a widely used approach in robot design, control, and simulation.
@@ -125,6 +161,9 @@ Great resources on how to build your robot using DH parameters:
 
 ### Forward kinematics
 
+Forward kinematics is a fundamental concept in robotics that involves determining the position and orientation of a robot's end effector (such as a gripper or tool) based on the known joint angles and link parameters. In simpler terms, it's the process of calculating the robot's pose (position and orientation) in space given the joint configurations.
+
+The forward kinematics problem is about understanding how the robot's various joints and links combine to determine the position and orientation of the end effector. It's like tracing the path of the robot's movements to find out where its hand or tool ends up.
 
 ### Inverse kinematics
 
@@ -136,8 +175,33 @@ Inverse kinematics can be quite complex, especially for robots with multiple joi
 
 Inverse kinematics is crucial for tasks such as trajectory planning, motion control, and object manipulation, as it allows the robot to determine how to move its joints to achieve a specific goal in its operational environment. It's used in applications ranging from industrial robotics and automation to animation and simulation.
 
+
+### Task planning
+### Path planning
+### Trahjectory planning
+### Trajectory following
 ### Joint space
+
+
+
 ### Cartesian space
+
+<p align="center">
+<img src="../assets/CART_X.png" alt="drawing" width="800"/> <br />
+</p>
+
+<p align="center">
+<img src="../assets/CART_Y.png" alt="drawing" width="800"/> <br />
+</p>
+
+<p align="center">
+<img src="../assets/CART_Z.png" alt="drawing" width="800"/> <br />
+</p>
+
+<p align="center">
+<img src="../assets/JOINT_POST_CART.png" alt="drawing" width="800"/> <br />
+</p>
+
 ### Jacobian
 ### 3D representation
 ### Singularity
@@ -148,7 +212,45 @@ Inverse kinematics is crucial for tasks such as trajectory planning, motion cont
 ### Torque control
 ### Blends
 ### Trajectory
+
+#### Trapezoidal velocity profile 
+
+<p align="center">
+<img src="../assets/TRAP_position.png" alt="drawing" width="800"/> <br />
+</p>
+
+<p align="center">
+<img src="../assets/TRAP_speed.png" alt="drawing" width="800"/> <br />
+</p>
+
+<p align="center">
+<img src="../assets/TRAP_acc.png" alt="drawing" width="800"/> <br />
+</p>
+
+#### Polynomial velocity profile
+
+A quintic (5th order) polynomial is used with default zero boundary conditions for velocity and acceleration. 
+Zero boundary conditions mean that  typically means that you assume 
+that the velocity and acceleration are zero at the endpoints of the interval being interpolated. 
+This assumption is often used when constructing interpolating polynomials for motion or 
+physical systems where you want to ensure that the motion starts and ends from rest (zero velocity and acceleration).
+
+<p align="center">
+<img src="../assets/JTRAJ_position.png" alt="drawing" width="800"/> <br />
+</p>
+
+<p align="center">
+<img src="../assets/JTRAJ_speed.png" alt="drawing" width="800"/> <br />
+</p>
+
+<p align="center">
+<img src="../assets/JTRAJ_acc.png" alt="drawing" width="800"/> <br />
+</p>
+
 ### Mastering the robot
+### Open loop control
+### Closed loop control
+### Stepper motors
 ### Encoders
 ### PID loops
 ### Homing
