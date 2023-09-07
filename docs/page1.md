@@ -8,6 +8,10 @@ The Theory Corner is designed to provide comprehensive explanations of essential
 
 Here is a listo of great resources that you can use to learn more about robotics:
 
+* [https://robotacademy.net.au/](https://robotacademy.net.au/)
+* [https://automaticaddison.com/](https://automaticaddison.com/)
+* [https://robogrok.com/](https://robogrok.com/)
+* [https://github.com/mithi/robotics-coursework](https://github.com/mithi/robotics-coursework)
 
 ## Basic theory
 
@@ -178,6 +182,7 @@ Inverse kinematics is crucial for tasks such as trajectory planning, motion cont
 
 ### Task planning
 ### Path planning
+### Resolved rate motion
 ### Trahjectory planning
 ### Trajectory following
 ### Joint space
@@ -248,11 +253,18 @@ physical systems where you want to ensure that the motion starts and ends from r
 </p>
 
 ### Mastering the robot
+### Backlash
+### Actuators
+### Machine learning
+### Communication protocols
+### Robot loop times
 ### Open loop control
 ### Closed loop control
 ### Stepper motors
 ### Encoders
 ### PID loops
 ### Homing
+### ROS 
+### Matlab
 
 
