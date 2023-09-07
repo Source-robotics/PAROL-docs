@@ -16,6 +16,7 @@
 
 ## Communication protocol
 
+The default communication method used by our robots is over USB.
 PAROL6 uses serial USB communication to talk between high and low level code. 
 
 The protocol consists of three types of commands. Active, passive and carrier. Active commands can only be given by the "command" argument and is represented by one byte. Thwt means there can only be 255 commands. Passive commands are for example io commands and gripper commands. They are always sent with the data packet. Passive commands do not affect movement of the robot joints and by that can be injected in any active command. Carrrier commands are joint speeds and positions that are modifiers for active movement commands.

@@ -1,8 +1,9 @@
 # PAROL6 control board
 
 <p align="center">
-<img src="../assets/PAROL6_board.png" alt="drawing" width="800"/> <br />
+<img src="../assets/PCB1.jpg" alt="drawing" width="1200"/> <br />
 </p>
+
 
 ## Introduction
 
