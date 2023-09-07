@@ -253,6 +253,9 @@ physical systems where you want to ensure that the motion starts and ends from r
 </p>
 
 ### Mastering the robot
+### Robot mastering
+### zero position mastering
+### Witness marks
 ### Backlash
 ### Actuators
 ### Machine learning
