@@ -27,7 +27,7 @@ See more of our robots on [Youtube](https://www.youtube.com/channel/UCp3sDRwVkbm
         Getting started         # How to start using PAROL6 robot.
         Software                # All about PAROL6 software and API.
         Peripherals             # All about grippers, pneumatics, PLCs...
-        Safety and handling     # How to not brake your robot.
+        Safety and handling     # How to not break your robot.
 
 
 
