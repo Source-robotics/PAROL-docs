@@ -104,6 +104,16 @@ Reduction ratios for each joint are as follows:
 Robot uses stepper motors. Microstepping is on all motors equal to 32. <br />
 With 32 microstepping regular 200 steps per revolution stepper motor needs 6400 steps for one revolution.
 
+
+Smallest theoretical steps with 32 microstep at the joint levels are  <br />
+(these values are after the reduction ratios!):
+* Joint 1 -> 0.00015339807878856412 RAD --> 0.0087890625 DEG
+* Joint 2 -> 4.9087385212340514e-05 RAD --> 0.0028125 DEG 
+* Joint 3 -> 5.4254478392586896e-05 RAD --> 0.0031085526315789477 DEG
+* Joint 4 -> 0.0002454369260617026 RAD  --> 0.0140625 DEG
+* Joint 5 -> 0.0002454369260617026 RAD  --> 0.0140625 DEG
+* Joint 6 -> 9.817477042468103e-05 RAD  --> 0.005625 DEG
+
 ## Joint limits
 
 !!! Note annotate "TIP"

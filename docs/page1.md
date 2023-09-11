@@ -210,6 +210,11 @@ Inverse kinematics is crucial for tasks such as trajectory planning, motion cont
 ### Jacobian
 ### 3D representation
 ### Singularity
+
+Unless you deal with a simple pick and place application you need to learnabout robot singularities and configuratios.
+Singularity is a configuration where the robot end effector loses a degree of freedom.
+When moving near singularity in cartesian mode, the robot might stop.
+
 ### Workspace
 ### Reach
 ### Velocity control
@@ -217,6 +222,13 @@ Inverse kinematics is crucial for tasks such as trajectory planning, motion cont
 ### Torque control
 ### Blends
 ### Trajectory
+
+### Optimal patch placement
+
+Optimal path placement leads to faster cycle times and larger paths
+optimal choice of configuration leaed to larger workspace
+design cell layout correctly
+a lot of trial and error.
 
 #### Trapezoidal velocity profile 
 
