@@ -15,10 +15,6 @@ Here is a listo of great resources that you can use to learn more about robotics
 
 ## Basic theory
 
-### Units 
-
-There is a lot of conversion of units in robotics and PAROL6 is not an exception to that. To keep things simple and accurate we compiled where these conversions happen, why and how.
-
 
 ### Joints and naming
 
@@ -53,20 +49,18 @@ For rotation; orient your thumb in positive direction of axes you want to see po
 
 
 
-
-
 ## Concepts
 
 ### Types of robots and number of joints
 
 There are a lot of robot types in industry. They are usually categorised by number of joints and how they are arranged. Some of the types of the robots are:
 
-    • Vertically articulated.
-    • Cartesian.
-    • Cylindrical.
-    • Polar.
-    • Selective compliance assembly robot arm (SCARA).
-    • Delta
+• Vertically articulated.
+• Cartesian.
+• Cylindrical.
+• Polar.
+• Selective compliance assembly robot arm (SCARA).
+• Delta
 
 PAROL6 is vartically articulated robot. All conecpts here apply to any type of the robot but most of the examples will be for robots like PAROL6.
 
@@ -81,7 +75,21 @@ The first 3 axes are used to position the end effector in cartesian space while 
 
     	                Figure 2: left robot with spherical wrist, right robot without spherical wrist
 
-### Orientation 
+### Robot pose
+
+In robotics, the term "pose" refers to the position and orientation of a robot in its environment. It provides a complete description of where the robot is located and how it is oriented relative to a specific coordinate system or frame of reference. The pose typically includes:
+
+ *  Position: This specifies the location of the robot in the environment. In a 2D space, this is often represented by a pair of coordinates (x, y), while in a 3D space, it includes three coordinates (x, y, z). These coordinates are usually given with respect to a fixed reference point.
+
+* Orientation: This specifies the orientation or rotation of the robot in space. In 2D, it can be represented as an angle (θ) relative to a reference direction (e.g., the x-axis). In 3D, it often uses representations like Euler angles, roll-pitch-yaw angles, or rotation matrices to describe the orientation.
+
+KAKO MI TU REPRESENTAMO ORIEJNTACIJU 
+
+The combination of position and orientation fully defines the pose of the robot at a specific moment in time.
+
+#### Orientation 
+
+KAKO MI TU REPRESENTAMO ORIEJNTACIJU 
 
 6 axes means it has 6 joints in our case 6 rotational joints. Joints are connected with links. 
 The advantage of robot arms of this type is that they can get to the same position in space with different orientations.  Both pictures show the arm at position x=0.3m, y=0.3m, and z=0.2m but as you can see orientations are different. Robot's pose in 3D space is described by the position and orientation ( rotation) of the robot's end effector in 3D space.
@@ -91,6 +99,10 @@ The advantage of robot arms of this type is that they can get to the same positi
 </p>
 
                         Figure 3: Same position in space different orientation
+
+### Positon
+
+
 
 ### Frames
 
@@ -204,12 +216,17 @@ Inverse kinematics is crucial for tasks such as trajectory planning, motion cont
 </p>
 
 <p align="center">
-<img src="../assets/JOINT_POST_CART.png" alt="drawing" width="800"/> <br />
+<img src="../assets/JOINT_POS_CART.png" alt="drawing" width="800"/> <br />
 </p>
 
 ### Jacobian
 ### 3D representation
 ### Singularity
+
+Unless you deal with a simple pick and place application you need to learnabout robot singularities and configuratios.
+Singularity is a configuration where the robot end effector loses a degree of freedom.
+When moving near singularity in cartesian mode, the robot might stop.
+
 ### Workspace
 ### Reach
 ### Velocity control
@@ -218,19 +235,19 @@ Inverse kinematics is crucial for tasks such as trajectory planning, motion cont
 ### Blends
 ### Trajectory
 
+### Optimal path placement
+
+Optimal path placement leads to faster cycle times and larger paths
+optimal choice of configuration leaed to larger workspace
+design cell layout correctly
+a lot of trial and error.
+
 #### Trapezoidal velocity profile 
 
 <p align="center">
-<img src="../assets/TRAP_position.png" alt="drawing" width="800"/> <br />
+<img src="../assets/trap.png" alt="drawing" width="2000"/> <br />
 </p>
 
-<p align="center">
-<img src="../assets/TRAP_speed.png" alt="drawing" width="800"/> <br />
-</p>
-
-<p align="center">
-<img src="../assets/TRAP_acc.png" alt="drawing" width="800"/> <br />
-</p>
 
 #### Polynomial velocity profile
 
@@ -241,16 +258,9 @@ This assumption is often used when constructing interpolating polynomials for mo
 physical systems where you want to ensure that the motion starts and ends from rest (zero velocity and acceleration).
 
 <p align="center">
-<img src="../assets/JTRAJ_position.png" alt="drawing" width="800"/> <br />
+<img src="../assets/poly.png" alt="drawing" width="2000"/> <br />
 </p>
 
-<p align="center">
-<img src="../assets/JTRAJ_speed.png" alt="drawing" width="800"/> <br />
-</p>
-
-<p align="center">
-<img src="../assets/JTRAJ_acc.png" alt="drawing" width="800"/> <br />
-</p>
 
 ### Mastering the robot
 ### Robot mastering
