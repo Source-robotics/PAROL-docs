@@ -204,20 +204,9 @@ Inverse kinematics is crucial for tasks such as trajectory planning, motion cont
 ### Cartesian space
 
 <p align="center">
-<img src="../assets/CART_X.png" alt="drawing" width="800"/> <br />
+<img src="../assets/grupa.png" alt="drawing" width="2000"/> <br />
 </p>
 
-<p align="center">
-<img src="../assets/CART_Y.png" alt="drawing" width="800"/> <br />
-</p>
-
-<p align="center">
-<img src="../assets/CART_Z.png" alt="drawing" width="800"/> <br />
-</p>
-
-<p align="center">
-<img src="../assets/JOINT_POS_CART.png" alt="drawing" width="800"/> <br />
-</p>
 
 ### Jacobian
 ### 3D representation

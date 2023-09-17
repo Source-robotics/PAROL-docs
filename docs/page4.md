@@ -134,27 +134,6 @@ Data sent from the robot to the PC consists only of robots telemetry data and fl
     int end_bytes[] = {0x01, 0x02};                         // 2 byte
 
 
-### Robot input packet (PC -> robot)
-
-    uint8_t start_bytes[] = {0xff, 0xff, 0xff};         // 3 byte
-    int len = 52;                                       // 1 byte
-    int Joints[6];                                      // each joint is 3 bytes; total of 18 bytes
-    int Speed[6];                                       // each joint is 3 bytes; total of 18 bytes
-    int Command = 255;                                  // 1 byte
-    int Affected_joint[] = {1, 1, 1, 1, 1, 1, 1, 1};    // 1 byte
-    int InOut[] = {1, 1, 1, 1, 1, 1, 1, 1};             // 1 byte
-    int Timeout;                                        // 1 byte
-    int Gripper_position;                               // 2 byte
-    int Gripper_speed;                                  // 2 byte
-    int Gripper_current;                                // 2 byte
-    int Gripper_command;                                // 1 byte
-    int Gripper_mode;                                   // 1 byte
-    int Gripper_ID = 212;                               // 1 byte
-    int CRC_byte = 212;                                 // 1 byte
-    int end_bytes[] = {0x01, 0x02};                     // 2 byte
-
-
-
 
 
 ## PAROL6 commander software
@@ -211,10 +190,11 @@ Units for distance used in PAROL6 commander software are milimeter [mm]. In the 
 
 #### Speed
 
-Units of speed used in PAROL6 commander software backend are either STEPS/s , RAD/s or DEG/s for rotations or mm/s or m/s for translations. In the GUI speeds setpoints can only be set using %.
+In the GUI speeds setpoints can only be set using %.<br />
+Units of speed used in PAROL6 commander software backend are either STEPS/s , RAD/s or DEG/s for rotations or mm/s or m/s for translations. 
 
 #### Acceleration
-
+In the GUI acceleration setpoints can only be set using %. <br />
 Units of acceleration used in PAROL6 commander software backend are either STEPS/s*s , RAD/s*s or DEG/s*s for rotations or mm/s*s or m/s*s for translations. In the GUI acceleration setpoints can only be set using %.
 
 
