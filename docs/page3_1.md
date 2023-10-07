@@ -22,18 +22,18 @@ To use PAROL6 robotic arm you will need a PAROL6 control board. The PAROL6 contr
 
 |      |         |
 | ----------- | ------------------------------------ |
-| Processor       |  110.50 mm | 
-| Processor features      | 23.42 mm | 
-| Communication interfaces    | 180.00 mm |
-| Stepper drivers       | 43.50 mm  | 
-| Stepper drivers features       | 176.35 mm| 
-| Inputs    | 62.8 mm|
-| Ouputs    | 45.25 mm|
-| Estop input    | 62.8 mm|
-| AdDitional memory    | 45.25 mm|
+| Processor       |  STM32F446RE  | 
+| Processor features      | Arm Cortex-M4 core with DSP and FPU, 512 Kbytes of Flash memory, 180 MHz CPU, ART Accelerator | 
+| Communication interfaces    | 2 x CAN bus, 1 x USB   |
+| Stepper drivers       | TMC5160   | 
+| Stepper drivers features       | SPI comms, 10-35V, 3A max, protection features| 
+| Inputs    |2 x ISOLATED|
+| Ouputs    |   2 x ISOLATED, 0.5A current output|
+| Estop input    |  Dedicated pin on MCU for ESTOP interrupt, 2 ESTOP connections on control board|
+| Additional  memory    |  W25Q64FV, SPI, 64Mb|
 | Programming  interface | JTAG |
-| Cooling fan connection  | 62.8 mm|
-| Connection for smart power button   | 45.25 mm|
+| Cooling fan connection  | 5V cooling fan|
+| Connection for smart power button   | |
 
 
 ### Operating limits
@@ -44,9 +44,9 @@ To use PAROL6 robotic arm you will need a PAROL6 control board. The PAROL6 contr
 | Stepper drivers      | Rated current 2.5A, maximal current 3.6A (Short burst or extreme cooling) | 
 | Temperature    | xx stepper driver temperature warrning, xx temperature error |
 | Isolated Inputs voltage       | 24V nominal voltage, min 12V max 50V  | 
-| Isolated Outputs voltage      | 176.35 mm| 
-| Isolated Inputs current       | 24V nominal voltage, min 12V max 50V  | 
-| Isolated Outputs current      | 176.35 mm| 
+| Isolated Outputs voltage      | Max 48V| 
+| Isolated Inputs current       |  | 
+| Isolated Outputs current      | Max 1A| 
 | Fuse    | Fuse is used for outputs if used in NON ISOLATED MOD; 2A fuse|
 | Cooling fan   | Maximal allowed current draw for cooling fan is 0.3A |
 
@@ -98,7 +98,7 @@ Do not go over 0.3 A.
 
     ** View schematic in PDF view. Images are hard to read! **<br />
 
-Link to PDF schematic!
+Link to PDF schematic:  [Link](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm)<br />
 
 <p align="center">
 <img src="../assets/Scheamtic_main.png" alt="drawing" width="2000"/> <br />
@@ -201,8 +201,22 @@ Connections:
 Stepper drivers need to be placed with respect to this diagram to the PAROL6 control board!<br />
 Stepper drivers orientation can be recognised by 2 diagnostic pins!
 
+!!! Warrning
+
+    ** Some stepper drivers have diag pins soldered. If they are soldered you NEED to remove them! **<br />
+    ** If diag pins are on the PCB they are blocked by the capacitors on PAROL6 PCB, and you cant place the modules in. **<br />
+
 <p align="center">
 <img src="../assets/step_stick.png" alt="drawing" width="800"/> <br />
+</p>
+
+
+!!! Info
+
+    ** DIAG PINS SHOULD FOLLOW RED ARROWS ON THE IMAGE BELLOW!! **<br />
+
+<p align="center">
+<img src="../assets/diag_dir.png" alt="drawing" width="900"/> <br />
 </p>
 
 
