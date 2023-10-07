@@ -14,6 +14,86 @@
  For low level software only PAROL6 control board software is available.
  PAROL6 commander software allows you to write simple robot arm scripts. Scripting language is called RBTscript.
 
+
+
+## PAROL6 commander software
+
+Commander software can be found here: [https://github.com/PCrnjak/PAROL-commander-software](https://github.com/PCrnjak/PAROL-commander-software)<br />
+PAROL6 commander software was writen in python. Its main purpase is to offer an interactive GUI for users to use to control and program PAROL6 robot. 
+
+Some of the features that PAROL6 commander software has:
+
+* Built in robot simulator 
+* Built in programming language RBTscript
+* Control loops of up to 100Hz
+* Robot jog in joint and cartesian space
+* Input and Output control
+* View of robot telemetry data 
+* Estop and safety functions
+
+It is devided in multiple files:
+xxx
+xxx
+xxx
+
+
+
+### Structure
+
+<p align="center">
+<img src="../assets/proces_full.png" alt="drawing" width="2000"/>
+</p>
+
+### Dependancy
+
+Latest stable version uses python 3.11.0 and following dependencies:
+
+    roboticstoolbox-python==1.0.3
+    spatialgeometry==1.0.3
+    spatialmath-python==1.0.3
+    -e git+https://github.com/PCrnjak/s_visual_kinematics.git@f5204c9e0d29818d65f7280ef12f93ea82b61395#egg=s_visual_kinematics
+    customtkinter==5.1.2
+    numpy==1.23.4
+    matplotlib==3.6.2
+    pyserial==3.5
+    oclock==1.3.0
+
+### How to run / Install
+
+* First install proper python version
+* Install all dependencies
+* clone or download [https://github.com/PCrnjak/PAROL-commander-software](https://github.com/PCrnjak/PAROL-commander-software)
+* Run the Serial_sender_good_latest.py
+
+
+## PAROL6 control board software
+
+We recommend using VS Code and platformio to install, edit and run the  code. 
+
+### PAROL6 control board software Install guide
+
+* Insall VS Code: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+* In the VS Code extensions install Platformio
+* Clone [https://github.com/PCrnjak/PAROL6-Desktop-robot-arm](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm) or download zip folder
+* In VS Code click open folder and select "PAROL control board" from previously downloaded folder
+* Now Platformio should download all necesarry configurations to allow you to compile and upload code
+
+
+
+### Code upload to PAROL6 control board software
+To upload code on your PAROL6 board you need a programming cable and stlink device<br />
+If you followed the steps from "PAROL6 control board software Install guide" you should be able to upload code to your PAROL6 PCB from VS Code.
+
+
+### How to test PAROL6 control board?
+
+To test PAROL6 control board special testing software was made.
+You can find it at: [https://github.com/PCrnjak/PAROL6-Desktop-robot-arm](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm) in TESTING folder.
+
+This code will allow you to control idividual functions of PAROL6 robot arm (if wired as per wiring instructions).
+
+
+
 ## Communication protocol
 
 Communication is based on UART and is being done over USB cable from the robot to the PC. The usual baud rate is 3Mbit. Data is sent to the robot at 100Hz (If your PC is not good enough this can be decrease but performance will suffer). Data is sent in specially packed compact data packets. 
@@ -134,29 +214,10 @@ Data sent from the robot to the PC consists only of robots telemetry data and fl
     int end_bytes[] = {0x01, 0x02};                         // 2 byte
 
 
-### Robot input packet (PC -> robot)
-
-    uint8_t start_bytes[] = {0xff, 0xff, 0xff};         // 3 byte
-    int len = 52;                                       // 1 byte
-    int Joints[6];                                      // each joint is 3 bytes; total of 18 bytes
-    int Speed[6];                                       // each joint is 3 bytes; total of 18 bytes
-    int Command = 255;                                  // 1 byte
-    int Affected_joint[] = {1, 1, 1, 1, 1, 1, 1, 1};    // 1 byte
-    int InOut[] = {1, 1, 1, 1, 1, 1, 1, 1};             // 1 byte
-    int Timeout;                                        // 1 byte
-    int Gripper_position;                               // 2 byte
-    int Gripper_speed;                                  // 2 byte
-    int Gripper_current;                                // 2 byte
-    int Gripper_command;                                // 1 byte
-    int Gripper_mode;                                   // 1 byte
-    int Gripper_ID = 212;                               // 1 byte
-    int CRC_byte = 212;                                 // 1 byte
-    int end_bytes[] = {0x01, 0x02};                     // 2 byte
 
 
 
-
-
+=======
 ## PAROL6 commander software
 
 It is divided in multiple files:
@@ -186,6 +247,7 @@ Structure of the code:
 ### Code upload to PAROL6 control board software
 To upload code on your PAROL6 board you need a programming cable and stlink device
 
+
 ## Commander software API 
 
 ### RBTscript
@@ -211,10 +273,11 @@ Units for distance used in PAROL6 commander software are milimeter [mm]. In the 
 
 #### Speed
 
-Units of speed used in PAROL6 commander software backend are either STEPS/s , RAD/s or DEG/s for rotations or mm/s or m/s for translations. In the GUI speeds setpoints can only be set using %.
+In the GUI speeds setpoints can only be set using %.<br />
+Units of speed used in PAROL6 commander software backend are either STEPS/s , RAD/s or DEG/s for rotations or mm/s or m/s for translations. 
 
 #### Acceleration
-
+In the GUI acceleration setpoints can only be set using %. <br />
 Units of acceleration used in PAROL6 commander software backend are either STEPS/s*s , RAD/s*s or DEG/s*s for rotations or mm/s*s or m/s*s for translations. In the GUI acceleration setpoints can only be set using %.
 
 

@@ -78,6 +78,55 @@ Another problem that is not so critical when starting up is that your joints are
 It can be fixed by looking at a motor_init.cpp file for PAROL6 control board. In that file you can find bunch of paremeters for robots motors. One we need is called "direction_reversed" For joint that are moving in wrong direction change the value of that variable if it was 1 to 0 and if it was 0 to 1.
 
 
+## Testing
+
+To test PAROL6 control board connection to your robot you can use stock software or use testing software.
+Testing software is more safe and interactive for users. It can be found at: xxx
+Once you flash your PAROL6 control board testing will start. 
+
+### Stepper drivers test
+
+The code will try to communicate with stepper drivers. Output1 and Output will go from high to low every 1s and LED1 and LED2 will flasg. If everything is ok you will get output like this on serial:
+
+<p align="center">
+<img src="../assets/STEPPER_GOOD.png" alt="drawing" width="900"/>
+</p>
+
+If stepper driver is faulty or not connected you will get:
+
+<p align="center">
+<img src="../assets/BAD_STEPPER_DRIVER.png" alt="drawing" width="900"/>
+</p>
+
+If stepper drivers are good your stepper motors should spin at a low speed using moderate current of 200-300 mA.
+
+### Flash memory test
+
+In serial terminal write # FLASH and press enter. You should get a output like this for successful test. 
+
+<p align="center">
+<img src="../assets/FLASH_TEST.png" alt="drawing" width="900"/>
+</p>
+
+### LIMIT test
+
+In serial terminal write # LIMIT and press enter. You should get a output like this if you activate the switch.
+
+<p align="center">
+<img src="../assets/LIMIT_GOOD.png" alt="drawing" width="900"/>
+</p>
+
+### IO 
+
+In serial terminal write # IO and press enter. You should get a output like this:
+
+<p align="center">
+<img src="../assets/GOOD_IO.png" alt="drawing" width="900"/>
+</p>
+
+If you change the state of ESTOP, INPUT1 or INPUT2 you will see states changing. You will also be able to see voltage of your power supply in mV!
+
+
 ## Quick start guide
 
 * attach the robot to table or workstation.
