@@ -12,7 +12,7 @@
  * Use ROS
 
  For low level software only PAROL6 control board software is available.
- PAROL6 commander software allows you to write simple robot arm scripts. Scripting language is called 
+ PAROL6 commander software allows you to write simple robot arm scripts. Scripting language is called RBTscript.
 
 ## Communication protocol
 
@@ -159,7 +159,7 @@ Data sent from the robot to the PC consists only of robots telemetry data and fl
 
 ## PAROL6 commander software
 
-It is devided in multiple files:
+It is divided in multiple files:
 xxx
 xxx
 xxx
