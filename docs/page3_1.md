@@ -92,33 +92,6 @@ Do not go over 0.3 A.
 
 
 
-### Schematic
-
-!!! note
-
-    ** View schematic in PDF view. Images are hard to read! **<br />
-
-Link to PDF schematic:  [Link](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm)<br />
-
-<p align="center">
-<img src="../assets/Scheamtic_main.png" alt="drawing" width="2000"/> <br />
-</p>
-
-<p align="center">
-<img src="../assets/Input_output_schematic.png" alt="drawing" width="2000"/> <br />
-</p>
-
-<p align="center">
-<img src="../assets/Stepper_drivers_schematic.png" alt="drawing" width="2000"/> <br />
-</p>
-
-### Pin connections
-
-<p align="center">
-<img src="../assets/CONTROLLER.png" alt="drawing" width="800"/> <br />
-</p>
-
-
 ### Pin definitions
 
 !!! Note annotate "TIP"
