@@ -6,7 +6,7 @@ The Theory Corner is designed to provide comprehensive explanations of essential
 
 ## Want to know more? 
 
-Here is a listo of great resources that you can use to learn more about robotics:
+Here is a list of great resources that you can use to learn more about robotics:
 
 * [https://robotacademy.net.au/](https://robotacademy.net.au/)
 * [https://automaticaddison.com/](https://automaticaddison.com/)
@@ -14,6 +14,11 @@ Here is a listo of great resources that you can use to learn more about robotics
 * [https://github.com/mithi/robotics-coursework](https://github.com/mithi/robotics-coursework)
 
 ## Basic theory
+
+
+### Units 
+
+There is a lot of conversion of units in robotics and PAROL6 is not an exception. To keep things simple and accurate we compiled where these conversions happen, why and how.
 
 
 ### Joints and naming
@@ -53,7 +58,8 @@ For rotation; orient your thumb in positive direction of axes you want to see po
 
 ### Types of robots and number of joints
 
-There are a lot of robot types in industry. They are usually categorised by number of joints and how they are arranged. Some of the types of the robots are:
+There are a lot of robot types in industry usually categorised by number of joints and how the joints are arranged. Some of the types of the robots are:
+
 
 • Vertically articulated.
 • Cartesian.
@@ -62,7 +68,8 @@ There are a lot of robot types in industry. They are usually categorised by numb
 • Selective compliance assembly robot arm (SCARA).
 • Delta
 
-PAROL6 is vartically articulated robot. All conecpts here apply to any type of the robot but most of the examples will be for robots like PAROL6.
+
+PAROL6 is vertically articulated robot. All conecpts here apply to any type of the robot but most of the examples will be for robots like PAROL6.
 
 
 ### Spherical wrist

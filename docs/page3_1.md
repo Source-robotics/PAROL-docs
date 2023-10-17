@@ -57,7 +57,7 @@ To use PAROL6 robotic arm you will need a PAROL6 control board. The PAROL6 contr
 
 !!! note
 
-    ** Dimensions are in milimeters! **<br />
+    ** Dimensions are in millimeters! **<br />
 
 <p align="center">
 <img src="../assets/PCB_dimensions.png" alt="drawing" width="800"/> <br />
