@@ -130,7 +130,7 @@ If you change the state of ESTOP, INPUT1 or INPUT2 you will see states changing.
 
 ## Quick start guide
 
-* attach the robot to table or workstation.
+* attach the robot to table or workstation..
 * Make sure you have driver board that has firmware on it!
 * Connect power supply and USB to your robot.
 * Test if you can move your robots joints freely.
