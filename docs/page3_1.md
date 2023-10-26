@@ -80,6 +80,10 @@ Do not go over 0.3 A.
 
 ## Connections
 
+<p align="center">
+<img src="../assets/connection.png" alt="drawing" width="800"/> <br />
+</p>
+
 ### Connectors
 
 * 24 power connector on PAROL6 control board is XT30 MALE connector. 
