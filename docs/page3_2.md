@@ -90,13 +90,13 @@ Once you flash your PAROL6 control board testing will start.
 The code will try to communicate with stepper drivers. Output1 and Output will go from high to low every 1s and LED1 and LED2 will flasg. If everything is ok you will get output like this on serial:
 
 <p align="center">
-<img src="../assets/STEPPER_GOOD.png" alt="drawing" width="900"/>
+<img src="../assets/STEPPER_GOOD.PNG" alt="drawing" width="900"/>
 </p>
 
 If stepper driver is faulty or not connected you will get:
 
 <p align="center">
-<img src="../assets/BAD_STEPPER_DRIVER.png" alt="drawing" width="900"/>
+<img src="../assets/BAD_STEPPER_DRIVER.PNG" alt="drawing" width="900"/>
 </p>
 
 If stepper drivers are good your stepper motors should spin at a low speed using moderate current of 200-300 mA.
@@ -106,7 +106,7 @@ If stepper drivers are good your stepper motors should spin at a low speed using
 In serial terminal write # FLASH and press enter. You should get a output like this for successful test. 
 
 <p align="center">
-<img src="../assets/FLASH_TEST.png" alt="drawing" width="900"/>
+<img src="../assets/FLASH_TEST.PNG" alt="drawing" width="900"/>
 </p>
 
 ### LIMIT test
@@ -114,7 +114,7 @@ In serial terminal write # FLASH and press enter. You should get a output like t
 In serial terminal write # LIMIT and press enter. You should get a output like this if you activate the switch.
 
 <p align="center">
-<img src="../assets/LIMIT_GOOD.png" alt="drawing" width="900"/>
+<img src="../assets/LIMIT_GOOD.PNG" alt="drawing" width="900"/>
 </p>
 
 ### IO 
@@ -122,7 +122,7 @@ In serial terminal write # LIMIT and press enter. You should get a output like t
 In serial terminal write # IO and press enter. You should get a output like this:
 
 <p align="center">
-<img src="../assets/GOOD_IO.png" alt="drawing" width="900"/>
+<img src="../assets/GOOD_IO.PNG" alt="drawing" width="900"/>
 </p>
 
 If you change the state of ESTOP, INPUT1 or INPUT2 you will see states changing. You will also be able to see voltage of your power supply in mV!
@@ -130,7 +130,7 @@ If you change the state of ESTOP, INPUT1 or INPUT2 you will see states changing.
 
 ## Quick start guide
 
-* attach the robot to table or workstation.
+* attach the robot to table or workstation..
 * Make sure you have driver board that has firmware on it!
 * Connect power supply and USB to your robot.
 * Test if you can move your robots joints freely.
