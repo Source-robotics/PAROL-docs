@@ -84,6 +84,7 @@ To test PAROL6 control board connection to your robot you can use stock software
 Testing software is more safe and interactive for users. It can be found at: xxx
 Once you flash your PAROL6 control board testing will start. 
 
+
 ### Stepper drivers test
 
 The code will try to communicate with stepper drivers. Output1 and Output will go from high to low every 1s and LED1 and LED2 will flasg. If everything is ok you will get output like this on serial:
