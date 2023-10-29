@@ -219,9 +219,11 @@ Inverse kinematics is crucial for tasks such as trajectory planning, motion cont
 ### 3D representation
 ### Singularity
 
-Unless you deal with a simple pick and place application you need to learnabout robot singularities and configuratios.
+Unless you deal with a simple pick and place application you need to learn about robot singularities and configuratios.
 Singularity is a configuration where the robot end effector loses a degree of freedom.
-When moving near singularity in cartesian mode, the robot might stop.
+When moving near singularity in cartesian mode, the robot might stop. 
+Best way to visualize singularities is by seeing them!
+Here are a few clips that showcase them.
 
 ### Workspace
 ### Reach
@@ -258,10 +260,11 @@ physical systems where you want to ensure that the motion starts and ends from r
 </p>
 
 
-### Mastering the robot
+
 ### Robot mastering
 ### zero position mastering
 ### Witness marks
+### Homing
 ### Backlash
 ### Actuators
 ### Machine learning
@@ -272,7 +275,6 @@ physical systems where you want to ensure that the motion starts and ends from r
 ### Stepper motors
 ### Encoders
 ### PID loops
-### Homing
 ### ROS 
 ### Matlab
 ### Test
