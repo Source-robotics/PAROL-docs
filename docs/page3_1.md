@@ -206,6 +206,19 @@ Microcontroller on PAROL6 control board is STM32F446RE. To upload code you need 
 
 ## Wiring PAROL6 control board
 
+You need to follow this diagram to wire your PAROL6 robot arm to PAROL6 control board.
+
+<p align="center">
+<img src="../assets/wiring.png" alt="drawing" width="800"/> <br />
+</p>
+
+After sucesssful wiring of the robot it should look something like this. 
+
+<p align="center">
+<img src="../assets/good_wire.jpg" alt="drawing" width="800"/> <br />
+</p>
+
+
 
 ## Software
 
@@ -219,12 +232,8 @@ Microcontroller on PAROL6 control board is STM32F446RE. To upload code you need 
 
 ## PCB revision history
 
+Latest version of PAROL6 PCB is: V1.2
 
-After sucesssful wiring of the robot it should look something like this. 
-
-<p align="center">
-<img src="../assets/control_board.jpg" alt="drawing" width="800"/> <br />
-</p>
 
 
 

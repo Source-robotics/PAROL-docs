@@ -25,7 +25,7 @@ to any of **GND_SEL** pins and plus of power supply to any of **HV_SEL** pins.
 <img src="../assets/Ext_supply.png" alt="drawing" width="800"/>
 </p>
 
-By using isolated power supply you are not limited to 24V. You can 5V or 12V depending on your aplications.
+By using isolated power supply you are not limited to 24V. You can use 5V or 12V depending on your aplications.
 
 ### Not isolated power supply
 
@@ -56,7 +56,7 @@ There are 2 CAN buses.
 
 !!! Note annotate "Recommended pressure"
 
-    Recommended pressure for PAROL6 and generally in industry is 6-8 bar. All examples conducted with pneumatics you see in our videos are done with pressures in that range. Negative pressures are also possible but we are still experimenting with them.
+    Recommended pressure for PAROL6 and generally in industry is 6-8 bar. All examples conducted with pneumatics you see in our videos are done with pressures in that range.
 
 ### Example of gripper connection
 
