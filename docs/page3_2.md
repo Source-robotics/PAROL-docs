@@ -6,7 +6,32 @@ Assembly manual is located in [Github](https://www.mkdocs.org) repository. <br /
 Of course to use the robot you will have to build/buy it.  <br />
 If you decide to build it or buy a kit you will need to follow the assembly manual to make it.  <br />
 Assembly manual is also great tool for reparing and upgrading your robot. Make sure you use the latest version of the manual. <br />
-Version is marked on the first page in the bottom left corner.
+Version is marked on the first page in the bottom left corner.<br />
+Latest version is: v1 rev1
+
+## Do not do this
+
+There are few things you should never do to your PAROL6.
+
+!!! Warning annotate "Warning"
+
+    Never spin joint 5 more then one rotation
+
+<p align="center">
+<img src="../assets/Limits_j5.png" alt="drawing" width="900"/>
+</p>
+
+The image above represents the range of J5. 
+
+!!! Warning annotate "Warning"
+
+    If you dont have blockers on joint 1 there is possibility to spin it more then 1 rotation. Never do it!
+
+!!! Warning annotate "Warning"
+
+    Robot does not have brakes. When you power off your robot steppers will stop producting torque and ROBOT WILL FALL! <br />
+    **Never turn off the robot without you holding it!**
+
 
 
 
@@ -78,14 +103,33 @@ Another problem that is not so critical when starting up is that your joints are
 It can be fixed by looking at a motor_init.cpp file for PAROL6 control board. In that file you can find bunch of paremeters for robots motors. One we need is called "direction_reversed" For joint that are moving in wrong direction change the value of that variable if it was 1 to 0 and if it was 0 to 1.
 
 
+## Homing
+
+Homing is a process where a robot joint finds a known position in its rotation space, typically by hitting a limit switch or sensor.
+
+The process for PAROL6 and FAZE4 robots is the same as that for 3D printers. After powering up, the robot doesn't know its position and needs to be homed. By hitting a limit switch, we determine the robot joint's position based on our knowledge of the limit switch's location, which we have from the CAD model. For example, when we hit a limit switch on Joint 1, we know that we need xxx steps to reach a witness mark or Joint 1's 0-degree position.
+
+Now that we know our position after homing and the number of steps required from the limit switch to the witness mark, you might think we're done, right? Well, not quite. To be really precise, after hitting the limit switch, you should observe how many steps it actually takes from the limit switch to the witness mark. Each PAROL6 build may have slight differences due to various printers, tolerance variations, and parts.
+
+The Parol6 control board comes preloaded with generic parameters that will work for anyone building the robot. However, if you want to fine-tune your robot, you now have the option to do so.
+
+    By default PAROL6 homes in these steps:
+    * Joint 1,2 and 3 move to the limit switch at the same time
+    * Once all are pressed they move away from them and press again.
+    * Now joints 1,2 and 3 move to standby position
+    * Now joint 4 homes
+    * After joint 4 is homed it moves to its standby position
+    * Now Joint6 homes
+    * After it homes it goes to positon to home joint 5
+    * After joint5 homes joints 5 and 6 move to the standby position
+    
 ## Testing
 
 To test PAROL6 control board connection to your robot you can use stock software or use testing software.
-Testing software is more safe and interactive for users. It can be found at: xxx
-Once you flash your PAROL6 control board testing will start. 
+Testing software is more safe and interactive for users. It can be found at: [Link](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm/tree/main/PAROL%20control%20board%20software)
 
 
-### Stepper drivers test
+### PAROL6 control board testing software
 
 The code will try to communicate with stepper drivers. Output1 and Output will go from high to low every 1s and LED1 and LED2 will flasg. If everything is ok you will get output like this on serial:
 
@@ -159,15 +203,28 @@ We recommend to periodically check your belt tension and apply greese to the bel
 
 Belts are located on Joints: 1,3,4,5
 
+#### Joint 5 belt
 <p align="center">
-<img src="../assets/belt1.jpg" alt="drawing" width="800"/> <br />
+<img src="../assets/belt1.jpg" alt="drawing" width="600"/> <br />
 </p>
+
+#### Joint 4 belt
 <p align="center">
-<img src="../assets/belt2.jpg" alt="drawing" width="800"/> <br />
+<img src="../assets/belt2.jpg" alt="drawing" width="600"/> <br />
 </p>
+
+#### Joint 3 belt
 <p align="center">
-<img src="../assets/belt3.jpg" alt="drawing" width="800"/> <br />
+<img src="../assets/belt3.jpg" alt="drawing" width="600"/> <br />
+</p>
+
+#### Joint 1 belt
+<p align="center">
+<img src="../assets/belt3.jpg" alt="drawing" width="600"/> <br />
 </p>
 
 ### Couplers and threadlocker
+
+In case your joint starts to slip your set srews probably slipped. Tighten them again and make sure you use blue threadlocker.
+To be safe after you apply do not touch the robot for 24h. Also make sure you place screws in the keyhole!
 

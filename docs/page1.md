@@ -29,7 +29,7 @@ Joint are numbered from bottom to the top of the arm. In case of PAROL6 it follo
 <img src="../assets/Joints.png" alt="drawing" width="800"/> <br />
 </p>
 
-                        Figure 1: Robot joint naming
+                        Figure: Robot joint naming
 
 ### Rules and convenctions
 
@@ -61,15 +61,15 @@ For rotation; orient your thumb in positive direction of axes you want to see po
 There are a lot of robot types in industry usually categorised by number of joints and how the joints are arranged. Some of the types of the robots are:
 
 
-• Vertically articulated.
-• Cartesian.
-• Cylindrical.
-• Polar.
-• Selective compliance assembly robot arm (SCARA).
-• Delta
+    • Vertically articulated.
+    • Cartesian.
+    • Cylindrical.
+    • Polar.
+    • Selective compliance assembly robot arm (SCARA).
+    • Delta
 
 
-PAROL6 is vertically articulated robot. All conecpts here apply to any type of the robot but most of the examples will be for robots like PAROL6.
+PAROL6 is vertically articulated robot. All conecepts here apply to any type of the robot but most of the examples will be for robots like PAROL6.
 
 
 ### Spherical wrist
@@ -80,7 +80,7 @@ The first 3 axes are used to position the end effector in cartesian space while 
 <img src="../assets/spherical.png" alt="drawing" width="800"/> <br />
 </p>
 
-    	                Figure 2: left robot with spherical wrist, right robot without spherical wrist
+    	                Figure: left robot with spherical wrist, right robot without spherical wrist
 
 ### Robot pose
 
@@ -105,7 +105,7 @@ The advantage of robot arms of this type is that they can get to the same positi
 <img src="../assets/orientations.png" alt="drawing" width="800"/> <br />
 </p>
 
-                        Figure 3: Same position in space different orientation
+                        Figure: Same position in space different orientation
 
 ### Positon
 
@@ -131,7 +131,7 @@ Reference frame that is associated to robots end-effector. This frame changes de
 <img src="../assets/real_frame.jpg" alt="drawing" width="800"/> <br />
 </p>
 
-                        Figure 4: Robot with TRF 
+                        Figure: Robot with TRF 
 
 ### Links
 
@@ -260,11 +260,58 @@ physical systems where you want to ensure that the motion starts and ends from r
 </p>
 
 
+### Witness marks
+
+ In the context of robot arms, "witness marks" typically refer to marks or indicators that are used to verify or witness the alignment, position, or movement of components or parts within the robotic system. These marks can serve various purposes in robot arms and automation; but are usually used to master the robot.
+
+Witness marks can be used during the calibration process to ensure that different components are properly aligned or positioned as per the specified configuration.
+
+Parol6, Faze4, and CM6 robotic arms also have witness marks. These marks are indicated by holes in the mechanical parts, allowing the parts to be aligned by inserting a pin through those holes.
+
+<p align="center">
+<img src="../assets/parolw.png" alt="drawing" width="2000"/> <br />
+</p>
+
+                        Figure: Witness marks of PAROL6 robot 
+
 
 ### Robot mastering
-### zero position mastering
-### Witness marks
+
+Mastering the robotic arm is the process of bringing your robots joints to the witness mark of that joint and recording the position that robot is at that point.
+
+When at the position of the witness mark robots position is know because of our knowledge of robots kinematics and CAD. it basically assigns robots encoder ticks / stepper ticks to the know joint angle
+
+Lets take an example of J1 of our PAROL6 robotic arm
+
+<p align="center">
+<img src="../assets/Joints.png" alt="drawing" width="800"/> <br />
+</p>
+
+                        Figure: Standby position of PAROL6 robotic arm
+
+
+At this exact position our robots joint is at 0 degrees. If everything was perfect you would place a pin at the witness marks and it would fit with no problems. 
+
 ### Homing
+
+Homing is a process where a robot joint finds a known position in its rotation space, typically by hitting a limit switch or sensor.
+
+The process for PAROL6 and FAZE4 robots is the same as that for 3D printers. After powering up, the robot doesn't know its position and needs to be homed. By hitting a limit switch, we determine the robot joint's position based on our knowledge of the limit switch's location, which we have from the CAD model. For example, when we hit a limit switch on Joint 1, we know that we need xxx steps to reach a witness mark or Joint 1's 0-degree position.
+
+Now that we know our position after homing and the number of steps required from the limit switch to the witness mark, you might think we're done, right? Well, not quite. To be really precise, after hitting the limit switch, you should observe how many steps it actually takes from the limit switch to the witness mark. Each PAROL6 build may have slight differences due to various printers, tolerance variations, and parts.
+
+The Parol6 control board comes preloaded with generic parameters that will work for anyone building the robot. However, if you want to fine-tune your robot, you now have the option to do so.
+
+    By default PAROL6 homes in these steps:
+    * Joint 1,2 and 3 move to the limit switch at the same time
+    * Once all are pressed they move away from them and press again.
+    * Now joints 1,2 and 3 move to standby position
+    * Now joint 4 homes
+    * After joint 4 is homed it moves to its standby position
+    * Now Joint6 homes
+    * After it homes it goes to positon to home joint 5
+    * After joint5 homes joints 5 and 6 move to the standby position
+
 ### Backlash
 ### Actuators
 ### Machine learning
