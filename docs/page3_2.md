@@ -63,9 +63,9 @@ Robot is now locked and it is waiting to receive commands.
 
 !!! Danger annotate "Do not try to power off the robot when it is running!"
 
-    ** If robot start to behave unexpectedly USE ESTOP.** <br />
-    ** If ESTOP is not functional power of the supply.**<br />
-    ** Reaching for the power button should be the last option.**
+    **If robot start to behave unexpectedly USE ESTOP.** <br />
+    **If ESTOP is not functional power of the supply.**<br />
+    **Reaching for the power button should be the last option.**
 
 Because lack of brakes sudden loss of power will result in robot falling down. That may cause damage to the robot or the operator.
 Robot is powered on and off by pressing a button marked red on the image. When powering the robot on even when USB connection is not available it will energise the
@@ -103,6 +103,7 @@ Look at the PAROL6 control board page.
 ## First startup
 
 When first starting the robot biggest and most common problem is that motors will turn in different directions from those they were supposed to move. There are 2 ways to fix this: <br />
+
 * Open the robot base and replace wires of one of the stepper motor phases <br />
 * **RECOMMENDED**-> Upload a new code to PAROL6 control board with small changes to the code
 
@@ -124,31 +125,32 @@ Now that we know our position after homing and the number of steps required from
 
 The Parol6 control board comes preloaded with generic parameters that will work for anyone building the robot. However, if you want to fine-tune your robot, you now have the option to do so.
 
-    By default PAROL6 homes in these steps:
-    * Joint 1,2 and 3 move to the limit switch at the same time
-    * Once all are pressed they move away from them and press again.
-    * Now joints 1,2 and 3 move to standby position
-    * Now joint 4 homes
-    * After joint 4 is homed it moves to its standby position
-    * Now Joint6 homes
-    * After it homes it goes to positon to home joint 5
-    * After joint5 homes joints 5 and 6 move to the standby position
+By default PAROL6 homes in these steps:
 
-** Joints 1,4 and 6 home with inductive sensors make sure they trigger! **
+* Joint 1,2 and 3 move to the limit switch at the same time
+* Once all are pressed they move away from them and press again.
+* Now joints 1,2 and 3 move to standby position
+* Now joint 4 homes
+* After joint 4 is homed it moves to its standby position
+* Now Joint6 homes
+* After it homes it goes to positon to home joint 5
+* After joint5 homes joints 5 and 6 move to the standby position
+
+**Joints 1,4 and 6 home with inductive sensors make sure they trigger!**
 
 !!! Warning annotate "Warning"
 
-    ** Joints 1,4 and 6 home with inductive sensors make sure they trigger! ** <br />
-    ** Failing to adjust their trigger points you risk damaging the robot! **
+    **Joints 1,4 and 6 home with inductive sensors make sure they trigger!** <br />
+    **Failing to adjust their trigger points you risk damaging the robot!**
 
 !!! Note annotate "Note"
 
-    ** When starting homing procedure Joint 6 will rotate in the NEGATIVE DIRECTION TO FIND THE HOMING PIN!** <br />
-    ** Make sure that it does not make to much rotations or you risk wires/tubes getting tangled and braking/damaging your robot! **<br />
+    **When starting homing procedure Joint 6 will rotate in the NEGATIVE DIRECTION TO FIND THE HOMING PIN!** <br />
+    **Make sure that it does not make to much rotations or you risk wires/tubes getting tangled and braking/damaging your robot! **<br />
 
 !!! Note annotate "Note"
 
-    ** If using custom gripper make sure it has a spot that can trigger joint 5 limit switch!** <br />
+    **If using custom gripper make sure it has a spot that can trigger joint 5 limit switch!** <br />
 
 
 
