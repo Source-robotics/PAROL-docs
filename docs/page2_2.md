@@ -40,14 +40,21 @@ Stepper motors will reach these temperatures after 3 hours when just holding pos
 * Joint 5 - 70 °C
 * Joint 6 - 54 °C
 
-When robot is moving it will reach these temperatures after 3 hours:
+When robot is moving it will reach these temperatures after 2 hours:
 
-* Joint 1 -  °C
-* Joint 2 -  °C
-* Joint 3 -  °C
-* Joint 4 -  °C
-* Joint 5 -  °C
-* Joint 6 -  °C
+* Joint 1 -  74 °C
+* Joint 2 -  64 °C
+* Joint 3 -  52 °C
+* Joint 4 -  83 °C
+* Joint 5 -  92 °C
+* Joint 6 -  66 °C
+
+!!! Danger
+
+    ** When using robot for longer periods you MUST REDUCE THE CURRENT in the software or you risk destroying your robot! **<br />
+
+
+
 
 ## Dimensions
 

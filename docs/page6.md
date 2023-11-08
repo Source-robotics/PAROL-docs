@@ -104,7 +104,7 @@ When packing the robot it is recommended to put some kind of sponge or styrofoam
     On PAROL6 controller board there are connectors for 2 ESTOPS. They both share same GPIO on microcontroller.
     They both need to be NO contact. 
 
-Estop needs to be NORMALLY CLOSED (NO) contact type. NC will not work.<br />
-NO is beneficial in case your estop unplugs or gets its wires cut it will also register as a press of an estop, which is desirable behaviour.
+Estop needs to be NORMALLY CLOSED (NC) contact type. NO will not work.<br />
+NC is beneficial in case your estop unplugs or gets its wires cut it will also register as a press of an estop, which is desirable behaviour.
 
 
