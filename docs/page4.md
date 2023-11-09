@@ -303,7 +303,7 @@ In commands MoveJoint, MovePose, MoveCart and MoveCartRelTRF following only with
            show that robot is 1/3 of the path in acceleration 1/3 in cruise and 1/3 in deceleration.
 
 <p align="center">
-<img src="../assets/trap_position_ex.png" alt="drawing" width="2000"/>
+<img src="../assets/trap_position_ex.PNG" alt="drawing" width="2000"/>
 </p>
 
             Figure: Positon curve when following only with speed vs speed + positon.  
@@ -311,7 +311,7 @@ In commands MoveJoint, MovePose, MoveCart and MoveCartRelTRF following only with
             exactly the commanded positon. This plot is for trapezoidal velocity profile.
 
 <p align="center">
-<img src="../assets/poly_position.png" alt="drawing" width="2000"/>
+<img src="../assets/poly_position.PNG" alt="drawing" width="2000"/>
 </p>
 
             Figure: This is same commanded positon but with polynomial. 
