@@ -184,7 +184,7 @@ Stepper drivers orientation can be recognised by 2 diagnostic pins!
     ** If diag pins are on the PCB they are blocked by the capacitors on PAROL6 PCB, and you cant place the modules in. **<br />
 
 <p align="center">
-<img src="../assets/step_stick_2.PNG" alt="drawing" width="800"/> <br />
+<img src="../assets/step_stick.png" alt="drawing" width="800"/> <br />
 </p>
 
 
