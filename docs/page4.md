@@ -8,7 +8,7 @@
  For high level software there are multiple options:
 
  * Use PAROL6 commander software for control, programming, simulating
- * Use our API to send command thur your languange of choice Matlab, python, c++
+ * Use our API to send command thru your languange of choice Matlab, python, c++
  * Use ROS
 
  For low level software only PAROL6 control board software is available.
@@ -31,11 +31,6 @@ Some of the features that PAROL6 commander software has:
 * View of robot telemetry data 
 * Estop and safety functions
 
-It is devided in multiple files:
-xxx
-xxx
-xxx
-
 
 
 ### Structure
@@ -48,15 +43,7 @@ xxx
 
 Latest stable version uses python 3.11.0 and following dependencies:
 
-    roboticstoolbox-python==1.0.3
-    spatialgeometry==1.0.3
-    spatialmath-python==1.0.3
-    -e git+https://github.com/PCrnjak/s_visual_kinematics.git@f5204c9e0d29818d65f7280ef12f93ea82b61395#egg=s_visual_kinematics
-    customtkinter==5.1.2
-    numpy==1.23.4
-    matplotlib==3.6.2
-    pyserial==3.5
-    oclock==1.3.0
+* Check dependancy here: [https://github.com/PCrnjak/PAROL-commander-software](https://github.com/PCrnjak/PAROL-commander-software)
 
 ### How to run / Install
 
@@ -83,6 +70,8 @@ We recommend using VS Code and platformio to install, edit and run the  code.
 ### Code upload to PAROL6 control board software
 To upload code on your PAROL6 board you need a programming cable and stlink device<br />
 If you followed the steps from "PAROL6 control board software Install guide" you should be able to upload code to your PAROL6 PCB from VS Code.
+
+Programming adapter needs to be connected to the black connector next to the USB. Needed connections are 3v3, gnd, swdio, clk.
 
 
 ### How to test PAROL6 control board?

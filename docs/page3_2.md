@@ -57,6 +57,13 @@ After you press the power button the robots joints will start producing torque. 
 Robot is now locked and it is waiting to receive commands.
 
 
+## Stepper Induced voltage
+
+!!! Danger annotate "DO NOT SPIN UNPOWERED ROBOT WHEN CONNECTED TO SUPPLY"
+
+    **Because stepper motors create voltage when spun, they can turn the robot on if you spin them.** <br />
+    **After you turn of the robot move it to standby position slowly**<br />
+    **Never randomly spin the robot when connected to power or you risk powering it on**
 
 
 ## Powering off
@@ -80,15 +87,7 @@ Powering off the robot is also done by pressing button marked in RED. Before you
 ## Installing PAROL6 commander software
 
 Commander software can be located in [Github](https://github.com/PCrnjak/PAROL-commander-software) repository. <br />
-Some prerequisites you will need to have are: <br />
-
-* python <br />
-* pip3 <br />
-
-Commander software was tested on machines with these specifications: <br />
-
-* Windows 10, Ryzen 5, 32gb ram, Nvidia 3060  <br />
-* Windows 10,  <br />
+Install instructions are located there.
 
 
 ## PAROL6 control board 
@@ -160,6 +159,19 @@ By default PAROL6 homes in these steps:
 To test PAROL6 control board connection to your robot you can use stock software or use testing software.
 Testing software is more safe and interactive for users. It can be found at: [Link](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm/tree/main/PAROL%20control%20board%20software)
 
+It is recommended to use testing code to test your components (for example test if Joint1 motor is spinning or does J3 limit switch works). 
+
+!!! Note annotate "Note"
+
+    **This code will try to spin all the motors, so it is not safe to just upload it to your robot.** <br />
+
+Upload the code with only usb connected and Programming adapter. Programming adapter will supply your board with 3v3 and if you configure your COM port you should be able to talk to your board. It will report errors for the stepper drivers since they need 24V to power on.
+
+After you comfirmed that you can communicate; disconnect programming adapter and plug in 24V. Board will stay turned off until you do one of the 2 things:
+
+* Turn the board by supplying 3v3 from the programming adapter.
+* Attach power button. You will need to hold it pressed to keep the board powered.
+
 
 ### PAROL6 control board testing software
 
@@ -203,6 +215,11 @@ In serial terminal write # IO and press enter. You should get a output like this
 
 If you change the state of ESTOP, INPUT1 or INPUT2 you will see states changing. You will also be able to see voltage of your power supply in mV!
 
+## Uploading PAROL6 control board code
+
+This code is not the testing code. This code will be able to communicate with commander software.
+You will need to have working commander software to use this code or build your own API. 
+
 
 ## Quick start guide
 
@@ -216,7 +233,7 @@ If you change the state of ESTOP, INPUT1 or INPUT2 you will see states changing.
 * After the commander software started you will see 2 windows: Simulator window and GUI window
 * Simulator will not be calibrated to the robot and GUI will display wrong joint and cartesian coordinates.
 * Go to joint jog menu and try to jog the motors.
-* Arrows pointing to the left represent negative rotation of the joint and arrows pointing to the right positive.
+* Arrows pointing to the left represent **POSITIVE** rotation of the joint and arrows pointing to the right **NEGATIVE**.
 * Positive and negative rotations of the joints are shown on the image below
 * Comfirm that every joint moves coresponding joint in right direction. If not fallow the above guide to calibrate it.
 * Once you adjusted your joint rotations repet all the previous steps and confirm correct rotations.
@@ -297,4 +314,5 @@ Belts are located on Joints: 1,3,4,5
 
 In case your joint starts to slip your set screw probably slipped. Tighten them again and make sure you use blue threadlocker.
 To be safe after you apply do not touch the robot for 24h. Also make sure you place screws in the keyhole!
+Threadlocker should be applied to all metal mating surfaces. **Due the vibrations these parts will get lose screws.**
 
