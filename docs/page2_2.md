@@ -51,7 +51,7 @@ When robot is moving it will reach these temperatures after 2 hours:
 
 !!! Danger
 
-    ** When using robot for longer periods you MUST REDUCE THE CURRENT in the software or you risk destroying your robot! **<br />
+    **When using robot for longer periods you MUST REDUCE THE CURRENT in the software or you risk destroying your robot!**<br />
 
 
 
@@ -104,14 +104,14 @@ Dimensions using default pneumatic gripper!
 !!! Warning annotate "Standby position"
 
     **THIS IS THE POSITION OF THE ROBOT DEFINED BY THE DH TABLE BELOW!** <br />
-    ** This position is also called standby positon! ** <br />
-    ** In this position joint angles are as follows: ** <br />
-    ** Joint 1 -> 0 degress **  <br />
-    ** Joint 2 -> -90 degress **  <br />
-    ** Joint 3 -> 180 degrees ** <br />
-    ** Joint 4 -> 0 degrees ** <br />
-    ** Joint 5 -> 0 degrees ** <br />
-    ** Joint 6 -> 180 degrees ** <br />
+    **This position is also called standby positon!** <br />
+    **In this position joint angles are as follows:** <br />
+    **Joint 1 -> 0 degress**  <br />
+    **Joint 2 -> -90 degress**  <br />
+    **Joint 3 -> 180 degrees** <br />
+    **Joint 4 -> 0 degrees** <br />
+    **Joint 5 -> 0 degrees** <br />
+    **Joint 6 -> 180 degrees** <br />
 
 
 <p align="center">
@@ -135,6 +135,7 @@ With 32 microstepping regular 200 steps per revolution stepper motor needs 6400 
 
 Smallest theoretical steps with 32 microstep at the joint levels are  <br />
 (these values are after the reduction ratios!):
+
 * Joint 1 -> 0.00015339807878856412 RAD --> 0.0087890625 DEG
 * Joint 2 -> 4.9087385212340514e-05 RAD --> 0.0028125 DEG 
 * Joint 3 -> 5.4254478392586896e-05 RAD --> 0.0031085526315789477 DEG

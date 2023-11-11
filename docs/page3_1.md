@@ -57,7 +57,7 @@ To use PAROL6 robotic arm you will need a PAROL6 control board. The PAROL6 contr
 
 !!! note
 
-    ** Dimensions are in millimeters! **<br />
+    **Dimensions are in millimeters!**<br />
 
 <p align="center">
 <img src="../assets/PCB_dimensions.png" alt="drawing" width="800"/> <br />
@@ -172,16 +172,16 @@ Connections:
 
 !!! Danger
 
-    ** Only use step sticks that are verified in this document! **<br />
-    ** Failing to do so will destroy your PAROL6 control board! **<br />
+    **Only use step sticks that are verified in this document!**<br />
+    **Failing to do so will destroy your PAROL6 control board!**<br />
 
 Stepper drivers need to be placed with respect to this diagram to the PAROL6 control board!<br />
 Stepper drivers orientation can be recognised by 2 diagnostic pins!
 
 !!! Warrning
 
-    ** Some stepper drivers have diag pins soldered. If they are soldered you NEED to remove them! **<br />
-    ** If diag pins are on the PCB they are blocked by the capacitors on PAROL6 PCB, and you cant place the modules in. **<br />
+    **Some stepper drivers have diag pins soldered. If they are soldered you NEED to remove them!**<br />
+    **If diag pins are on the PCB they are blocked by the capacitors on PAROL6 PCB, and you cant place the modules in. **<br />
 
 <p align="center">
 <img src="../assets/stick.png" alt="drawing" width="800"/> <br />
