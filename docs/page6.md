@@ -62,7 +62,7 @@ There are 2 ways of anchoring the robot:
 * Using clamps to attach it to the edge of the table or work surface
 
 <p align="center">
-<img src="../assets/base.png" alt="drawing" width="900"/>
+<img src="../assets/base.PNG" alt="drawing" width="900"/>
 </p>
 
 Base holes are spaced for easy mounting on 30x30 aluminum profiles
