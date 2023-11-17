@@ -14,16 +14,16 @@ theme:
   logo: assets/Icon2.png
   language: en
   palette:
-    - scheme: default
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to dark mode
-      primary: blue
-      accent: blur 
-    - scheme: slate 
+    - scheme: slate
       toggle:
         icon: material/weather-night
-        name: Switch to light mode    
+        name: Switch to light mode
+      primary: blue
+      accent: blur 
+    - scheme: default 
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode    
       primary: blue
       accent: blur
 

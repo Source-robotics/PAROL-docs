@@ -206,13 +206,7 @@ Data sent from the robot to the PC consists only of robots telemetry data and fl
 
 
 
-=======
 ## PAROL6 commander software
-
-It is divided in multiple files:
-xxx
-xxx
-xxx
 
 
 
@@ -222,9 +216,10 @@ xxx
 <img src="../assets/proces_full.png" alt="drawing" width="2000"/>
 </p>
 
-### Dependancy
 
 ### How to run / Install
+
+Check here: [https://github.com/PCrnjak/PAROL-commander-software](https://github.com/PCrnjak/PAROL-commander-software)
 
 ## PAROL6 control board software
 

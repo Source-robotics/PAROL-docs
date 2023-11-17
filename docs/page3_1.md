@@ -190,7 +190,7 @@ Stepper drivers orientation can be recognised by 2 diagnostic pins!
 
 !!! Info
 
-    ** DIAG PINS SHOULD FOLLOW RED ARROWS ON THE IMAGE BELLOW!! **<br />
+    **DIAG PINS SHOULD FOLLOW RED ARROWS ON THE IMAGE BELLOW!!**<br />
 
 <p align="center">
 <img src="../assets/diag_dir.png" alt="drawing" width="900"/> <br />
@@ -200,8 +200,6 @@ Stepper drivers orientation can be recognised by 2 diagnostic pins!
 ## How to upload code
 
 Microcontroller on PAROL6 control board is STM32F446RE. To upload code you need to use STlink device and connect it dedicated CLK, SWDIO, 3V3 and GND pins. You can use jumper cables or dedicated stlink + cable assembly.
-
-## Getting connected
 
 
 ## Wiring PAROL6 control board
@@ -218,16 +216,6 @@ After sucesssful wiring of the robot it should look something like this.
 <img src="../assets/good_wire.jpg" alt="drawing" width="800"/> <br />
 </p>
 
-
-
-## Software
-
-
-### PAROL6 control software structure
-
-### API
-
-### Firmware configuration
 
 
 ## PCB revision history
