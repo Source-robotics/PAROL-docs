@@ -61,11 +61,16 @@ There are 2 ways of anchoring the robot:
 * Using the 6 holes in the base of the robot to attach it to the surface
 * Using clamps to attach it to the edge of the table or work surface
 
+<p align="center">
+<img src="../assets/base.png" alt="drawing" width="900"/>
+</p>
+
+Base holes are spaced for easy mounting on 30x30 aluminum profiles
 
 ## Pinching points
 
 <p align="center">
-<img src="../assets/pinch_points.png" alt="drawing" width="900"/>
+<img src="../assets/pinch_points.png" alt="drawing" width="500"/>
 </p>
 
 Be careful when the robot is running. There are few pinching points that can hurt you and others. <br />

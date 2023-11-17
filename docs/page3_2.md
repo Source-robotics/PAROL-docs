@@ -56,13 +56,18 @@ First connect power cable (marked green). After that you can turn robot on and o
 After you press the power button the robots joints will start producing torque. You will hear 6 clicking sounds, that is normal.<br />
 Robot is now locked and it is waiting to receive commands.
 
+!!! Warning annotate "Warning"
+
+    Robot will power on by itself if you have connected 3v3 supply from the programming port.<br />
+
+
 
 ## Stepper Induced voltage
 
 !!! Danger annotate "DO NOT SPIN UNPOWERED ROBOT WHEN CONNECTED TO SUPPLY"
 
     **Because stepper motors create voltage when spun, they can turn the robot on if you spin them.** <br />
-    **After you turn of the robot move it to standby position slowly**<br />
+    **After you turn off the robot move it to standby position slowly**<br />
     **Never randomly spin the robot when connected to power or you risk powering it on**
 
 
@@ -89,6 +94,9 @@ Powering off the robot is also done by pressing button marked in RED. Before you
 Commander software can be located in [Github](https://github.com/PCrnjak/PAROL-commander-software) repository. <br />
 Install instructions are located there.
 
+[Windows](https://github.com/PCrnjak/PAROL-commander-software/blob/main/Windows_install.md)
+
+[Linux](https://github.com/PCrnjak/PAROL-commander-software/blob/main/Linux_install.md)
 
 ## PAROL6 control board 
 
@@ -157,7 +165,7 @@ By default PAROL6 homes in these steps:
 ## Testing
 
 To test PAROL6 control board connection to your robot you can use stock software or use testing software.
-Testing software is more safe and interactive for users. It can be found at: [Link](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm/tree/main/PAROL%20control%20board%20software)
+Testing software is more safe and interactive for users. It can be found at: [Link](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm/tree/main/PAROL6%20control%20board%20test%20code)
 
 It is recommended to use testing code to test your components (for example test if Joint1 motor is spinning or does J3 limit switch works). 
 
@@ -175,7 +183,7 @@ After you comfirmed that you can communicate; disconnect programming adapter and
 
 ### PAROL6 control board testing software
 
-The code will try to communicate with stepper drivers. Output1 and Output will go from high to low every 1s and LED1 and LED2 will flasg. If everything is ok you will get output like this on serial:
+The code will try to communicate with stepper drivers. Output1 and Output will go from high to low every 1s and LED1 and LED2 will flash. If everything is ok you will get output like this on serial:
 
 <p align="center">
 <img src="../assets/STEPPER_GOOD.PNG" alt="drawing" width="900"/>
@@ -223,26 +231,92 @@ You will need to have working commander software to use this code or build your 
 
 ## Quick start guide
 
-* attach the robot to table or workstation..
+* attach the robot to table or workstation.
 * Make sure you have driver board that has firmware on it!
 * Connect power supply and USB to your robot.
 * Test if you can move your robots joints freely.
-* Move the robot close to the position shown on the image. 
+* Turn on your power supply. **IT NEEDS TO BE 24V**
 * Press the power button. Power button locks all the joints to the current position.
 * After power button is pressed you can turn on commander software.
+* Commander software has a menu at the bottom that allows you to select COM port if it is not correct in the source code
+* If you fail to connect check your COM port number again. If using linux use: sudo chmod 666 /dev/ttyACMx mutiple times
 * After the commander software started you will see 2 windows: Simulator window and GUI window
 * Simulator will not be calibrated to the robot and GUI will display wrong joint and cartesian coordinates.
 * Go to joint jog menu and try to jog the motors.
 * Arrows pointing to the left represent **POSITIVE** rotation of the joint and arrows pointing to the right **NEGATIVE**.
 * Positive and negative rotations of the joints are shown on the image below
-* Comfirm that every joint moves coresponding joint in right direction. If not fallow the above guide to calibrate it.
+
+<p align="center">
+<img src="../assets/Joints.png" alt="drawing" width="800"/> <br />
+</p>
+
+* Comfirm that every joint moves coresponding joint in right direction. If not follow first statup guide to callibrate them.
 * Once you adjusted your joint rotations repet all the previous steps and confirm correct rotations.
-* Press the home button. All joints of the robot will start to move. Be close to the estop of the robot in case the estops stop working or robot crashed. If you hear grinding noise when robot is close to the limit switch press the estop emediately.
-That means your estop for that joint is not working and you need to check your wiring.
-* If the robot homes correctly it will be in this position. Small deviations are ok since your robot is still not calibrated 
+* Press the home button. All joints of the robot will start to move. Be close to the estop of the robot. If you hear grinding noise when robot is close to the limit switch press the estop emediately. 
+That means your estop for that joint is not working and you need to check your wiring.If you see that J6 is spinning mutiple times press ESTOP and adjust your inductive sensor trigger screw.
+* If the robot homes correctly it will be in position as in the image above but J1 will be rotate for +90 degree. Small deviations are ok since your robot is still not calibrated 
 * Simulator is now sinced to the robot and GUI shows correct values.
 * Congrats you have a functional PAROL6 robot to work with!
 
+
+## Output log
+
+In your terminal you will periodically see this data:
+
+        ROBOT DATA:
+        Position from robot is: [154, 0, 0, 0, 0, 0]
+        Speed from robot is: [0, 0, 0, 0, 0, 0]
+        Robot homed status is: [0, 0, 0, 0, 0, 0, 1, 1]
+        Robot Input/Output status is: [0, 0, 0, 0, 1, 1, 1, 1]
+        Robot temperature error status is: [0, 0, 0, 0, 0, 0, 1, 1]
+        Robot temperature error status is: [0, 0, 0, 0, 0, 0, 1, 1]
+        Timeout_error is: 100
+        Time between 2 commands raw is: 7129
+        Time between 2 commands in ms is: 0.010139022206380001
+        XTR_DATA byte is: 255
+        Gripper ID is: 255
+        Gripper position is: -100
+        Gripper speed is: 2000
+        Gripper current is: -3000
+        Gripper status is: 123
+        Gripper object detection is: 69
+
+        COMMANDED DATA:
+        Robot Input/Output status is (OUT): [0, 0, 0, 0, 0, 0, 0, 0]
+        Robot Commands is:  255
+        Commanded robot speeds are: [0, 0, 0, 0, 0, 0]
+
+        GUI DATA:
+        Joint jog buttons: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        Cart jog buttons: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        Home button state:0
+        Enable button state:0
+        Disable button state:0
+        Clear error button state:0
+        Real robot state: 1
+        Simulator robot state: 1
+        Speed slider is: 50
+        WRF/TRF is: 0
+        Demo app button state: 0
+        Shared string is: b'Log: Joint  1  jog  '
+        Program execution variable: 0
+        [255, 255, 255]
+        b'\xff\xff\xff'
+        [0, 1, 1, 1, 1, 0, 1, 1]
+        b'\x00\xfcj\x03'
+        0x0
+        0xfc
+        0x6a
+        b'\x00'
+        b'\xfc'
+        b'j'
+        fuesd
+        -235005
+        b'{'
+        $$$$$$$$$$$$$$$$
+
+
+This data tells you about the state of the GUI and the robot. What we are interested is the value of Time between 2 commands in ms. This variable needs to be in range of 0.010 ms. Monitor it for a few minutes while you jog the robot. If it is in the range of 0.01 your PC can handle the commander software. If it is not in the range your PC is probably too week.
 
 ## Mastering the robot
 
