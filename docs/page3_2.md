@@ -2,7 +2,7 @@
 
 ## Assembly manual
 
-Assembly manual is located in [Github](https://www.mkdocs.org) repository. <br />
+Assembly manual is located in [Github](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm/tree/main/Building%20instructions) repository. <br />
 If you decide to build it or buy a kit you will need to follow the assembly manual to make it.  <br />
 Assembly manual is also great tool for reparing and upgrading your robot. Make sure you use the latest version of the manual. <br />
 Version is marked on the first page in the bottom left corner.<br />
