@@ -204,6 +204,8 @@ Microcontroller on PAROL6 control board is STM32F446RE. To upload code you need 
 
 ## Wiring PAROL6 control board
 
+
+
 You need to follow this diagram to wire your PAROL6 robot arm to PAROL6 control board.
 
 <p align="center">
@@ -211,6 +213,8 @@ You need to follow this diagram to wire your PAROL6 robot arm to PAROL6 control 
 </p>
 
 After sucesssful wiring of the robot it should look something like this. 
+
+Limit switches to 24V and signal. Inductive sensors to 24V, GND and signal.
 
 <p align="center">
 <img src="../assets/good_wire.jpg" alt="drawing" width="800"/> <br />
