@@ -143,6 +143,8 @@ By default PAROL6 homes in these steps:
 * After it homes it goes to positon to home joint 5
 * After joint5 homes joints 5 and 6 move to the standby position
 
+Homing needs to look like shown in this [video!](https://www.youtube.com/watch?v=OCCQkIWPWwo&ab_channel=Sourcerobotics)
+
 **Joints 1,4 and 6 home with inductive sensors make sure they trigger!**
 
 !!! Warning annotate "Warning"
