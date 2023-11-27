@@ -373,7 +373,7 @@ Example commands and explanation:<br />
 
 #### MoveCart(x,y,z,Rx,Ry,Rz,t=0,func,speed)
 
-Robot will move all its joints to the desired *orientation* tracking a specific velocity curve. Joints will stop at the same time at the desired positons. The path is linear in tools / task    space, Actuator motion not necessarily smooth and harder to validate. Can track trapezoidal velocity profile or polynomial. With this mode robot cant pass singularities and is affected by them. Note that when robot gets close to singularity it will stop. Robot will try to exectute the trajectory even if it has singularity in it. User needs <br />
+Robot will move all its joints to the desired *orientation* tracking a specific velocity curve. Joints will stop at the same time at the desired positons. The path is linear in tools / task    space, Actuator motion not necessarily smooth and harder to validate. Can track trapezoidal velocity profile or polynomial. With this mode robot cant pass singularities and is affected by them. Note that when robot gets close to singularity it will stop. Robot will try to exectute the trajectory even if it has singularity in it. User needs to make sure their robot can pass thru the singularity by properly designing the task and robotic cell. <br />
 User can set desired duration of the move with variable t. <br />
 
 Arguments need to be given in above defined order!<br />
@@ -388,7 +388,7 @@ Example commands and explanation:<br />
 #### MoveCartRelTRF(x,y,z,Rx,Ry,Rz,t=0,func,speed)
 
 
-Unlike MoveCart where pose is defined with respect to WRF in MoveCartRelTRF we are moving robot pose relative to current Tool reference frame. 
+Unlike MoveCart where pose is defined with respect to WRF in MoveCartRelTRF we are moving robot pose relative to current Tool reference frame. With this mode robot cant pass singularities and is affected by them. Note that when robot gets close to singularity it will stop. Robot will try to exectute the trajectory even if it has singularity in it. User needs to make sure their robot can pass thru the singularity by properly designing the task and robotic cell.
 
 * x,y,z,Rx,Ry,Rz -> pose arguments relative to TRF. x,y,z are in [mm]; Rx,Ry,Rz are in [degrees] *REQUIRED ELEMENT*
 * t -> desired duration of the move [s] *OPTIONAL ELEMENT*
@@ -441,7 +441,7 @@ Sets one of the 2 outputs HIGH or LOW.
 Example:
 
     Output(1, HIGH) // sets output 1 of PAROL6 control board to HIGH state
-    Output(2, LOw) // sets output 2 of PAROL6 control board to LOW state
+    Output(2, LOW) // sets output 2 of PAROL6 control board to LOW state
 
 
 ### Example codes with explanation

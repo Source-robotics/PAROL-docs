@@ -31,23 +31,29 @@
 ## Operating temperatures
 
 Stepper motors can work up to 100-110 degrees with no problems. In case of PAROL6 that is not acceptable since it is built out of plastic. That is why we recommend PETG because of its high glass transiton temperature. 
-Stepper motors will reach these temperatures after 3 hours when just holding position:
+Stepper motors will reach these temperatures after 5 hours when just holding position:
 
 * Joint 1 - 51 °C
 * Joint 2 - 54 °C
 * Joint 3 - 48 °C
-* Joint 4 - 73 °C
-* Joint 5 - 70 °C
-* Joint 6 - 54 °C
+* Joint 4 - 60 °C
+* Joint 5 - 60 °C
+* Joint 6 - 61 °C
 
 When robot is moving it will reach these temperatures after 2 hours:
 
-* Joint 1 -  74 °C
+* Joint 1 -  64 °C
 * Joint 2 -  64 °C
 * Joint 3 -  52 °C
-* Joint 4 -  83 °C
-* Joint 5 -  92 °C
-* Joint 6 -  66 °C
+* Joint 4 -  73 °C
+* Joint 5 -  72 °C
+* Joint 6 -  65 °C
+
+Currents can be adjusted by adjusting values in PAROL6 control board.<br />
+Values to be adjusted are located in constants.h <br />
+MOTORx_MAX_CURRENT is max stepper current. <br />
+In motor_init.cpp you can adjust: Joint__->hold_multiplier (Hold_current = MAX_current * hold_multiplier)<br />
+Adjusting currents will reduce motor torque production and in turn max speeds/accels.<br />
 
 !!! Danger
 

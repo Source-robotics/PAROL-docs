@@ -219,11 +219,29 @@ Inverse kinematics is crucial for tasks such as trajectory planning, motion cont
 ### 3D representation
 ### Singularity
 
-Unless you deal with a simple pick and place application you need to learn about robot singularities and configuratios.
-Singularity is a configuration where the robot end effector loses a degree of freedom.
-When moving near singularity in cartesian mode, the robot might stop. 
-Best way to visualize singularities is by seeing them!
-Here are a few clips that showcase them.
+When a robot navigates through Cartesian space, the reference frame transitions from individual joints to the end effector. The robot employs various joint movements to achieve the desired Cartesian motion for the end effector. To optimize joint movements, the robot calculates the necessary displacement and direction for each joint. This method generally works efficiently for most arm configurations. However, challenges arise at singularities, which occur when joints reach their limits or when two or more joints align collinearly.
+
+At these joint alignments, certain movements within Cartesian space become unattainable, leading to exceedingly high joint velocities. The mathematical equations governing the robot's motion approach singularity when divided by  small values. The actual singularity manifests when one of these equations is divided by zero, signifying the impossibility of the movement.
+
+Singularity point represent critical zones where the robot's kinematic equations encounter mathematical limitations due to specific joint configurations, resulting in movement impossibilities or erratic behavior.
+
+ [Video demonstration of singularities](https://www.youtube.com/watch?v=BJnZvwAE0PY&list=LL&index=1&ab_channel=industrial_robotics)
+
+If you plan to program the robot to perform some tasks you will inevitably have to deal with singularities. These unique configurations can significantly obstruct the Cartesian movements of your robot's end-effector. It's important to understand how to navigate around robot singularities by strategically designing your robot cell.
+
+Because singularities are common in 6 axes robotic arms, you must learn how to identify and avoid them. 
+
+Now that you know what are singularities and how to recognise them, how do we avoid them? This is a hard problem and usually requires a lot of trial and error. It can be only avoided by properly designing your robotic cell or task. If your robot is mounted to the cell and it keeps hitting the singularities you can do few things:
+* Change the adapter plate of your gripper/end-effector to be at a different angle.
+* Relocate the robot around the robotic cell
+* try another robot configuration/pose
+
+
+Certain robot manufacturers provide singularity avoidance features allowing the robot's end-effector to make slight deviations from the intended Cartesian trajectory to circumvent singularities. These options prove highly beneficial when absolute adherence to the trajectory isn't crucial. For instance, in scenarios where the robot's task involves movement away from or towards a target rather than precision tasks like gluing or assembly.
+
+These deviations enable seamless and smoother end-effector motion, ensuring continuity in movement without interruptions caused by singularities. By allowing slight deviations, the robot can navigate around singularities, maintaining a more stable and continuous trajectory while performing tasks that do not demand pinpoint accuracy.
+
+In contrast, PAROL6 robotic arm will try to keep the desired Cartesian trajectory although that might mean that the end-effector will stop when near singularity. Feature to try to avoid the singularity by small deviations is not implemented.
 
 ### Workspace
 ### Reach
@@ -311,6 +329,9 @@ The Parol6 control board comes preloaded with generic parameters that will work 
     * Now Joint6 homes
     * After it homes it goes to positon to home joint 5
     * After joint5 homes joints 5 and 6 move to the standby position
+
+Homing needs to look like shown in this [video!](https://www.youtube.com/watch?v=OCCQkIWPWwo&ab_channel=Sourcerobotics)
+
 
 ### Backlash
 ### Actuators
