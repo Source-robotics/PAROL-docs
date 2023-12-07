@@ -386,6 +386,8 @@ Belts are located on Joints: 1,3,4,5
 <img src="../assets/belt4.jpg" alt="drawing" width="600"/> <br />
 </p>
 
+Use [This video](https://www.youtube.com/watch?v=v0PYfEoIr3k&ab_channel=Sourcerobotics) as a reference for belt tension! In the video we apply max force we can with the hands to the belt. You can use the belts "stretching" as a reference for your belt. Belts for J1 and J4 need to have a bit less tension on them.
+
 ### Couplers and threadlocker
 
 In case your joint starts to slip your set screw probably slipped. Tighten them again and make sure you use blue threadlocker.
