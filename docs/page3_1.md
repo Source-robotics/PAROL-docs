@@ -166,7 +166,12 @@ Connections:
         #define CAN2TX PB13     --> CAN channel 2
         #define CAN2RX PB12     --> CAN channel 2
 
+### Stepper driver
 
+Please use stepper drivers that are listed in the BOM. In case you dont buy them from source robotics website you will need to do few modifications to them:
+
+* Remove 2 diag pins 
+* Apply thermal cement to attach the heatsink (Link to cement is in the BOM)
 
 ### Stepper driver orientation
 

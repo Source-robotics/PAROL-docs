@@ -67,6 +67,16 @@ There are 2 ways of anchoring the robot:
 
 Base holes are spaced for easy mounting on 30x30 aluminum profiles
 
+Another option is to use "connectors_4_alu_profiles.STL" that can be found in the STL folder of PAROL6 github to create a base like shown in the image below. For that you will also need:
+
+* T-nuts for 30x30 profile (M5)
+* M5 x 12 mm screws
+* 18 - 20 mm M5 screw
+
+<p align="center">
+<img src="../assets/alu_profile.png" alt="drawing" width="900"/>
+</p>
+
 ## Pinching points
 
 <p align="center">
