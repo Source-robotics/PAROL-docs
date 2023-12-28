@@ -121,7 +121,7 @@ Dimensions using default pneumatic gripper!
 
 
 <p align="center">
-<img src="../assets/DH_table.png" alt="drawing" width="800"/> <br />
+<img src="../assets/DH_table.PNG" alt="drawing" width="800"/> <br />
 </p>
 
 ## Joint reduction ratios and microstepping 
