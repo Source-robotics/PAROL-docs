@@ -245,19 +245,19 @@ You will need to have working commander software to use this code or build your 
 * After the commander software started you will see 2 windows: Simulator window and GUI window
 * Simulator will not be calibrated to the robot and GUI will display wrong joint and cartesian coordinates.
 * Go to joint jog menu and try to jog the motors.
-* Arrows pointing to the left represent **POSITIVE** rotation of the joint and arrows pointing to the right **NEGATIVE**.
+* Arrows (OF THE JOG MENU) pointing to the left represent **POSITIVE** rotation of the joint and arrows pointing to the right **NEGATIVE**.
 * Positive and negative rotations of the joints are shown on the image below
 
 <p align="center">
 <img src="../assets/Joints.png" alt="drawing" width="800"/> <br />
 </p>
 
-* Comfirm that every joint moves coresponding joint in right direction. If not follow first statup guide to callibrate them.
+* Comfirm that every joint moves coresponding joint in right direction. If not follow first startup guide to callibrate them and only then return here.
 * Once you adjusted your joint rotations repet all the previous steps and confirm correct rotations.
 * Press the home button. All joints of the robot will start to move. Be close to the estop of the robot. If you hear grinding noise when robot is close to the limit switch press the estop emediately. 
 That means your estop for that joint is not working and you need to check your wiring.If you see that J6 is spinning mutiple times press ESTOP and adjust your inductive sensor trigger screw.
-* If the robot homes correctly it will be in position as in the image above but J1 will be rotate for +90 degree. Small deviations are ok since your robot is still not calibrated 
-* Simulator is now sinced to the robot and GUI shows correct values.
+* If the robot homes correctly it will be in position as in the image above but J1 will be rotate for +90 degree. Small deviations are ok since your robot is still not mastered. 
+* Simulator is now synchronized to the robot and GUI shows correct values.
 * Congrats you have a functional PAROL6 robot to work with!
 
 
