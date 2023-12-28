@@ -32,7 +32,15 @@ See more of our robots on [Youtube](https://www.youtube.com/channel/UCp3sDRwVkbm
         Safety and handling     # How to not break your robot.
 
 
+## Preface
 
+This manual offers guidance on operating the 6-axis robot "Parol6" and its accompanying "Parol6" software. The Parol6 is a versatile robot designed for a wide audience, including educational institutions, robotics enthusiasts, and small-scale automation applications. It serves as a practical tool for learning, exploration, and implementing robotics in various fields.
+
+## Liability
+
+1. Source Robotics shall not assume liability for any accidents, damages, and/or issues resulting from the improper use of the Parol6 robot
+
+2. Source Robotics retains the right to modify, revise, or update this manual without prior notice.
 
 ## Licence
 
