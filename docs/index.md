@@ -28,6 +28,7 @@ See more of our robots on [Youtube](https://www.youtube.com/channel/UCp3sDRwVkbm
         PAROL6 control board    # All about control board and how to use it.
         Getting started         # How to start using PAROL6 robot.
         Software                # All about PAROL6 software and API.
+        PAROL6 commander GUI    # All about commander GUI interface
         Peripherals             # All about grippers, pneumatics, PLCs...
         Safety and handling     # How to not break your robot.
 

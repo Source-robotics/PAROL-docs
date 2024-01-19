@@ -58,7 +58,7 @@ Cartesian jog is used to move robot in cartesian space. You can use  TRF frame o
 
         Fig - joint jog
 
-Joint jog is used to jog indivitial motors. LEFT IS POSITIVE DIRECTION LEFT IS NEGATIVE DIRECTION!
+Joint jog is used to jog indivitial motors. LEFT IS POSITIVE DIRECTION RIGHT IS NEGATIVE DIRECTION!
 
 
 <p align="center">
