@@ -210,6 +210,12 @@ In serial terminal write # FLASH and press enter. You should get a output like t
 ### LIMIT test
 
 In serial terminal write # LIMIT and press enter. You should get a output like this if you activate the switch.
+For  limit switches orientation is also not important (one lead to 24V other to signal. For Inductive sensors. 
+
+Black - signal
+Blue - negative
+Brown - positive
+
 
 <p align="center">
 <img src="../assets/LIMIT_GOOD.PNG" alt="drawing" width="900"/>
