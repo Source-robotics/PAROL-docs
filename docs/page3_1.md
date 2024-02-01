@@ -14,7 +14,7 @@ To use PAROL6 robotic arm you will need a PAROL6 control board. The PAROL6 contr
 ## Features
 
 <p align="center">
-<img src="../assets/Features.png" alt="drawing" width="800"/> <br />
+<img src="../assets/img_parol.png" alt="drawing" width="800"/> <br />
 </p>
 
 ### Hardware specs
@@ -81,7 +81,7 @@ Do not go over 0.3 A.
 ## Connections
 
 <p align="center">
-<img src="../assets/connection.png" alt="drawing" width="800"/> <br />
+<img src="../assets/img_parol3.png" alt="drawing" width="800"/> <br />
 </p>
 
 ### Connectors
@@ -198,7 +198,7 @@ Stepper drivers orientation can be recognised by 2 diagnostic pins!
     **DIAG PINS SHOULD FOLLOW RED ARROWS ON THE IMAGE BELLOW!!**<br />
 
 <p align="center">
-<img src="../assets/diag_dir.png" alt="drawing" width="900"/> <br />
+<img src="../assets/img_parol2.png" alt="drawing" width="900"/> <br />
 </p>
 
 
@@ -214,7 +214,7 @@ Microcontroller on PAROL6 control board is STM32F446RE. To upload code you need 
 You need to follow this diagram to wire your PAROL6 robot arm to PAROL6 control board.
 
 <p align="center">
-<img src="../assets/wiring.png" alt="drawing" width="800"/> <br />
+<img src="../assets/img_parol5.png" alt="drawing" width="800"/> <br />
 </p>
 
 After sucesssful wiring of the robot it should look something like this. 
