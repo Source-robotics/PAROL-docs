@@ -112,12 +112,12 @@ When packing the robot it is recommended to put some kind of sponge or styrofoam
 
 !!! Note annotate "TIP"
 
-    If you dont have an ESTOP you can use any NO switch!
+    If you dont have an ESTOP you can use any NC switch!
 
 !!! Note annotate "TIP2"
 
     On PAROL6 controller board there are connectors for 2 ESTOPS. They both share same GPIO on microcontroller.
-    They both need to be NO contact. 
+    They both need to be NC contact. 
 
 Estop needs to be NORMALLY CLOSED (NC) contact type. NO will not work.<br />
 NC is beneficial in case your estop unplugs or gets its wires cut it will also register as a press of an estop, which is desirable behaviour.
