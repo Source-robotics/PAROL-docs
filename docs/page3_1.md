@@ -173,12 +173,20 @@ Please use stepper drivers that are listed in the BOM. In case you dont buy them
 * Remove 2 diag pins 
 * Apply thermal cement to attach the heatsink (Link to cement is in the BOM)
 
-### Stepper driver orientation
-
 !!! Danger
 
-    **Only use step sticks that are verified in this document!**<br />
+    **ONLY USE STEP STICK THAT ARE SPECIFIED IN THE BOM!**<br />
     **Failing to do so will destroy your PAROL6 control board!**<br />
+
+!!! Warrning
+
+    **YOU NEED TO SECURE HEATSINK TO STEPPER DRIVER WITH TERMAL CEMENT!**<br />
+    **Failing to do so will destroy your PAROL6 control board!**<br />
+    
+
+### Stepper driver orientation
+
+
 
 Stepper drivers need to be placed with respect to this diagram to the PAROL6 control board!<br />
 Stepper drivers orientation can be recognised by 2 diagnostic pins!
