@@ -50,7 +50,30 @@ For releys connect one end to GND_SEL and another to OUT1 or OUT2.
 !!! Tip annotate "Still under developement"
 
 Can bus will allow you to connect external grippers and additional axes. <br />
-There are 2 CAN buses.
+There are 2 CAN buses. Note* CAN2 is not soldered by default!
+
+## SSG48 Gripper
+
+<p align="center">
+<img src="../assets/GRIP_CON.png" alt="drawing" width="600"/>
+</p>
+
+The gripper connects to the following connector on the PAROL6 robotic arm.  <br />
+If building your own robot and gripper make sure you follow the wiring instructions. Failing to do that can destroy your gripper and control board.<br />
+First test the PAROL6 robot and then attach the gripper. Trying to troubleshoot both at the same time will be hard.
+
+<p align="center">
+<img src="../assets/GRP4.png" alt="drawing" width="600"/>
+</p>
+
+ [SSG48](https://github.com/PCrnjak/SSG-48-adaptive-electric-gripper) Works by default with PAROL6 commander software and control board. There is no need to configure anything; it is plug and play experiance.
+
+If you want to build or buy one check the link below:
+[https://source-robotics.com/products/compliant-gripper](https://source-robotics.com/products/compliant-gripper)
+
+!!! Note annotate "Change in main.cpp"
+
+    If using SSG48 gripper; In the main.cpp file change j5_homing_offset to be equal to 8035
 
 ## Pneumatics
 
@@ -60,10 +83,30 @@ There are 2 CAN buses.
 
 ### Example of gripper connection
 
-The 2 tubes going into a gripper are tubes that exit the PAROL6 robotic arm at a forearm region. Tubes going from the pneumatic valve need to be connected to the pneumatic connections in the base of the robot. Orientation is imporatant. Switching the 2 tubes will make your gripper normally closed or normally open depending on the orientation.
+The 2 tubes going into a gripper are tubes that exit the PAROL6 robotic arm at a forearm region.  <br />
+Tubes going from the pneumatic valve need to be connected to the pneumatic connections in the base of the robot.  <br />
+Orientation is imporatant. Switching the 2 tubes will make your gripper normally closed or normally open depending on the orientation. <br />
 
 <p align="center">
 <img src="../assets/pneumatic connection_edit.png" alt="drawing" width="800"/>
+</p>
+
+Connect valve wires to GND_SEL and OUTPUT1.
+
+
+### Vacuum gripper
+
+You will have to print vacuum gripper holder from the github folder.<br />
+By default the gripper will spin freely; if you dont want that tie it up with a zip tie to the screw on the image.
+
+<p align="center">
+<img src="../assets/vacuum_gripper.png" alt="drawing" width="800"/>
+</p>
+
+You will have to block one port of pneumatic valve. You can use a tube of fitting size and screw in a M3 screw with threadlocker on it.
+
+<p align="center">
+<img src="../assets/vacuum_gripper2.png" alt="drawing" width="800"/>
 </p>
 
 ## Estop

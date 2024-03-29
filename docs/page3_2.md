@@ -11,6 +11,10 @@ Latest version is: v1 rev1<br />
 After you have built the robot follow these steps to get it up and running!
 
 
+## How to follow this guide
+
+It is best to read the whole guide and then go step by step on each step. If you do something wrong you will have to go a few steps back so it is recommended to read or skim through this page.
+
 ## Do not do this
 
 There are few things you should never do to your PAROL6.
@@ -34,7 +38,10 @@ The image above represents the range of J5.
     Robot does not have brakes. When you power off your robot steppers will stop producting torque and ROBOT WILL FALL! <br />
     **Never turn off the robot without you holding it!**
 
+## SSG48 gripper
 
+If you plan to use [SSG48 gripper](https://github.com/PCrnjak/SSG-48-adaptive-electric-gripper) first make sure that your PAROL6 works and than attach it to the robot!<br />
+Check the section in Peripherals on how to connect the gripper!
 
 
 ## Powering on 
@@ -94,9 +101,25 @@ Powering off the robot is also done by pressing button marked in RED. Before you
 Commander software can be located in [Github](https://github.com/PCrnjak/PAROL-commander-software) repository. <br />
 Install instructions are located there.
 
+Using requirements.txt <br />
+CD into commander software folder <br />
+pip install -r requirements.txt <br />
+
 [Windows](https://github.com/PCrnjak/PAROL-commander-software/blob/main/Windows_install.md)
 
 [Linux](https://github.com/PCrnjak/PAROL-commander-software/blob/main/Linux_install.md)
+
+## Uploading PAROL6 control board code
+
+This code is not the testing code. This code will be able to communicate with commander software.
+You will need to have working commander software to use this code or build your own API. 
+
+Upload the following code [Link](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm/tree/main/PAROL6%20control%20board%20main%20software)
+
+!!! Note annotate "If using SSG48 gripper"
+
+    **In the main.cpp file change j5_homing_offset to be equal to 8035** <br />
+
 
 ## PAROL6 control board 
 
@@ -118,9 +141,10 @@ If you are going with code edit solution you will need to edit these segments of
 
         file name: motor_init.cpp
         If rotating in wrong direction switch from 0 to 1 or 1 to 0
+        The variable to change is:
+
+
         Joint__->direction_reversed = 1;
-
-
 
 ## Homing
 
@@ -145,7 +169,7 @@ By default PAROL6 homes in these steps:
 
 Homing needs to look like shown in this [video!](https://www.youtube.com/watch?v=OCCQkIWPWwo&ab_channel=Sourcerobotics)
 
-**Joints 1,4 and 6 home with inductive sensors make sure they trigger!**
+**Joints 1,4 and 6 home with inductive sensors make sure they trigger! If they do not trigger the LEDS on the sensors will not light up. To fix that you will need to adjust the screw that homes that joint**
 
 !!! Warning annotate "Warning"
 
@@ -156,6 +180,12 @@ Homing needs to look like shown in this [video!](https://www.youtube.com/watch?v
 
     **When starting homing procedure Joint 6 will rotate in the NEGATIVE DIRECTION TO FIND THE HOMING PIN!** <br />
     **Make sure that it does not make to much rotations or you risk wires/tubes getting tangled and braking/damaging your robot! **<br />
+
+<p align="center">
+<img src="../assets/J6_home.png" alt="drawing" width="900"/>
+</p>
+
+You will need to place the gripper in the position like this. Note that J6 wil rotate in the direction of green arrow during homing. The red circle is location of homing pin and blue arrow indicated the location of the sensor.
 
 !!! Note annotate "Note"
 
@@ -170,6 +200,10 @@ To test PAROL6 control board connection to your robot you can use stock software
 Testing software is more safe and interactive for users. It can be found at: [Link](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm/tree/main/PAROL6%20control%20board%20test%20code)
 
 It is recommended to use testing code to test your components (for example test if Joint1 motor is spinning or does J3 limit switch works). 
+
+!!! Danger annotate "Danger"
+
+    **Using testing code on assembled robot may cause damage, only use it to test individual components and functions! ** <br />
 
 !!! Note annotate "Note"
 
@@ -229,15 +263,10 @@ In serial terminal write # IO and press enter. You should get a output like this
 
 If you change the state of ESTOP, INPUT1 or INPUT2 you will see states changing. You will also be able to see voltage of your power supply in mV!
 
-## Uploading PAROL6 control board code
-
-This code is not the testing code. This code will be able to communicate with commander software.
-You will need to have working commander software to use this code or build your own API. 
-
 
 ## Quick start guide
 
-* attach the robot to table or workstation.
+* Attach the robot to table or workstation.
 * Make sure you have driver board that has firmware on it!
 * Connect power supply and USB to your robot.
 * Test if you can move your robots joints freely.
@@ -322,7 +351,7 @@ In your terminal you will periodically see this data:
         $$$$$$$$$$$$$$$$
 
 
-This data tells you about the state of the GUI and the robot. What we are interested is the value of Time between 2 commands in ms. This variable needs to be in range of 0.010 ms. Monitor it for a few minutes while you jog the robot. If it is in the range of 0.01 your PC can handle the commander software. If it is not in the range your PC is probably too week.
+This data tells you about the state of the GUI and the robot. What we are interested is the value of Time between 2 commands in ms. This variable needs to be in range of 0.010 s. Monitor it for a few minutes while you jog the robot. If it is in the range of 0.01 your PC can handle the commander software. If it is not in the range your PC is probably too week.
 
 ## Mastering the robot
 

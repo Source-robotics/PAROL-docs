@@ -20,9 +20,8 @@
 - 6 - ∞
 * Motors: Steppers
 * Gearboxes: precision planetary and bets
-* Position sensing: Limit switches for open loop version, magnetic encoders for closed-loop version
-* Drivers: Open-loop stepper drivers for open loop version, custom FOC Stepper drivers for closed-loop
-* Number of isolated inputs: 2
+* Position sensing: Limit switches for open loop version
+* Drivers: Open-loop stepper drivers for open loop version
 * Number of isolated outputs: 2
 * Number of CAN buses: 2
 * Communication with master PC: USB 
