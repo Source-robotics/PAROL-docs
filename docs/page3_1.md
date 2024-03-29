@@ -24,7 +24,7 @@ To use PAROL6 robotic arm you will need a PAROL6 control board. The PAROL6 contr
 | ----------- | ------------------------------------ |
 | Processor       |  STM32F446RE  | 
 | Processor features      | Arm Cortex-M4 core with DSP and FPU, 512 Kbytes of Flash memory, 180 MHz CPU, ART Accelerator | 
-| Communication interfaces    | 2 x CAN bus, 1 x USB   |
+| Communication interfaces    | 2 x CAN bus (CAN2 transceiver  is not soldered), 1 x USB   |
 | Stepper drivers       | TMC5160   | 
 | Stepper drivers features       | SPI comms, 10-35V, 3A max, protection features| 
 | Inputs    |2 x ISOLATED|
@@ -88,11 +88,13 @@ Do not go over 0.3 A.
 
 * 24 power connector on PAROL6 control board is XT30 MALE connector. 
 
-* Connector for cooling fan on PAROL6 control is 
+* Connector for cooling fan on PAROL6 control is  3 pin 2.54 pitch 
 
-* Connector for power on/off button on PAROL6 control is 
+* Connector for power on/off button on PAROL6 control is JST B4B-PH-SM4-TB(LF)(SN)
 
 * Connector for USB on PAROL6 control is USB female type B
+
+* Connector for programming adapter is 2 row x 5 pin 2.54 pitch 
 
 
 
@@ -212,7 +214,7 @@ Stepper drivers orientation can be recognised by 2 diagnostic pins!
 
 ## How to upload code
 
-Microcontroller on PAROL6 control board is STM32F446RE. To upload code you need to use STlink device and connect it dedicated CLK, SWDIO, 3V3 and GND pins. You can use jumper cables or dedicated stlink + cable assembly.
+Microcontroller on PAROL6 control board is STM32F446RE. To upload code you need to use STlink device and connect it dedicated CLK, SWDIO, 3V3 and GND pins. You can use jumper cables or [dedicated stlink + cable assembly](https://source-robotics.com/products/parol6-programming-adapter).
 
 
 ## Wiring PAROL6 control board

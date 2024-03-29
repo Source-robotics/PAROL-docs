@@ -123,3 +123,18 @@ Here you can change GUI from dark to light mode and change the scaling to fit
 
 
 
+<p align="center">
+<img src="../assets/parol_grip_gui.PNG" alt="drawing" width="1700"/> <br />
+</p>
+
+        Fig - Gripper tab
+
+Here you control and configure your gripper. After homing the robot press calibrate gripper button. <br />
+Gripper will start to move and its status will change to calibrated. Press "clear gripper error". <br />
+Now you can command gripper to go to the specific position with specific speed and torque. <br />
+
+Set the setpoints with the sliders and press "Move GoTo"<br />
+Under gripper feedback you will see gripper current and position feedback.<br />
+You will also see what is status of the gripper. If it is in motion, detected object...
+
+

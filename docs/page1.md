@@ -4,6 +4,12 @@ The PAROL6 robotic arm serves as an exceptional tool for educators aiming to enh
 
 The Theory Corner is designed to provide comprehensive explanations of essential robotic concepts. Whether you're a newcomer to robotics or a seasoned enthusiast, this section offers insights into topics such as kinematics, dynamics, control systems, sensors, programming languages, and more. 
 
+
+!!! Note annotate "Note"
+
+    This is still work in progress and is being constantly updated! <br />
+
+
 ## Want to know more? 
 
 Here is a list of great resources that you can use to learn more about robotics:
@@ -12,14 +18,9 @@ Here is a list of great resources that you can use to learn more about robotics:
 * [https://automaticaddison.com/](https://automaticaddison.com/)
 * [https://robogrok.com/](https://robogrok.com/)
 * [https://github.com/mithi/robotics-coursework](https://github.com/mithi/robotics-coursework)
+* [https://robotics-explained.com](https://robotics-explained.com/)
 
 ## Basic theory
-
-
-### Units 
-
-There is a lot of conversion of units in robotics and PAROL6 is not an exception. To keep things simple and accurate we compiled where these conversions happen, why and how.
-
 
 ### Joints and naming
 
@@ -90,13 +91,11 @@ In robotics, the term "pose" refers to the position and orientation of a robot i
 
 * Orientation: This specifies the orientation or rotation of the robot in space. In 2D, it can be represented as an angle (θ) relative to a reference direction (e.g., the x-axis). In 3D, it often uses representations like Euler angles, roll-pitch-yaw angles, or rotation matrices to describe the orientation.
 
-KAKO MI TU REPRESENTAMO ORIEJNTACIJU 
 
 The combination of position and orientation fully defines the pose of the robot at a specific moment in time.
 
 #### Orientation 
 
-KAKO MI TU REPRESENTAMO ORIEJNTACIJU 
 
 6 axes means it has 6 joints in our case 6 rotational joints. Joints are connected with links. 
 The advantage of robot arms of this type is that they can get to the same position in space with different orientations.  Both pictures show the arm at position x=0.3m, y=0.3m, and z=0.2m but as you can see orientations are different. Robot's pose in 3D space is described by the position and orientation ( rotation) of the robot's end effector in 3D space.
