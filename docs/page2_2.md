@@ -59,8 +59,6 @@ Adjusting currents will reduce motor torque production and in turn max speeds/ac
     **When using robot for longer periods you MUST REDUCE THE CURRENT in the software or you risk destroying your robot!**<br />
 
 
-
-
 ## Dimensions
 
 <p align="center">
