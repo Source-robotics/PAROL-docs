@@ -160,15 +160,20 @@ Denavit-Hartenberg parameters are a set of standardized parameters used to descr
 
 The Denavit-Hartenberg parameters consist of four values associated with each joint of a robotic arm:
 
-* Link Length (a): The distance between the common normal (perpendicular) to the current and next joint axes, measured along the previous joint axis.
-* Link Twist (α): The angle between the common normal of the current and next joint axes, measured along the previous joint axis.
-* Link Offset (d): The distance between the joint axes along the common normal, measured along the current joint axis.
-* Joint Angle (θ): The angle of rotation or translation about the current joint axis to align the coordinate frames.
+
+* Link length = distance Zi-1 from Oi-1 to the intersection with Xi.
+* Link offset = Distance from Oi-1 and Oi measured along Xi
+* θ THETA = Rotation around Zi-1 to get Xi-1 to match Xi
+* α ALPHA = Rotation around Xi to get Zi-1 to match Zi (We are rotating frame Oi-1 around Xi)
 
 These parameters are defined for each pair of consecutive joints in the robot's kinematic chain. By applying a sequence of transformations using these parameters, you can calculate the overall transformation matrix that represents the position and orientation of each link relative to a reference frame.
 
 The Denavit-Hartenberg parameters provide a consistent and concise way to model and analyze the kinematics of complex robotic systems, making them a widely used approach in robot design, control, and simulation.
 
+Great guides:
+
+* [Link](https://automaticaddison.com/how-to-assign-denavit-hartenberg-frames-to-robotic-arms/)
+* [Link](https://automaticaddison.com/how-to-find-denavit-hartenberg-parameter-tables/)
 
 <p align="center">
 <img src="../assets/DH_table.png" alt="drawing" width="800"/> <br />
