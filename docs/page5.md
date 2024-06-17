@@ -121,7 +121,7 @@ Connection is as follows:
 
 !!! Note annotate "TIP"
 
-    If you dont have an ESTOP you can use any NO switch!
+    If you dont have an ESTOP you can use any NC switch!
 
 !!! Note annotate "TIP2"
 
