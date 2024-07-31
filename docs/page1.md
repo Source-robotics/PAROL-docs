@@ -20,7 +20,7 @@ Here is a list of great resources that you can use to learn more about robotics:
 * [https://github.com/mithi/robotics-coursework](https://github.com/mithi/robotics-coursework)
 * [https://robotics-explained.com](https://robotics-explained.com/)
 * [https://roboticseabass.com](https://roboticseabass.com/2024/06/30/how-do-robot-manipulators-move/)
-* [https://roboticseabass.com](https://roboticseabass.com/2024/06/30/how-do-robot-manipulators-move/)
+* [https://robohub.org](https://robohub.org/how-many-axes-does-my-robot-need/)
 
 
 ## Basic theory
