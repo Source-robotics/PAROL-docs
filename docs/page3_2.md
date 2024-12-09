@@ -111,6 +111,14 @@ pip install -r requirements.txt <br />
 
 ## Uploading PAROL6 control board code
 
+Microcontroller on PAROL6 control board is STM32F446RE. To upload code you need to use STlink device and connect it dedicated CLK, SWDIO, 3V3 and GND pins (Do not connect any other pin!). You can use jumper cables or [dedicated stlink + cable assembly](https://source-robotics.com/products/parol6-programming-adapter).
+
+!!! Danger
+
+    **Only use one of those 2 methods to program PAROL6 control board! Connecting STlink with a cable wihout adapter WILL KILL YOUR BOARD!**<br />
+
+## Uploading main control board code
+
 This code is not the testing code. This code will be able to communicate with commander software.
 You will need to have working commander software to use this code or build your own API. 
 
