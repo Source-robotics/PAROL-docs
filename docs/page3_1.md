@@ -241,6 +241,11 @@ Limit switches to 24V and signal. Inductive sensors to 24V, GND and signal.
 </p>
 
 
+## Code upload
+
+If you are having problems with code upload via Stlink try installing the drivers:
+https://www.st.com/en/development-tools/stsw-link009.html
+
 
 ## PCB revision history
 

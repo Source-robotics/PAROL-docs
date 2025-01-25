@@ -124,6 +124,9 @@ You will need to have working commander software to use this code or build your 
 
 Upload the following code [Link](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm/tree/main/PAROL6%20control%20board%20main%20software)
 
+If you are having problems with code upload via Stlink try installing the drivers:
+https://www.st.com/en/development-tools/stsw-link009.html
+
 !!! Note annotate "If using SSG48 gripper"
 
     **In the main.cpp file change j5_homing_offset to be equal to 8035** <br />
