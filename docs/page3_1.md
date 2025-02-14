@@ -1,7 +1,7 @@
 # PAROL6 control board
 
 <p align="center">
-<img src="../assets/PCB1.jpg" alt="drawing" width="1200"/> <br />
+<img src="../assets/PAROL6V2.jpg" alt="drawing" width="1200"/> <br />
 </p>
 
 
@@ -10,6 +10,14 @@
 The PAROL6 control board is the advanced 32-bit controller for 6 AXES robotic arms like PAROL6. It works out of the box with PAROL6 and PAROL6 commander software.
 
 To use PAROL6 robotic arm you will need a PAROL6 control board. The PAROL6 control board is a compact robotic controller. It is by size a little bigger than a pack of playing cards. It allows PAROL6 to be a really small and portable robot without the need for a control cabinet that is usually the size of the whole robot.
+
+!!! note
+
+    **There are two functionally identical versions of the PAROL6 control board. The version with spring-loaded contacts is no longer being produced. The version with a pluggable system terminal block is now in production and available in our store.**<br />
+
+<p align="center">
+<img src="../assets/PCB_dimensions.png" alt="drawing" width="800"/> <br />
+</p>
 
 ## Features
 
@@ -229,7 +237,7 @@ Microcontroller on PAROL6 control board is STM32F446RE. To upload code you need 
 You need to follow this diagram to wire your PAROL6 robot arm to PAROL6 control board.
 
 <p align="center">
-<img src="../assets/img_parol5.png" alt="drawing" width="800"/> <br />
+<img src="../assets/parol6v2_connection.png" alt="drawing" width="800"/> <br />
 </p>
 
 After sucesssful wiring of the robot it should look something like this. 
@@ -237,15 +245,33 @@ After sucesssful wiring of the robot it should look something like this.
 Limit switches to 24V and signal. Inductive sensors to 24V, GND and signal.
 
 <p align="center">
-<img src="../assets/good_wire.jpg" alt="drawing" width="800"/> <br />
+<img src="../assets/WIRING V2.jpg" alt="drawing" width="800"/> <br />
 </p>
 
+<p align="center">
+<img src="../assets/CONNECT.jpg" alt="drawing" width="800"/> <br />
+</p>
+
+
+## Code upload
+
+If you are having problems with code upload via Stlink try installing the drivers:
+https://www.st.com/en/development-tools/stsw-link009.html
 
 
 ## PCB revision history
 
-Latest version of PAROL6 PCB is: V1.2
+Latest version of PAROL6 PCB is: V2.0
+
+<p align="center">
+<img src="../assets/PAROL6V2.jpg" alt="drawing" width="1200"/> <br />
+</p>
 
 
+Version of PAROL6 PCB is: V1.2 that is no longer produced. This version used spring loaded phoenix contacts and is functionally the same as the latest version. 
+ 
+<p align="center">
+<img src="../assets/PCB1.jpg" alt="drawing" width="1200"/> <br />
+</p>
 
 
