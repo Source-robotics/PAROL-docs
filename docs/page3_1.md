@@ -1,31 +1,31 @@
-# PAROL6 control board
+# **PAROL6 control board**
 
 <p align="center">
 <img src="../assets/PAROL6V2.jpg" alt="drawing" width="1200"/> <br />
 </p>
 
 
-## Introduction
+## **Introduction**
 
 The PAROL6 control board is the advanced 32-bit controller for 6 AXES robotic arms like PAROL6. It works out of the box with PAROL6 and PAROL6 commander software.
 
-To use PAROL6 robotic arm you will need a PAROL6 control board. The PAROL6 control board is a compact robotic controller. It is by size a little bigger than a pack of playing cards. It allows PAROL6 to be a really small and portable robot without the need for a control cabinet that is usually the size of the whole robot.
+To use PAROL6 robotic arm with PAROL6 commander software you will need a PAROL6 control board. The PAROL6 control board is a compact robotic controller. It is by size a little bigger than a pack of playing cards. It allows PAROL6 to be a really small and portable robot without the need for a control cabinet that is usually the size of the whole robot.
 
 !!! note
 
-    **There are two functionally identical versions of the PAROL6 control board. The version with spring-loaded contacts is no longer being produced. The version with a pluggable system terminal block is now in production and available in our store.**<br />
+    **There are two functionally identical versions of the PAROL6 control board. The version with orange spring-loaded contacts is no longer being produced. The version with a pluggable system terminal block is now in production and available in our store.**<br />
 
 <p align="center">
 <img src="../assets/PCB_dimensions.png" alt="drawing" width="800"/> <br />
 </p>
 
-## Features
+## **Features**
 
 <p align="center">
 <img src="../assets/img_parol.png" alt="drawing" width="800"/> <br />
 </p>
 
-### Hardware specs
+### **Hardware specs**
 
 
 |      |         |
@@ -44,13 +44,13 @@ To use PAROL6 robotic arm you will need a PAROL6 control board. The PAROL6 contr
 | Connection for smart power button   | |
 
 
-### Operating limits
+### **Operating limits**
 
 |      |         |
 | ----------- | ------------------------------------ |
 | Power supply       |  18V minimal, 24V maximal voltage | 
 | Stepper drivers      | Rated current 2.5A, maximal current 3.6A (Short burst or extreme cooling) | 
-| Temperature    | xx stepper driver temperature warrning, xx temperature error |
+| Temperature    | 100 deg stepper driver temperature warrning, 120 deg temperature error |
 | Isolated Inputs voltage       | 24V nominal voltage, min 12V max 50V  | 
 | Isolated Outputs voltage      | Max 48V| 
 | Isolated Inputs current       |  | 
@@ -59,9 +59,9 @@ To use PAROL6 robotic arm you will need a PAROL6 control board. The PAROL6 contr
 | Cooling fan   | Maximal allowed current draw for cooling fan is 0.3A |
 
 
-## Physical properties
+## **Physical properties**
 
-### Dimensions
+### **Dimensions**
 
 !!! note
 
@@ -72,27 +72,28 @@ To use PAROL6 robotic arm you will need a PAROL6 control board. The PAROL6 contr
 </p>
 
 
-### Mounting
+### **Mounting**
 
 3 Holes located on PAROL6 control board are used to mount the PCB. Use M3 screws!
 
-### Cooling
+### **Cooling**
 
 Stepper drivers need cooling. It can be done with nocuta fan or any other 5V tolerant fan that fits the robot. In case of PAROL6 the fan needs to be of these dimensions: 40x40x20
 
 Keep fan current draw around 0.1 A.
 Do not go over 0.3 A.
 
-### 3D models
+!!! note
 
+    **The fan cant be a PWM type fan!**<br />
 
-## Connections
+## **Connections**
 
 <p align="center">
 <img src="../assets/img_parol3.png" alt="drawing" width="800"/> <br />
 </p>
 
-### Connectors
+### **Connectors**
 
 * 24 power connector on PAROL6 control board is XT30 MALE connector. 
 
@@ -106,7 +107,7 @@ Do not go over 0.3 A.
 
 
 
-### Pin definitions
+### **Pin definitions**
 
 !!! Note annotate "TIP"
 
@@ -176,7 +177,7 @@ Connections:
         #define CAN2TX PB13     --> CAN channel 2
         #define CAN2RX PB12     --> CAN channel 2
 
-### Stepper driver
+### **Stepper driver**
 
 Please use stepper drivers that are listed in the BOM. In case you dont buy them from source robotics website you will need to do few modifications to them:
 
@@ -194,7 +195,7 @@ Please use stepper drivers that are listed in the BOM. In case you dont buy them
     **Failing to do so will destroy your PAROL6 control board!**<br />
     
 
-### Stepper driver orientation
+### **Stepper driver orientation**
 
 
 
@@ -210,6 +211,9 @@ Stepper drivers orientation can be recognised by 2 diagnostic pins!
 <img src="../assets/stick.png" alt="drawing" width="800"/> <br />
 </p>
 
+!!! Info
+
+    **If you find a fitting TMC5160 driver make sure that it follows the pinout from the image above. **<br />
 
 !!! Info
 
@@ -220,7 +224,7 @@ Stepper drivers orientation can be recognised by 2 diagnostic pins!
 </p>
 
 
-## How to upload code
+## **How to upload code**
 
 Microcontroller on PAROL6 control board is STM32F446RE. To upload code you need to use STlink device and connect it dedicated CLK, SWDIO, 3V3 and GND pins. You can use jumper cables or [dedicated stlink + cable assembly](https://source-robotics.com/products/parol6-programming-adapter).
 
@@ -230,7 +234,7 @@ Microcontroller on PAROL6 control board is STM32F446RE. To upload code you need 
 
 
 
-## Wiring PAROL6 control board
+## **Wiring PAROL6 control board**
 
 
 
@@ -240,7 +244,7 @@ You need to follow this diagram to wire your PAROL6 robot arm to PAROL6 control 
 <img src="../assets/parol6v2_connection.png" alt="drawing" width="800"/> <br />
 </p>
 
-After sucesssful wiring of the robot it should look something like this. 
+After sucesssful wiring of the robot and control board it should look somthing like this. 
 
 Limit switches to 24V and signal. Inductive sensors to 24V, GND and signal.
 
@@ -253,13 +257,13 @@ Limit switches to 24V and signal. Inductive sensors to 24V, GND and signal.
 </p>
 
 
-## Code upload
+## **Code upload**
 
 If you are having problems with code upload via Stlink try installing the drivers:
 https://www.st.com/en/development-tools/stsw-link009.html
 
 
-## PCB revision history
+## **PCB revision history**
 
 Latest version of PAROL6 PCB is: V2.0
 

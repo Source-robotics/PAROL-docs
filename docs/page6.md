@@ -1,4 +1,4 @@
-# Safety and handling
+# **Safety and handling**
 
 !!! Warning annotate "Warning"
 
@@ -26,17 +26,17 @@ PAROL6 requires 3 connections for normal operation.
 * ESTOP -> Marked with yellow and pink squares (One lead of ESTOP to pink one to yellow)
 
 
-## Code upload
+## **Code upload**
 
 When uploading code to the PAROL6 controller board TURN OFF the 24V power supply of the robot. When uploading code to PAROL6 controller board it receives 3v3 from stlink device. This keeps the robot constantly ON and blocks the shutdown of the robot with a powerbutton located on the base. <br />
 After the code is uploaded disconnect the stlink, turn on the robot with power button located on the base and then run the PAROL6 commander software.
 
-## USB 
+## **USB**
 
 USB connection does not power the board!
 
 
-## Safe shutdown
+## **Safe shutdown**
 
 !!! Danger annotate "Do not try to power off the robot when it is running!"
 
@@ -50,7 +50,7 @@ the motors. It will produce 6 clicking sounds and that is normal behaviour.<br /
 
 Powering off the robot is also done by pressing button marked in RED. Before you power off the robot **GRAB IT BY THE FOREARM** and then press the button. This will ensure that robot does not fall down.
 
-## Anchoring the robot
+## **Anchoring the robot**
 
 !!! Danger annotate "Robot that is not anchored WILL fall over!"
 
@@ -77,7 +77,7 @@ Another option is to use "connectors_4_alu_profiles.STL" that can be found in th
 <img src="../assets/alu_profile.png" alt="drawing" width="900"/>
 </p>
 
-## Pinching points
+## **Pinching points**
 
 <p align="center">
 <img src="../assets/pinch_points.png" alt="drawing" width="500"/>
@@ -86,7 +86,7 @@ Another option is to use "connectors_4_alu_profiles.STL" that can be found in th
 Be careful when the robot is running. There are few pinching points that can hurt you and others. <br />
 Also make sure that additional wires or tubes are not in the pinching points!
 
-##  Joint limits
+##  **Joint limits**
 
 
 !!! Warning annotate "Warning"
@@ -100,13 +100,13 @@ Also make sure that additional wires or tubes are not in the pinching points!
 The image above represents the range of J5.
 
 
-## Transport
+## **Transport**
 
 When moving the robot it is best to move joints 2 and 3 to the limit switches. After that grab the robot by the base and you can carry it around.
 
 When packing the robot it is recommended to put some kind of sponge or styrofoam under J3 limit switch. After that you can tape around forearm and upper arm links.
 
-## ESTOP
+## **ESTOP**
 
 **Estop needs to be connected for normal operation of the robot**
 
