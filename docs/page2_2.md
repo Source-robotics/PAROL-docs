@@ -1,9 +1,9 @@
  
-# Robot specifications
+# **Robot specifications**
 
-## Specs 
+## **Specs**
 
-* Payload: 1 Kg
+* Payload: 1 Kg near the base, 0.5kg in whole workspace
 * Weight: 5.5 Kg
 * Reach: 400 mm with the standard gripper
 * Degrees of freedom: 6 rotating joints
@@ -27,7 +27,7 @@
 * Communication with master PC: USB 
 * Pneumatic connectors: 2
 
-## Operating temperatures
+## **Operating temperatures**
 
 Stepper motors can work up to 100-110 degrees with no problems. In case of PAROL6 that is not acceptable since it is built out of plastic. That is why we recommend PETG because of its high glass transiton temperature. 
 Stepper motors will reach these temperatures after 5 hours when just holding position:
@@ -39,7 +39,7 @@ Stepper motors will reach these temperatures after 5 hours when just holding pos
 * Joint 5 - 60 °C
 * Joint 6 - 61 °C
 
-When robot is moving it will reach these temperatures after 2 hours:
+**When robot is moving it will reach these temperatures after 2 hours:**
 
 * Joint 1 -  64 °C
 * Joint 2 -  64 °C
@@ -59,7 +59,7 @@ Adjusting currents will reduce motor torque production and in turn max speeds/ac
     **When using robot for longer periods you MUST REDUCE THE CURRENT in the software or you risk destroying your robot!**<br />
 
 
-## Dimensions
+## **Dimensions**
 
 <p align="center">
 <img src="../assets/Dimensions.png" alt="drawing" width="800"/> <br />
@@ -77,17 +77,12 @@ Dimensions using default pneumatic gripper!
 | a6    | 62.8 mm|
 | a7    | 45.25 mm|
 
-!!! Note annotate "Dimensions can change!"
 
-    For example when you change grippers or put robot on aditional base. <br />
-    If that happens you need to change your parameters in DH table, otherwise you kinematic diagram will be wrong  <br />
-
-
-## Kinematic diagram 
+## **Kinematic diagram** 
 
 !!! Note annotate "Dimensions can change!"
 
-    For example when you change grippers or put robot on aditional base. <br />
+    For example when you change grippers or put robot on additional base. <br />
     If that happens you need to change your parameters in DH table, otherwise you kinematic diagram will be wrong  <br />
 
 
@@ -95,9 +90,9 @@ Dimensions using default pneumatic gripper!
 <img src="../assets/Kinematic_diagram.png" alt="drawing" width="800"/> <br />
 </p>
 
-* Digram for the robot using standard pneumatic gripper
+* Kinematic Diagram for the robot using standard pneumatic gripper
 
-## Denavit-Hartenberg parameters
+## **Denavit-Hartenberg parameters**
 
 
 <p align="center">
@@ -121,7 +116,7 @@ Dimensions using default pneumatic gripper!
 <img src="../assets/DH_table.PNG" alt="drawing" width="800"/> <br />
 </p>
 
-## Joint reduction ratios and microstepping 
+## **Joint reduction ratios and microstepping** 
 
 Reduction ratios for each joint are as follows:
 
@@ -146,7 +141,7 @@ Smallest theoretical steps with 32 microstep at the joint levels are  <br />
 * Joint 5 -> 0.0002454369260617026 RAD  --> 0.0140625 DEG
 * Joint 6 -> 9.817477042468103e-05 RAD  --> 0.005625 DEG
 
-## Joint limits
+## **Joint limits**
 
 !!! Note annotate "TIP"
 

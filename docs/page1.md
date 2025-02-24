@@ -1,4 +1,4 @@
-# General concepts
+# **General concepts**
 
 The PAROL6 robotic arm serves as an exceptional tool for educators aiming to enhance their students' understanding of robotics and automation. Its innovative design and user-friendly features make it an ideal platform for various educational settings. In our commitment to fostering a deep understanding of robotics and empowering educators to enhance their curriculums, the PAROL6 documentation includes a dedicated "Theory Corner." This section serves as a valuable resource for individuals seeking to delve into the theoretical foundations of robotics and educators striving to enrich their teaching materials.
 
@@ -7,10 +7,10 @@ The Theory Corner is designed to provide comprehensive explanations of essential
 
 !!! Note annotate "Note"
 
-    This is still work in progress and is being constantly updated! <br />
+    This is still work in progress and is being constantly updated!  <br />
 
 
-## Want to know more? 
+## **Want to know more?**
 
 Here is a list of great resources that you can use to learn more about robotics:
 
@@ -23,9 +23,9 @@ Here is a list of great resources that you can use to learn more about robotics:
 * [https://robohub.org](https://robohub.org/how-many-axes-does-my-robot-need/)
 
 
-## Basic theory
+## **Basic theory**
 
-### Joints and naming
+### **Joints and naming**
 
 Joint are numbered from bottom to the top of the arm. In case of PAROL6 it follows naming on the Figure 1.
 
@@ -35,9 +35,9 @@ Joint are numbered from bottom to the top of the arm. In case of PAROL6 it follo
 
                         Figure: Robot joint naming
 
-### Rules and convenctions
+### **Rules and convenctions**
 
-#### Right hand rule for axes
+#### **Right hand rule for axes**
 
 The right-hand rule is a convention used to define the orientation of coordinate systems in three-dimensional space. It provides a consistent way to determine the positive directions of the axes (x, y, and z) in relation to each other.
 
@@ -55,12 +55,9 @@ For rotation; orient your thumb in positive direction of axes you want to see po
 
 
 
+## **Concepts**
 
-
-
-## Concepts
-
-### Types of robots and number of joints
+### **Types of robots and number of joints**
 
 There are a lot of robot types in industry usually categorised by number of joints and how the joints are arranged. Some of the types of the robots are:
 
@@ -76,7 +73,7 @@ There are a lot of robot types in industry usually categorised by number of join
 PAROL6 is vertically articulated robot. All conecepts here apply to any type of the robot but most of the examples will be for robots like PAROL6.
 
 
-### Spherical wrist
+### **Spherical wrist**
 
 The first 3 axes are used to position the end effector in cartesian space while the last 3 joints are used to change the end effector orientation.  PAROL6 uses a popular configuration where the axes of rotation of the last 3 joints intersect. That configuration is called a spherical wrist and is one of the most common configurations you will see in industrial robots.  A spherical wrist allows for much easier and faster calculation of inverse kinematics.  You can see an example of a spherical wrist on the example of Faze4 robotic arm in the image below.
 
@@ -86,7 +83,7 @@ The first 3 axes are used to position the end effector in cartesian space while 
 
     	                Figure: left robot with spherical wrist, right robot without spherical wrist
 
-### Robot pose
+### **Robot pose**
 
 In robotics, the term "pose" refers to the position and orientation of a robot in its environment. It provides a complete description of where the robot is located and how it is oriented relative to a specific coordinate system or frame of reference. The pose typically includes:
 
@@ -97,7 +94,7 @@ In robotics, the term "pose" refers to the position and orientation of a robot i
 
 The combination of position and orientation fully defines the pose of the robot at a specific moment in time.
 
-#### Orientation 
+#### **Orientation** 
 
 
 6 axes means it has 6 joints in our case 6 rotational joints. Joints are connected with links. 
@@ -109,22 +106,22 @@ The advantage of robot arms of this type is that they can get to the same positi
 
                         Figure: Same position in space different orientation
 
-### Positon
+### **Positon**
 
 
 
-### Frames
+### **Frames**
 
 Coordinate frames or axes are often included at each joint to show the orientation and position of each joint relative to a common reference frame. These frames help in defining the transformations between different segments of the arm.
 
-#### WRF 
+#### **WRF** 
 
 World reference frame
 This is a static frame that is fixed in real world. It is usually located in the base of the robot. 
 For PAROL6 it is located in the base. See figure xx. Coordinate frame represents world frame.
 
 
-#### TRF
+#### **TRF**
 
 TRF - Tool reference frame
 Reference frame that is associated to robots end-effector. This frame changes depending on what end effector you use. 
@@ -135,20 +132,20 @@ Reference frame that is associated to robots end-effector. This frame changes de
 
                         Figure: Robot with TRF 
 
-### Links
+### **Links**
 
 The links represent the rigid segments or sections of the robotic arm. These could be actual physical components or conceptual representations. Links are typically depicted as straight lines connecting joints.
 Links can for example be shoulder, wrist, forearm...
 
-### Joints
+### **Joints**
 
 The joints represent the articulation points where motion occurs. These can include revolute joints (rotational) and prismatic joints (linear). Joints are often shown as small circles or symbols, with appropriate labels indicating the type of joint and possibly its degree of freedom.
 
-#### Joint limits
+#### **Joint limits**
 
 
 
-### Kinematic diagram
+### **Kinematic diagram**
 
 A kinematic diagram of a robotic arm is a simplified graphical representation that illustrates the arrangement of links and joints in the robotic arm. It serves to convey the essential geometric and kinematic relationships between the various components of the arm without necessarily capturing all the physical details.
 
@@ -157,7 +154,7 @@ A kinematic diagram of a robotic arm is a simplified graphical representation th
 </p>
 
 
-### Denavit-Hartenberg parameters
+### **Denavit-Hartenberg parameters**
 
 Denavit-Hartenberg parameters are a set of standardized parameters used to describe the geometry and kinematics of robotic arms and mechanisms. They provide a systematic way to represent the transformation between consecutive coordinate frames along a robot's kinematic chain. These parameters were introduced by Jacques Denavit and Richard S. Hartenberg in the 1950s and have become a fundamental tool in robotics.
 
@@ -189,13 +186,13 @@ Great resources on how to build your robot using DH parameters:
  * Link
 
 
-### Forward kinematics
+### **Forward kinematics**
 
 Forward kinematics is a fundamental concept in robotics that involves determining the position and orientation of a robot's end effector (such as a gripper or tool) based on the known joint angles and link parameters. In simpler terms, it's the process of calculating the robot's pose (position and orientation) in space given the joint configurations.
 
 The forward kinematics problem is about understanding how the robot's various joints and links combine to determine the position and orientation of the end effector. It's like tracing the path of the robot's movements to find out where its hand or tool ends up.
 
-### Inverse kinematics
+### **Inverse kinematics**
 
 Inverse kinematics is a fundamental concept in robotics that involves determining the joint angles or parameters of a robotic mechanism in order to achieve a desired end-effector position and orientation. In simpler terms, it's the process of calculating the joint configurations that will result in a specific pose (position and orientation) of the robot's end-effector (e.g., its hand or tool).
 
@@ -206,7 +203,7 @@ Inverse kinematics can be quite complex, especially for robots with multiple joi
 Inverse kinematics is crucial for tasks such as trajectory planning, motion control, and object manipulation, as it allows the robot to determine how to move its joints to achieve a specific goal in its operational environment. It's used in applications ranging from industrial robotics and automation to animation and simulation.
 
 
-### Task planning
+### **Task planning**
 ### Path planning
 ### Resolved rate motion
 ### Trahjectory planning
@@ -215,7 +212,7 @@ Inverse kinematics is crucial for tasks such as trajectory planning, motion cont
 
 
 
-### Cartesian space
+### **Cartesian space**
 
 <p align="center">
 <img src="../assets/grupa.png" alt="drawing" width="2000"/> <br />
@@ -265,14 +262,14 @@ optimal choice of configuration leaed to larger workspace
 design cell layout correctly
 a lot of trial and error.
 
-#### Trapezoidal velocity profile 
+#### **Trapezoidal velocity profile**
 
 <p align="center">
 <img src="../assets/trap.png" alt="drawing" width="2000"/> <br />
 </p>
 
 
-#### Polynomial velocity profile
+#### **Polynomial velocity profile**
 
 A quintic (5th order) polynomial is used with default zero boundary conditions for velocity and acceleration. 
 Zero boundary conditions mean that  typically means that you assume 
@@ -285,7 +282,7 @@ physical systems where you want to ensure that the motion starts and ends from r
 </p>
 
 
-### Witness marks
+### **Witness marks**
 
  In the context of robot arms, "witness marks" typically refer to marks or indicators that are used to verify or witness the alignment, position, or movement of components or parts within the robotic system. These marks can serve various purposes in robot arms and automation; but are usually used to master the robot.
 
@@ -300,7 +297,7 @@ Parol6, Faze4, and CM6 robotic arms also have witness marks. These marks are ind
                         Figure: Witness marks of PAROL6 robot 
 
 
-### Robot mastering
+### **Robot mastering**
 
 Mastering the robotic arm is the process of bringing your robots joints to the witness mark of that joint and recording the position that robot is at that point.
 
@@ -317,7 +314,7 @@ Lets take an example of J1 of our PAROL6 robotic arm
 
 At this exact position our robots joint is at 0 degrees. If everything was perfect you would place a pin at the witness marks and it would fit with no problems. 
 
-### Homing
+### **Homing**
 
 Homing is a process where a robot joint finds a known position in its rotation space, typically by hitting a limit switch or sensor.
 
