@@ -1,6 +1,8 @@
  
 # **Robot specifications**
 
+---
+
 ## **Specs**
 
 * Payload: 1 Kg near the base, 0.5kg in whole workspace
@@ -23,9 +25,11 @@
 * Position sensing: Limit switches for open loop version
 * Drivers: Open-loop stepper drivers for open loop version
 * Number of isolated outputs: 2
-* Number of CAN buses: 2
+* Number of active CAN buses: 1
 * Communication with master PC: USB 
 * Pneumatic connectors: 2
+
+---
 
 ## **Operating temperatures**
 
@@ -38,6 +42,8 @@ Stepper motors will reach these temperatures after 5 hours when just holding pos
 * Joint 4 - 60 °C
 * Joint 5 - 60 °C
 * Joint 6 - 61 °C
+
+---
 
 **When robot is moving it will reach these temperatures after 2 hours:**
 
@@ -58,6 +64,7 @@ Adjusting currents will reduce motor torque production and in turn max speeds/ac
 
     **When using robot for longer periods you MUST REDUCE THE CURRENT in the software or you risk destroying your robot!**<br />
 
+---
 
 ## **Dimensions**
 
@@ -77,6 +84,7 @@ Dimensions using default pneumatic gripper!
 | a6    | 62.8 mm|
 | a7    | 45.25 mm|
 
+---
 
 ## **Kinematic diagram** 
 
@@ -91,6 +99,8 @@ Dimensions using default pneumatic gripper!
 </p>
 
 * Kinematic Diagram for the robot using standard pneumatic gripper
+
+---
 
 ## **Denavit-Hartenberg parameters**
 
@@ -116,6 +126,8 @@ Dimensions using default pneumatic gripper!
 <img src="../assets/DH_table.PNG" alt="drawing" width="800"/> <br />
 </p>
 
+---
+
 ## **Joint reduction ratios and microstepping** 
 
 Reduction ratios for each joint are as follows:
@@ -140,6 +152,8 @@ Smallest theoretical steps with 32 microstep at the joint levels are  <br />
 * Joint 4 -> 0.0002454369260617026 RAD  --> 0.0140625 DEG
 * Joint 5 -> 0.0002454369260617026 RAD  --> 0.0140625 DEG
 * Joint 6 -> 9.817477042468103e-05 RAD  --> 0.005625 DEG
+
+---
 
 ## **Joint limits**
 

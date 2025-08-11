@@ -1,5 +1,7 @@
 # **Software**
 
+---
+
  To operate PAROL6 robot you need a:<br />
 
  * High level software running on your PC
@@ -14,7 +16,16 @@
  For low level software only PAROL6 control board software is available.
  PAROL6 commander software allows you to write simple robot arm scripts. Scripting language is called RBTscript.
 
+---
 
+## **Python API**
+
+!!! Tip annotate "Commander alternative"
+
+    Alternative to the commander software is controling the robot with python API.<br />
+    More info and guide can be found in the github repo: [Link](https://github.com/PCrnjak/PAROL6-python-API) <br />
+
+---
 
 ## **PAROL6 commander software**
 
@@ -31,7 +42,7 @@ Some of the features that PAROL6 commander software has:
 * View of robot telemetry data 
 * Estop and safety functions
 
-
+---
 
 ### **Structure**
 
@@ -39,11 +50,15 @@ Some of the features that PAROL6 commander software has:
 <img src="../assets/proces_full.png" alt="drawing" width="2000"/>
 </p>
 
+---
+
 ### **Dependancy**
 
 Latest stable version uses python 3.11.0 and following dependencies:
 
 * Check dependancy here: [https://github.com/PCrnjak/PAROL-commander-software](https://github.com/PCrnjak/PAROL-commander-software)
+
+---
 
 ### **How to run / Install**
 
@@ -52,10 +67,13 @@ Latest stable version uses python 3.11.0 and following dependencies:
 * clone or download [https://github.com/PCrnjak/PAROL-commander-software](https://github.com/PCrnjak/PAROL-commander-software)
 * Run the Serial_sender_good_latest.py
 
+---
 
 ## **PAROL6 control board software**
 
 We recommend using VS Code and platformio to install, edit and run the  code. 
+
+---
 
 ### **PAROL6 control board software Install guide**
 
@@ -65,7 +83,7 @@ We recommend using VS Code and platformio to install, edit and run the  code.
 * In VS Code click open folder and select "PAROL control board" from previously downloaded folder
 * Now Platformio should download all necesarry configurations to allow you to compile and upload code
 
-
+---
 
 ### **Code upload to PAROL6 control board software**
 To upload code on your PAROL6 board you need a programming cable and stlink device<br />
@@ -73,6 +91,7 @@ If you followed the steps from "PAROL6 control board software Install guide" you
 
 Programming adapter needs to be connected to the black connector next to the USB. Needed connections are 3v3, gnd, swdio, clk.
 
+---
 
 ### **How to test PAROL6 control board?**
 
@@ -81,7 +100,7 @@ You can find it at: [https://github.com/PCrnjak/PAROL6-Desktop-robot-arm](https:
 
 This code will allow you to control idividual functions of PAROL6 robot arm (if wired as per wiring instructions).
 
-
+---
 
 ## **Communication protocol**
 
@@ -125,6 +144,7 @@ So if a robot receives good data packet, meaning good first 3 bytes, len, CRC an
 
 By viewing that variable you can check if your loop times are correct.
 
+---
 
 ### **PC -> robot**
 
@@ -136,6 +156,8 @@ The protocol from PC -> robot consists of three types of commands:
 
 
 The protocol from robot - PC consists only of robots telemetery data.
+
+---
 
 #### **List of active commands**
 
@@ -149,14 +171,18 @@ Active commands can only be given by the "command" argument and is represented b
     0x103 - Clear error
     0x255 - Dummy data
 
+---
 
 #### **Passive commands**
 Passive commands are for example io commands and gripper commands. They are always sent with the data packet. Passive commands do not affect movement of the robot joints and by that can be injected in any active command. 
+
+---
 
 #### **Carrier commands**
 
 Carrrier commands are joint speeds and positions that are modifiers for active movement commands. 
 
+---
 
 #### **Robot input packet (PC -> robot)**
 
@@ -177,6 +203,8 @@ Carrrier commands are joint speeds and positions that are modifiers for active m
     int CRC_byte = 212;                                 // 1 byte
     int end_bytes[] = {0x01, 0x02};                     // 2 byte
 
+
+---
 
 ### **Robot output packet (ROBOT -> PC)**
 
@@ -202,13 +230,11 @@ Data sent from the robot to the PC consists only of robots telemetry data and fl
     int CRC_byte = 212;                                     // 1 byte
     int end_bytes[] = {0x01, 0x02};                         // 2 byte
 
-
-
-
+---
 
 ## **PAROL6 commander software**
 
-
+---
 
 ### **Structure**
 
@@ -216,49 +242,73 @@ Data sent from the robot to the PC consists only of robots telemetry data and fl
 <img src="../assets/proces_full.png" alt="drawing" width="2000"/>
 </p>
 
+---
 
 ### **How to run / Install**
 
 Check here: [https://github.com/PCrnjak/PAROL-commander-software](https://github.com/PCrnjak/PAROL-commander-software)
 
+---
+
 ## **PAROL6 control board software**
 
 Structure of the code:
 
+---
+
 ### **PAROL6 control board software API**
 
+---
 
 ### **Code upload to PAROL6 control board software**
 To upload code on your PAROL6 board you need a programming cable and stlink device
 
+---
 
-## **Commander software API**
+## **Python API**
+
+Python API to control PAROL6 via custom python scripts, terminal or LLMs: [Link](https://github.com/PCrnjak/PAROL6-python-API)<br />
+
+
+---
 
 ### **RBTscript**
 
 PAROL6 commander software allows you to write simple robot arm scripts. Scripting language is called RBTscript. It allows you to move the robot in joint space or cartesian space, use delay functions, control outputs and grippers, read inputs and much more!
+
+---
 
 ### **Introduction**
 
 Commands are executed sequentally.
 they have tact of loop time!
 
+---
+
 ### **Units used**
 
 There is a lot of conversion of units in robotics and PAROL6 is not an exception to that. To keep things simple and accurate we compiled where these conversions happen, why and how.
+
+---
 
 #### **Angle**
 
 Units for angles used in PAROL6 commander software are DEGREES. What we are sending PAROL6 control board are STEPS. For all calculations used in PAROL6 commander software RADIANS are used.
 
+---
+
 #### **Distance**
 
 Units for distance used in PAROL6 commander software are milimeter [mm]. In the backend meters are used for all caculations
+
+---
 
 #### **Speed**
 
 In the GUI speeds setpoints can only be set using %.<br />
 Units of speed used in PAROL6 commander software backend are either STEPS/s , RAD/s or DEG/s for rotations or mm/s or m/s for translations. 
+
+---
 
 #### **Acceleration**
 In the GUI acceleration setpoints can only be set using %. <br />
@@ -303,6 +353,8 @@ In commands MoveJoint, MovePose, MoveCart and MoveCartRelTRF following only with
 
 ### **Functions**
 
+---
+
 #### **MoveJoint(j1,j2,j3,j4,j5,j6,v=0,a=0,t=0,func,speed)**
 
 Robot will move all its joints to the desired positons tracking a specific velocity curve. Joints will stop at the same time
@@ -342,8 +394,7 @@ Example:
 
 Example commands and explanation:<br />
 
-
-
+---
 
 #### **MovePose(x,y,z,Rx,Ry,Rz,v=0,a=0,t=0,func,speed)**
 
@@ -369,6 +420,8 @@ Example commands and explanation:<br />
 
 #### **SpeedJoint()**
 
+---
+
 #### **MoveCart(x,y,z,Rx,Ry,Rz,t=0,func,speed)**
 
 Robot will move all its joints to the desired *orientation* tracking a specific velocity curve. Joints will stop at the same time at the desired positons. The path is linear in tools / task    space, Actuator motion not necessarily smooth and harder to validate. Can track trapezoidal velocity profile or polynomial. With this mode robot cant pass singularities and is affected by them. Note that when robot gets close to singularity it will stop. Robot will try to exectute the trajectory even if it has singularity in it. User needs to make sure their robot can pass thru the singularity by properly designing the task and robotic cell. <br />
@@ -383,8 +436,9 @@ Arguments need to be given in above defined order!<br />
 
 Example commands and explanation:<br />
 
-#### **MoveCartRelTRF(x,y,z,Rx,Ry,Rz,t=0,func,speed)**
+---
 
+#### **MoveCartRelTRF(x,y,z,Rx,Ry,Rz,t=0,func,speed)**
 
 Unlike MoveCart where pose is defined with respect to WRF in MoveCartRelTRF we are moving robot pose relative to current Tool reference frame. With this mode robot cant pass singularities and is affected by them. Note that when robot gets close to singularity it will stop. Robot will try to exectute the trajectory even if it has singularity in it. User needs to make sure their robot can pass thru the singularity by properly designing the task and robotic cell.
 
@@ -402,7 +456,7 @@ Example:
 
 Example commands and explanation:<br />
 
-
+---
 
 #### **Delay()**
 
@@ -412,12 +466,16 @@ Example: <br />
 
     Delay(1.5) // Adds time delay of 1.5s 
 
+---
+
 #### **End()**
 
 Intidates that script will stop exectuing at this moment
 Example:
 
     End()
+
+---
 
 #### **Begin()**
 
@@ -426,12 +484,16 @@ Example:
 
     Begin()
 
+---
+
 #### **Loop()**
 
 When script reaches this command it will start executing from the beginning.
 Example:
 
     Loop()
+
+---
 
 #### **Output()**
 
@@ -441,6 +503,7 @@ Example:
     Output(1, HIGH) // sets output 1 of PAROL6 control board to HIGH state
     Output(2, LOW) // sets output 2 of PAROL6 control board to LOW state
 
+---
 
 #### **Gripper_cal()**
 
@@ -449,6 +512,8 @@ Example:
 
     Gripper_cal()
     Delay(2)
+
+---
 
 #### **Gripper(position,speed,current)**
 
@@ -465,9 +530,11 @@ Example:
     Gripper(120,30,500) // Move the gripper to positon 120 with speed of 30 and with current setpoint of 500mA
     Delay(2)
 
-
+---
 
 ### **Example codes**
+
+---
 
 #### **Simple Joint space move code**
 This code will perfrom small joint space movements in the loop.
@@ -479,6 +546,8 @@ This code will perfrom small joint space movements in the loop.
     MoveJoint(66.129,-117.368,136.77,46.28,-29.588,149.293)
     Delay(1)
     Loop()
+
+---
 
 #### **Cartesian TRF example code**
 This code will move the robot in TRF space. First translation in x,y,z direction then rotation around x,y,z of TRF.<br />
@@ -502,6 +571,7 @@ This code will move the robot in TRF space. First translation in x,y,z direction
     Delay(1)
     End()
 
+---
 
 #### **Cartesian relative TRF**
 This code moves the gripper relative to the last position. In this example we move for -80 mm in x direction of TRF.
@@ -514,6 +584,7 @@ This code moves the gripper relative to the last position. In this example we mo
     Delay(1)
     End()
 
+---
 
 #### **SSG48 gripper test code**
 This code will calibrate the gripper and perfrom few open-close operations. After that robot will make small move in joint space and small move in TRF cart space.<br />
@@ -533,6 +604,8 @@ After the gripper is calibrated we can start using it. *Note if there is gripper
     Gripper(100,60,600)
     Delay(2)
     End()
+
+---
 
 #### **OUTPUT click code**
 This code turns on and off OUTPUT1 of the robot arm. You can use this code example to control the pneumatic gripper.

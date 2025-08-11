@@ -9,6 +9,7 @@ The Theory Corner is designed to provide comprehensive explanations of essential
 
     This is still work in progress and is being constantly updated!  <br />
 
+---
 
 ## **Want to know more?**
 
@@ -22,8 +23,11 @@ Here is a list of great resources that you can use to learn more about robotics:
 * [https://roboticseabass.com](https://roboticseabass.com/2024/06/30/how-do-robot-manipulators-move/)
 * [https://robohub.org](https://robohub.org/how-many-axes-does-my-robot-need/)
 
+---
 
 ## **Basic theory**
+
+---
 
 ### **Joints and naming**
 
@@ -35,7 +39,11 @@ Joint are numbered from bottom to the top of the arm. In case of PAROL6 it follo
 
                         Figure: Robot joint naming
 
+---
+
 ### **Rules and convenctions**
+
+---
 
 #### **Right hand rule for axes**
 
@@ -53,9 +61,11 @@ With your hand in this configuration, the three fingers (thumb, index finger, an
 
 For rotation; orient your thumb in positive direction of axes you want to see positive rotation for. Your fingers now curl in the positive direction of rotation around that axis.
 
-
+---
 
 ## **Concepts**
+
+---
 
 ### **Types of robots and number of joints**
 
@@ -72,6 +82,7 @@ There are a lot of robot types in industry usually categorised by number of join
 
 PAROL6 is vertically articulated robot. All conecepts here apply to any type of the robot but most of the examples will be for robots like PAROL6.
 
+---
 
 ### **Spherical wrist**
 
@@ -82,6 +93,7 @@ The first 3 axes are used to position the end effector in cartesian space while 
 </p>
 
     	                Figure: left robot with spherical wrist, right robot without spherical wrist
+---
 
 ### **Robot pose**
 
@@ -94,8 +106,9 @@ In robotics, the term "pose" refers to the position and orientation of a robot i
 
 The combination of position and orientation fully defines the pose of the robot at a specific moment in time.
 
-#### **Orientation** 
+---
 
+#### **Orientation** 
 
 6 axes means it has 6 joints in our case 6 rotational joints. Joints are connected with links. 
 The advantage of robot arms of this type is that they can get to the same position in space with different orientations.  Both pictures show the arm at position x=0.3m, y=0.3m, and z=0.2m but as you can see orientations are different. Robot's pose in 3D space is described by the position and orientation ( rotation) of the robot's end effector in 3D space.
@@ -106,13 +119,13 @@ The advantage of robot arms of this type is that they can get to the same positi
 
                         Figure: Same position in space different orientation
 
-### **Positon**
-
-
+---
 
 ### **Frames**
 
 Coordinate frames or axes are often included at each joint to show the orientation and position of each joint relative to a common reference frame. These frames help in defining the transformations between different segments of the arm.
+
+---
 
 #### **WRF** 
 
@@ -120,6 +133,7 @@ World reference frame
 This is a static frame that is fixed in real world. It is usually located in the base of the robot. 
 For PAROL6 it is located in the base. See figure xx. Coordinate frame represents world frame.
 
+---
 
 #### **TRF**
 
@@ -132,18 +146,20 @@ Reference frame that is associated to robots end-effector. This frame changes de
 
                         Figure: Robot with TRF 
 
+---
+
 ### **Links**
 
 The links represent the rigid segments or sections of the robotic arm. These could be actual physical components or conceptual representations. Links are typically depicted as straight lines connecting joints.
 Links can for example be shoulder, wrist, forearm...
 
+---
+
 ### **Joints**
 
 The joints represent the articulation points where motion occurs. These can include revolute joints (rotational) and prismatic joints (linear). Joints are often shown as small circles or symbols, with appropriate labels indicating the type of joint and possibly its degree of freedom.
 
-#### **Joint limits**
-
-
+---
 
 ### **Kinematic diagram**
 
@@ -153,6 +169,7 @@ A kinematic diagram of a robotic arm is a simplified graphical representation th
 <img src="../assets/Kinematic_diagram.png" alt="drawing" width="800"/> <br />
 </p>
 
+---
 
 ### **Denavit-Hartenberg parameters**
 
@@ -179,18 +196,15 @@ Great guides:
 <img src="../assets/DH_table.png" alt="drawing" width="800"/> <br />
 </p>
 
-Great resources on how to build your robot using DH parameters:
-
- * Link
- * Link
- * Link
-
+---
 
 ### **Forward kinematics**
 
 Forward kinematics is a fundamental concept in robotics that involves determining the position and orientation of a robot's end effector (such as a gripper or tool) based on the known joint angles and link parameters. In simpler terms, it's the process of calculating the robot's pose (position and orientation) in space given the joint configurations.
 
 The forward kinematics problem is about understanding how the robot's various joints and links combine to determine the position and orientation of the end effector. It's like tracing the path of the robot's movements to find out where its hand or tool ends up.
+
+---
 
 ### **Inverse kinematics**
 
@@ -202,25 +216,8 @@ Inverse kinematics can be quite complex, especially for robots with multiple joi
 
 Inverse kinematics is crucial for tasks such as trajectory planning, motion control, and object manipulation, as it allows the robot to determine how to move its joints to achieve a specific goal in its operational environment. It's used in applications ranging from industrial robotics and automation to animation and simulation.
 
+---
 
-### **Task planning**
-### Path planning
-### Resolved rate motion
-### Trahjectory planning
-### Trajectory following
-### Joint space
-
-
-
-### **Cartesian space**
-
-<p align="center">
-<img src="../assets/grupa.png" alt="drawing" width="2000"/> <br />
-</p>
-
-
-### Jacobian
-### 3D representation
 ### Singularity
 
 When a robot navigates through Cartesian space, the reference frame transitions from individual joints to the end effector. The robot employs various joint movements to achieve the desired Cartesian motion for the end effector. To optimize joint movements, the robot calculates the necessary displacement and direction for each joint. This method generally works efficiently for most arm configurations. However, challenges arise at singularities, which occur when joints reach their limits or when two or more joints align collinearly.
@@ -247,13 +244,77 @@ These deviations enable seamless and smoother end-effector motion, ensuring cont
 
 In contrast, PAROL6 robotic arm will try to keep the desired Cartesian trajectory although that might mean that the end-effector will stop when near singularity. Feature to try to avoid the singularity by small deviations is not implemented.
 
+---
+
 ### Workspace
+Workspace is the total volume or area that a robot's end effector (e.g., gripper or tool) can reach.  
+It depends on the robot’s joint configuration, link lengths, and range of motion.  
+Two common types:
+- **Reachable workspace** — all points the robot can physically touch
+- **Dexterous workspace** — all points the robot can reach with any required orientation  
+A well-designed workspace ensures the robot can perform all intended tasks without collisions or overextension.
+
+---
+
 ### Reach
-### Velocity control
-### Position control
-### Torque control
+Reach is the maximum straight-line distance from the robot’s base to its end effector.  
+It is typically measured when all joints are extended in a straight line.  
+Longer reach allows a robot to interact with objects farther away, but may reduce stiffness and precision.  
+Designers must balance reach with payload capacity and accuracy.
+
+---
+
+### Velocity Control
+Velocity control regulates how fast a robot joint or end effector moves.  
+In this mode, the control system receives a desired speed as input and adjusts actuator power to maintain that speed.  
+**Uses:**
+- Continuous motion applications (e.g., conveyor tracking)
+- Coordinated joint movement for smooth paths  
+Velocity control often requires feedback (closed loop) for accuracy under varying loads.
+
+---
+
+### Position Control
+Position control moves a joint or end effector to a specific target location and holds it there.  
+The controller constantly compares the current position (from sensors) to the target and corrects any deviation.  
+**Advantages:**
+- High precision
+- Ideal for pick-and-place operations  
+**Example:** A robotic arm moving to a defined point in 3D space to assemble a part.
+
+---
+
+### Torque Control
+Torque control directly regulates the amount of rotational force applied by a joint’s actuator.  
+It allows the robot to apply a controlled force without focusing on a specific position or velocity.  
+**Applications:**
+- Collaborative robots that must be safe around humans
+- Force-sensitive assembly tasks
+- Compliant motion for delicate operations  
+Often used in advanced robotics where interaction with the environment requires adaptability.
+
+---
+
 ### Blends
+Blends (also called "motion blending" or "path smoothing") allow a robot to transition between motion commands without stopping at each intermediate point.  
+Instead of sharp stops, the robot smoothly curves through waypoints, maintaining continuous motion.  
+**Benefits:**
+- Reduced cycle time
+- Less mechanical wear
+- Smoother trajectories for delicate payloads
+
+---
+
 ### Trajectory
+A trajectory is the planned path that a robot’s joints or end effector will follow over time, including position, velocity, and acceleration profiles.  
+Trajectories ensure smooth, predictable movement while respecting mechanical limits.  
+Types of trajectories:
+- **Linear** — straight lines in Cartesian space
+- **Joint space** — movement planned in terms of joint angles
+- **Spline-based** — smooth curves between waypoints  
+Good trajectory planning improves efficiency, precision, and safety.
+
+---
 
 ### Optimal path placement
 
@@ -262,12 +323,15 @@ optimal choice of configuration leaed to larger workspace
 design cell layout correctly
 a lot of trial and error.
 
+---
+
 #### **Trapezoidal velocity profile**
 
 <p align="center">
 <img src="../assets/trap.png" alt="drawing" width="2000"/> <br />
 </p>
 
+---
 
 #### **Polynomial velocity profile**
 
@@ -281,6 +345,7 @@ physical systems where you want to ensure that the motion starts and ends from r
 <img src="../assets/poly.png" alt="drawing" width="2000"/> <br />
 </p>
 
+---
 
 ### **Witness marks**
 
@@ -296,6 +361,7 @@ Parol6, Faze4, and CM6 robotic arms also have witness marks. These marks are ind
 
                         Figure: Witness marks of PAROL6 robot 
 
+---
 
 ### **Robot mastering**
 
@@ -313,6 +379,8 @@ Lets take an example of J1 of our PAROL6 robotic arm
 
 
 At this exact position our robots joint is at 0 degrees. If everything was perfect you would place a pin at the witness marks and it would fit with no problems. 
+
+---
 
 ### **Homing**
 
@@ -336,18 +404,73 @@ The Parol6 control board comes preloaded with generic parameters that will work 
 
 Homing needs to look like shown in this [video!](https://www.youtube.com/watch?v=OCCQkIWPWwo&ab_channel=Sourcerobotics)
 
+---
 
 ### Backlash
-### Actuators
-### Machine learning
-### Communication protocols
-### Robot loop times
-### Open loop control
-### Closed loop control
-### Stepper motors
-### Encoders
-### PID loops
-### ROS 
-### Matlab
-### Test
+Backlash is the small amount of play or lost motion between mechanical components, usually caused by gaps between gear teeth or flexible couplings.  
+In robotic arms, backlash can lead to positioning errors because the actuator's motion does not immediately translate into movement of the end effector.  
+Minimizing backlash is important for precision — it can be reduced by using preloaded gears, belts, or software compensation.
 
+---
+
+### Actuators
+Actuators are the components that convert electrical signals into mechanical motion.  
+In robotics, they are responsible for moving joints, rotating parts, or gripping objects.  
+Common types of actuators include:
+- **Servo motors** — precise control of position and speed
+- **Stepper motors** — open-loop positioning with discrete steps
+- **DC/BLDC motors** — continuous rotation, speed control
+- **Pneumatic/hydraulic actuators** — high force applications  
+Choosing the right actuator depends on speed, torque, precision, and cost requirements.
+
+---
+
+### Open Loop Control
+Open loop control is a control method where the system sends commands to actuators without feedback from sensors.  
+It assumes that the actuator performs exactly as commanded.  
+**Advantages:**
+- Simple and low cost
+- No need for position or speed sensors  
+**Disadvantages:**
+- Inaccuracy due to missed steps, load changes, or mechanical wear
+- No automatic error correction  
+Example: Driving a stepper motor without an encoder.
+
+---
+
+### Closed Loop Control
+Closed loop control uses feedback from sensors (like encoders) to compare the actual output with the desired target and correct any errors.  
+**Advantages:**
+- High accuracy and repeatability
+- Ability to detect and correct errors
+- Stable operation under varying loads  
+**Disadvantages:**
+- More complex hardware and software
+- Higher cost due to sensors and controllers  
+Example: A servo motor system that adjusts power to maintain a precise position.
+
+---
+
+### Stepper Motors
+Stepper motors are electromechanical devices that move in discrete steps.  
+Each step corresponds to a fixed rotation angle, allowing precise control of position without needing feedback (in open loop mode).  
+**Pros:**
+- Precise positioning
+- Simple control
+- No feedback required for basic applications  
+**Cons:**
+- Can lose steps under high load
+- Lower efficiency compared to DC motors  
+Commonly used in 3D printers, CNC machines, and robotic arms for low-to-medium speed motion.
+
+---
+
+### Encoders
+Encoders are sensors that provide feedback about position, rotation, or speed.  
+They can be:
+- **Incremental encoders** — measure relative movement from a starting point
+- **Absolute encoders** — provide exact position within a full rotation  
+Encoders are essential in closed loop control systems, ensuring that actuators move precisely to their target positions.  
+They help improve accuracy, detect faults, and compensate for mechanical errors such as backlash.
+
+---
