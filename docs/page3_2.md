@@ -1,19 +1,33 @@
 # **Getting started**
 
+---
+
 ## **Assembly manual**
 
 Assembly manual is located in [Github](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm/tree/main/Building%20instructions) repository. <br />
-If you decide to build it or buy a kit you will need to follow the assembly manual to make it.  <br />
-Assembly manual is also great tool for reparing and upgrading your robot. Make sure you use the latest version of the manual. <br />
-Version is marked on the first page in the bottom left corner.<br />
-Latest version is: v1 rev1<br />
+- If you decide to build it or buy a kit you will need to follow the assembly manual to make it.  <br />
+- Assembly manual is also great tool for reparing and upgrading your robot. Make sure you use the latest version of the manual. <br />
 
 After you have built the robot follow these steps to get it up and running!
+
+---
+
+## **BOM**
+
+If you are building the robot yourself source the parts from the BOM on this [link!](https://github.com/PCrnjak/PAROL6-Desktop-robot-arm/tree/main/BOM)
+
+---
+
+## **Video guides**
+
+You can also follow a video [tutorial](https://www.youtube.com/playlist?list=PLSueoDrBt5MMTL9O8qAWZiJrNIf8-29Qz) to assemble and setup the robot.
 
 
 ## **How to follow this guide**
 
 It is best to read the whole guide and then go step by step on each step. If you do something wrong you will have to go a few steps back so it is recommended to read or skim through this page.
+
+---
 
 ## **Do not do this**
 
@@ -38,11 +52,14 @@ The image above represents the range of J5.
     Robot does not have brakes. When you power off your robot steppers will stop producting torque and ROBOT WILL FALL! <br />
     **Never turn off the robot without you holding it!**
 
+---
+
 ## **SSG48 gripper**
 
 If you plan to use [SSG48 gripper](https://github.com/PCrnjak/SSG-48-adaptive-electric-gripper) first make sure that your PAROL6 works and than attach it to the robot!<br />
 Check the section in Peripherals on how to connect the gripper!
 
+---
 
 ## **Powering on**
 
@@ -67,7 +84,7 @@ Robot is now locked and it is waiting to receive commands.
 
     Robot will power on by itself if you have connected 3v3 supply from the programming port.<br />
 
-
+---
 
 ## **Stepper Induced voltage**
 
@@ -77,14 +94,15 @@ Robot is now locked and it is waiting to receive commands.
     **After you turn off the robot move it to standby position slowly**<br />
     **Never randomly spin the robot when connected to power or you risk powering it on**
 
+---
 
 ## **Powering off**
 
 !!! Danger annotate "Do not try to power off the robot when it is running!"
 
-    **If robot starts to behave unexpectedly USE ESTOP.** <br />
-    **If ESTOP is not functional power of the supply.**<br />
-    **Reaching for the power button should be the last option.**
+    **If robot starts to behave unexpectedly USE ESTOP** <br />
+    **If ESTOP is not functional power of the supply**<br />
+    **Reaching for the power button should be the last option**
 
 Because lack of brakes sudden loss of power will result in robot falling down. That may cause damage to the robot or the operator.
 Robot is powered on and off by pressing a button marked red on the image. When powering the robot on even when USB connection is not available it will energise the
@@ -95,6 +113,8 @@ Powering off the robot is also done by pressing button marked in RED. Before you
 !!! Warning annotate "Warning"
 
     You will not be able to power off the robot if there is external 3v3 (from the stlink for example)
+
+---
 
 ## **Installing PAROL6 commander software**
 
@@ -111,6 +131,8 @@ pip install -r requirements.txt <br />
 
 More info how to install can be found in the github folder.
 
+---
+
 ## **Uploading PAROL6 control board code**
 
 Microcontroller on PAROL6 control board is STM32F446RE. To upload code you need to use STlink device and connect its dedicated CLK, SWDIO, 3V3 and GND pins (Do not connect any other pin!). You can use jumper cables or [dedicated stlink + cable assembly](https://source-robotics.com/products/parol6-programming-adapter).
@@ -118,6 +140,8 @@ Microcontroller on PAROL6 control board is STM32F446RE. To upload code you need 
 !!! Danger
 
     **Only use one of those 2 methods to program PAROL6 control board! Connecting STlink with a cable wihout adapter WILL KILL YOUR BOARD!**<br />
+
+---
 
 ## **Uploading main control board code**
 
@@ -133,6 +157,7 @@ https://www.st.com/en/development-tools/stsw-link009.html
 
     **In the main.cpp file change j5_homing_offset to be equal to 8035** <br />
 
+---
 
 ## **PAROL6 control board**
 
@@ -142,6 +167,8 @@ https://www.st.com/en/development-tools/stsw-link009.html
     After the code is uploaded disconnect the stlink and connect power supply. 
 
 Look at the PAROL6 control board page for more info.
+
+---
 
 ## **First startup**
 
@@ -158,6 +185,8 @@ If you are going with code edit solution you will need to edit these segments of
 
 
         Joint__->direction_reversed = 1;
+
+---
 
 ## **Homing**
 
@@ -204,9 +233,8 @@ You will need to place the gripper in the position like this. Note that J6 wil r
 
     **If using custom gripper make sure it has a spot that can trigger joint 5 limit switch!** <br />
 
+---
 
-
-    
 ## **Testing**
 
 To test PAROL6 control board connection to your robot you can use stock software or use testing software.
@@ -229,6 +257,7 @@ After you comfirmed that you can communicate; disconnect programming adapter and
 * Turn the board by supplying 3v3 from the programming adapter.
 * Attach power button. You will need to hold it pressed to keep the board powered.
 
+---
 
 ### **PAROL6 control board testing software**
 
@@ -246,6 +275,7 @@ If stepper driver is faulty or not connected you will get:
 
 If stepper drivers are good your stepper motors should spin at a low speed using moderate current of 200-300 mA.
 
+---
 
 ### **LIMIT test**
 
@@ -259,6 +289,8 @@ Black - signal, Blue - negative, Brown - positive
 <img src="../assets/LIMIT_GOOD.PNG" alt="drawing" width="900"/>
 </p>
 
+---
+
 ### **IO**
 
 In serial terminal write # IO and press enter. You should get a output like this:
@@ -269,6 +301,7 @@ In serial terminal write # IO and press enter. You should get a output like this
 
 If you change the state of ESTOP, INPUT1 or INPUT2 you will see states changing. You will also be able to see voltage of your power supply in mV!
 
+---
 
 ## **Quick start guide**
 
@@ -300,6 +333,7 @@ That means your estop for that joint is not working and you need to check your w
 * Simulator is now synchronized to the robot and GUI shows correct values.
 * Congrats you have a functional PAROL6 robot to work with!
 
+---
 
 ## **Output log**
 
@@ -360,7 +394,11 @@ In your terminal you will periodically see this data:
 
 This data tells you about the state of the GUI and the robot. What we are interested is the value of Time between 2 commands in ms. This variable needs to be in range of 0.010 s. Monitor it for a few minutes while you jog the robot. If it is in the range of 0.01 your PC can handle the commander software. If it is not in the range your PC is probably too week.
 
+---
+
 ## **Mastering the robot**
+
+---
 
 ### **Witness marks**
 
@@ -376,6 +414,8 @@ Parol6, Faze4, and CM6 robotic arms also have witness marks. These marks are ind
 
                         Figure: Witness marks of PAROL6 robot 
 
+
+---
 
 ### **Robot mastering**
 
@@ -398,7 +438,11 @@ At this exact position our robots joint is at 0 degrees / 0 steps. If everything
     /// @brief how much steeps need to be made from when limit is hit to standby position
     float homed_position 
 
+---
+
 ## **Maintenance**
+
+---
 
 ### **Belts**
 
@@ -427,6 +471,8 @@ Belts are located on Joints: 1,3,4,5
 </p>
 
 Use [This video](https://www.youtube.com/watch?v=v0PYfEoIr3k&ab_channel=Sourcerobotics) as a reference for belt tension! In the video we apply max force we can with the hands to the belt. You can use the belts "stretching" as a reference for your belt. Belts for J1 and J4 need to have a bit less tension on them.
+
+---
 
 ### **Couplers and threadlocker**
 

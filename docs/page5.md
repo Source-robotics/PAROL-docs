@@ -126,7 +126,7 @@ Connection is as follows:
 !!! Note annotate "TIP2"
 
     On PAROL6 controller board there are connectors for 2 ESTOPS. They both share same GPIO on microcontroller.
-    They both need to be NO contact. 
+    They both need to be NC contact. 
 
 Estop needs to be NORMALLY CLOSED (NC) contact type. NO will not work.<br />
 NC is beneficial in case your estop unplugs or gets its wires cut it will also register as a press of an estop, which is desirable behaviour.
